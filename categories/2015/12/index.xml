@@ -27,9 +27,10 @@
   第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;搭建自己的博客是有点折腾，但是会乐在其中。 考虑到技术文章会涉及到大量的英文单词，或者命令就用英文写。 概述类和心得篇就用中文。&lt;/p&gt;
+&lt;p&gt;搭建自己的博客是有点折腾，但是会乐在其中。 考虑到技术文章会涉及到大量的英文单词，或者命令就用英文写。 概述类和心得篇就用中文。
+p.s.&lt;a href=&#34;http://blog.csdn.net/u011613321&#34;&gt;&lt;code&gt;旧csdn博客地址&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;所以针对博客搭建有几个plan：&lt;/p&gt;
+&lt;p&gt;所以针对新博客搭建有几个plan：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;初期：基本功能&lt;code&gt;分类&lt;/code&gt;， &lt;code&gt;标签&lt;/code&gt;，&lt;code&gt;联系方式&lt;/code&gt;&lt;/li&gt;
@@ -37,7 +38,7 @@
 &lt;li&gt;长期：和顶级域名分离，blog分&lt;code&gt;En&lt;/code&gt; 和&lt;code&gt;Ch&lt;/code&gt;， 兴许还有&lt;code&gt;De&lt;/code&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;初期已经差不多完成了&lt;/p&gt;
+&lt;p&gt;初期已经差不多完成了，继续折腾。&lt;/p&gt;
 
 &lt;h1 id=&#34;disqus-添加评论功能:4396d87bf52c8e0d9b74841cebec2d9e&#34;&gt;Disqus 添加评论功能&lt;/h1&gt;
 
