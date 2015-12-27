@@ -279,10 +279,13 @@ $ git push -u origin master
 
 &lt;h1 id=&#34;buy-domain:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Buy domain&lt;/h1&gt;
 
-&lt;p&gt;A few suggestion:
-1. &lt;a href=&#34;https://www.godaddy.com&#34;&gt;godaddy&lt;/a&gt;
-2. &lt;a href=&#34;http://aliyun.com&#34;&gt;aliyun&lt;/a&gt;
-3. &amp;hellip;..&lt;/p&gt;
+&lt;p&gt;A few suggestion:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.godaddy.com&#34;&gt;godaddy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aliyun.com&#34;&gt;aliyun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&amp;hellip;..&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h1 id=&#34;setting:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Setting&lt;/h1&gt;
 
@@ -347,81 +350,6 @@ If you want to know why should be setting like this, see the references.&lt;/p&g
 &lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/user-organization-and-project-pages/&#34;&gt;Github Pages Setting&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/&#34;&gt;cnfeat.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://blog.coderzh.com/2015/08/29/hugo/&#34;&gt;coderzh&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://quantumman.me/blog/setting-up-a-domain-with-gitHub-pages.html&#34;&gt;quantumman.me&lt;/a&gt;
--pages.html)
-f+IydobPq0HZarCx2omCCOpwkHuXRTrQqq8Hc2hUjNd0qkrQ0CUIBAEoC3R2dUdRfXDYpMMFxIEng2fGPZxWcq0IyUW9WZSrQUlHiWOTeFpVcQ1lcxTgnXLmI0bm3T+CzxVWVKk5QV2VxE5QheIcpMPRp4hzKB6AAMSXQTMjMbndrxVcHWqVKeaorMrhqsprvGYSuo6RUAIBEAIBUAiAVACARACAdU1PafepluZ0fhr5DVBoCAVAIgBAKgBAdj+zbx8R9ln3nrxOm/hROPF8C3W2fjjjs7C4UM7SSXsyZLZxlmZid2qwovCvCd62b7nIuryO+/Azv2h7SY9zKTTLmEl3UCNO/wDBa9DUZRTm9nsbYa+e6L30Wls3Dse+iK2IeQLtDoc4TkYDpA36mD2K88RUxNZ0qbslxM6lSVWVr2XD+5Y2vspmKwvPczzFbLmALebdI/he2BIMWPYVzU8VXoYjqpPMiaVV03a9yHkJgaVTCuc+lTeeccMz2NcQMrDEkdZWvSmLqUqiUHoXxEnn0fAzNvY/Bso/RqIktczO9rRncGuGc85HjG/VuXRh1ipzVSW1ilJ1XPMdTj8ZRpYJr+ZBo5GkUSAei6CAQbE3v1ryF11XF2vZmVpX9Tl9gV6WKx88xTbS5p0UjTZEiOkQLE3Xr4nraGFbcrs3lGcaVm+JFyh2YH49lCk1lMOa0QxoaBJcXOIGsAE9ytgK77M6k2WoVMkJPkbeLxVDBVGYejhTWcRLiGCpUImMxMSewWXLCdfFJzUsqWxztzm8zf3KPLrYlOm0VqbQwyA9jbAzo4N3Gde1W6MxtSc3Sqa8jqw9Z3yNnGr3DuBACAEAIAQAgFQCQgH1vGd9o+8q0tzOl8OPyQ1VNAQCIBUAgQCoAQHY/s28fEfZZ9568Tpv4cfmceL4E+PwWPOMJpZ+aztgktFPLbNMmeKywywssN3t/uckVTyvNvwLP7RHMFBpMF4e3Jx1uOyFz9EubqtLw6lqLal8zWq4ypXoCphHMzuALc+k7wY0OoXNGPU4lxrXSuUlGzys43aGx8e9r6mKq83TaCXEvEQP6WsJJ717tKphIP8Al6s0i6Mbbs2uQf8A0L/8x/3GLz+ll/uIL5E4ld76HnrRr2n3r6KHhXyO+krQR6disCcTs+nTYRmdRp5ZMCQxtidy+VVZUca5S5nm7Tv6mByU2c/D45rKmXPzLzla7NAsBJFl6vSFaFXCylHa50VqqqQ05km1sY2jtWm91mhoBPAOD2z3SsMJTc8BJR3M6cc1OR0PKD6WWA4Msv4wMBxG4tJMdxXn4B0YtwrNowyxb7xw23Nk4mmzncXUuXANpl+YuJN+i3ogASZ6l9Bh6lDNkpI6qLpZrRRjLuO8EAqARAKgBACARACAkr+O77TveVL3KUvAvkMUFxEAIC/s/YuIrtLqNF9RotmaLSNw4nsUqLZjUxFKm8s5JMp1aZaS1wLXAwWuBBB4EG4Q1jJSV1qMUEggLOD2hVo5uafkLokgAzExr2rGth6dbSaMqtFVNyz/AMRYv68+YLD+HYfymPY48yjicRUquzVXueRpOg7AumlRhSVoKxrToRp6olwW0KtEzSqFk6jUHuVKuGpVfEhUoRnqSY/beIrNy1KstOrQAJ7VnSwVGm80UZRwsYu4mE2pXpsLKTy1kkkAA3IAM+YLSeEhVlmavYV6dJy7zsyk2y3ytHTDKtE9i/hNs4ii3LTqkN3NIkDslc1XA0akryjqc86EKjumRs2pWFU1ucPOkZc8DTgAp7JS6vq7aErDRy5SHFYl9V2eo7O6IkgaCfitKVKFNWgrF6VFU9i3gttYiiMtOqQ3c13SA7FhVwVGo7yRSeFjJ3WhBj9oVq5Bq1C6NBAAC0o4anRXcViaWHjB3K63OgEAIBUAiAEAIAQAgJcR47/tO+8VL3KU/AvkRqC4iA6rkPsKlXL6lYFzGENaySAXRJzEXgCLda2pQzbnk9J42VG0Ybs9S2VhgwNbTaGMFmhohoHUFu0krHz05ym7yd2UOVnJCjixVqZS3ECn0XNJGYtBygt0M6cetZSinqduExtSk1H+k8S9+8HUdoWGx9VdPYVQAQAgBAb3JDYBxVUZ2u5hsmo9oJgNBMdpiF0UoK2eS04Hj9J45wtRpStNv2R6DszZuym5mNpudzjsn7ynVs6D0WlzRl0JPDzKFi47LT6HmVcFiW81R3aV/FsuejL2zMRsykAykxoFWNabzr0QHFw6MwYB/FR2tcysujazu5K9ubu/oFPC7LxDqTW0mOc9rgxoY5tm65gAIPRsTdTHFKTSTvcrPAVqSk2rW3s+f11GbTobMrUqjnMaBT/dZmU3BzXOs3K0DpXFjBFinao2u3dBYCvGajC6bV1Z/wBzzflVyVqYQ84wOdhyG5ajoB6QBhzdRwuFM6cWs8PY9XAdIylPqa/ivo+DOcXOe0KpAKACAEAIAQCIBUAIBEAIB1Q3M6yfehSn4F8hqFwQHrXJLEU34ajkyw1gaRGjwBnnrJM98rtp2y6HyGPjNV3m+h2GAnKMvmKiRyovt1Fr7+pUJOV/aDyVGLog0gxtZhzBxtmbBzNJA7D2hVlHMtDvwWMdCd5ao8hpbFqu0b3my0jhW+JrU/UdOPhiy0OTrwJdI83sWiwkeLOOX6kqvwQRPT5LudBuB16+ZarCQOaX6hxL4pfQmPJeNfMHX7hF1ZYamuBzvpvFy/r+x6J+zbAilRqAO/meJaWwBcxxlZ4mCjaKWliuGryrOVScru5FicNRNY4VxLstR+JMiznOaSaUcA0g5p3heTKMb5H8z6WnUqqn10eKUf7mJhm0gAP3wbzQquacgz81mfTJkSO7X2rJKPqdk51fFpvZel9yfDVKFJ1PI17ajXPZzkA5iIoyeHjzbeEThFq25WarTUlJprR25cQwFGi/LSY6owVg2m4u5uoJAztdfQmSMtoPcrRUX3OehWpUqr+Y0nl1XD0NPl7RpfQRhueOZppjLmaXvyx4w1Frz2L0aayx12sfMYrENzzx8V72R5+OTjYsSuJzOhdJ4lf1Eb+TnAopmsemcSt2vYzsRsstmDMFXRtHp6qt0mRt2XVP8MDr+CXOmHT0X4o/cjfgXjVqXOuHTOHe90Qupkag+ZDthjaE9pIYh0Jp7MEJBAKgEQAgH1vGd9o+9EUp+BfIaEJlOMFeTLeH2ZUfo2O1RmR5lbpehDSOrO9/Z9gqlHnGVIhxDgBfQQZkdQ8y3ozi9EeHica8TO7VjucRtVlFs67oaJd6IV5TS3ZzOaSDD44npCYJ7lZWktApGmKocOrgVNhe5z1bYjcryzxp6ItHYruckjilh47mB9EaSZOYgwb6HhA0WfXmGVrQeaIA1IHb8UVZsjJzKbsTTAnnNewn3WVs8hZciu/Hhr21aUue0gg5SAY3OvpuVlXS0kFFp3jubmH5btJDq2FymbvBa4hsa3AOs24FY/yW9/dHYsZVSs1p6MkpctKDnAHDRTuM8McQ0CG9EDhNpt1olSeiZZY2e9nb5/8AQbQ5YUAYoYcVLGXOaGCZEWiTcSdNAjVKPifsWljar8N/q7FHbHLBpptbQpcxVkHO5tPo8cnGYgm1lGalFXVmY1sbNqzbXrc5OvtWXue485UJkudvItaO5c9Scpu72PMqY1Q0grvmSjbgA6TYPUbH4LPKRDpC+8fYhqbQNQi8DtsO3rVkklqdCxlNrV29C5RpsaM5IP8AdunqUOTZt1kFHM3oQ43ajWjowZ38L8FCRy1sasv8vW5Sp452vjDrt5rKbHDDGVYPUkw+OpVJzNAtIi/s4pZo7qeP/wDZp8jJ5S0GxTdTJHScCRbQN+Krm1Pc6OxjqQbpye5nYei8mJnpAX7SnWWPap9IVo+LUnxeGdSDS7fPHdE+9XhLMdMumKNOyq6X9iFrgdFc9GlXp1VenJMFBqCA1sHsg1Xm41JgHcSYVHKyPmanT0HFQoau251Gz+T7Gai6yczyK2IqVXebbNilh2t0AVGzEg2niqtNmahPONfTnK0PIY6o0VDlI/ozHuXTho3mr7Eq9ropVttPDKbzTu7xg4lpBuSfFNvxsuyfR8XJ2lwv/Y5lWk0m42d7F7Z3KAGBOQm8G41y+NHHjC5JxnR4nVSUp6RNmltZ0jQjeBdI4qV9S8ozW6LB2w1gkmB12HnK6e107FIQqVJZYK79Dk8XXwxe54rZHOJJyvJ1N+K4ZVW2d0ehsXP+gza2JpfXtf8Ab5we4GVosQ7WLr9P4vkvcGY+iB47Qf7Wv+VZuo3zN4/p7FegVdq0o6NQT1scVGYT/TuMa7skjPxFdjzJxB7OaMfeUqaXA5J/pLGVPHUQxvMxArvb2Ude394mfXYrH9G4qO1RfcuUcRSAH+Kd/oD384mdci7/AErjl/5UIMFSeZONk9dD/wDRT1keRlV/SeJk7ykmSu5OMeLYtgPE0nDzw4qyqxOX/S2Ig9yZvJKp/BicO7qJqM/2FTngzlqfp3ELYgq8kMWBLWsff+VVpkxugPj3K2jOWp0PiIf03MrG4SvQMVKdSmJkGoHBvc7RWy6HHVoVIK000isa8gZgROh61XLY51Tad0yOi6oAOjxueEqWol5qDe5MaubqjW3HQewqErFFTdvQp4lzntAkGCTA6wPgolA9no7EwoLJJbjsKCQO2SsMjZ61fpCjRtct457nNZYkNdOl4PALSjHK9TzMdjaGJisrM19Om7MRIdutERpYdy2szipYirQmnBtAKJA1zdaho+kwX6nlGWXEK658fqNypZns/wCosFzOipYjIZY4gxOaDBt4unvXPZs/OM7i+6yzS29UE9KRexkkXtB3/kp6uxqsXViWKHKFwBmDp2za9vOVR02axx0ktTe2fteiWDPWFMlpDsxpsynpHnWh46WojVogW1XpwpyjBXR7OFrRqwTW5xuNxra2Mr1aOZ1DKxucaVXNaMz47N+/XevSwse65M4sc+/GMXqXyAA3cJA4RfNHnErz+lpPqrpa3+x2dDU11tneyX30Fq7SaDYlxEkxNgNb8F4NOhXlq9PmfQOdK+Vas5Ham2ald0ucco8Vs2A+PWvTjTSWp6WGpRoLubvfmUxXdxKtkidKqz5jm4o71DpovGvLiywKiplNlUYvOJlRPWMOcTKh1jDnEyonrGLzijKh1jAVUyodYPbiSNCfOoyInOWKe1Kg0cVHVxKuz4F6hykqt/iUdXyZm6UHuauF5a1AIcSQdQbgjrBsVGWS2ZhPA0am6Ku0X0K4z0gKT23LW2puEXys/hI4CxvaVaNVrSSPlOmv09GjSlXorbdGW6q4GBcRcgLSy4nxShFq7KtR5nM5kmLRfzhXsuBso6WiyrWcwgceAMT3KrXM7sK60b5V9Sxhq24Aho392ihLgRjKKspSfef+XL1PFg7woycTyZUZRZBlAzTYa+fir3Zqm3axJVpS2GCDOuneoTs9SsZZXeRH4OPEe1OsiW7REs0sPVdYMd7grXijeNGb4ErNmV4jmz5x8VXPEv2apyH+DqtOHVKbnMmC1hE30JiTEx+SmM4t6HXg8DGUv52iK+LqYfOTXw4eXHoMc4wxoEZW2v0pdOt10yr1JJafc+ipYPB024qduJZ2NiaYpNbRotacsc6b9JvjkMy6nhustIVZvuy0jxMJ0MKouad58E19y67ZxcQXvcQCbHxt8RewghYYivDaK247ig6sU3Vlvw00GbWphmFq5AGjLFtTmcG3OpsVzQcpu72OjCTzVklscfh30Q0585cQCMsAA5jmBnXox3kroR6cqlRvT1JjUwpn/mD942JvFLo55jV3jxHUmgVWrp8n78CPbDadOq9lO7QRDs2b+ESOu8qJCGInkTZf5PYAVgcxIAG6JuTx7Fz1ZOOxpjMfLDUYyitWOfToB5bncRxBB9oauqGGqSjex5H+oa3lRYbg6JkN510bwaYb16iT2rBxcXZnoUOkcRUipNJL7ljC7IpvExViYkObE9uRTY6Hj58jWwvJOg7V1UdjqfyJYp/EKnJfcq8quS9PDU2PpPe4OzZg/KSC2mXiCAP6Srxirq47fUdKo0tUro5mhQLr3jsXTOjSXM8VdMY5xv3b/Ih2gCym9wN2vDYIm0Tdc0oxvoehhOkcTUnGM0rNXv6m9U2TTGHfU6WcUy4XESGyJEaLPjYwpdK4uVVRdrXtsYeFY5zQ6eM+dWtEw6S6exGGxDpRt7FjD1ACL3/FVlBHn1f1JjZ05U3azVnoStrltnPEHdvRq5844X1imRmqBYS4H2KSyi36Mp1mDMS236upaud+HquMMstblvZ+IaAAdVVxfA5cZGU5tpi46nmg0x5lMXbcxoytdTG0mh3/ADDcblL9C0nl8CLVSk4O6LujIsepVWu5lGUXHvLUmzH+oeYqtlyMsq5M7RodwI7fgslSk9z6pUmyUACMxtxOgWqoxjubww9yjtGox4jpEDe3ognrtf2LRabI6I0orcx6uwGVCC4v4dfZEIqj1sXdKK1loXcLg6dJoDGgb+PbJNzp+tFjKq7WuUlOClZL6kwbNzqq06bqy9DlcnIo8pD/AIar2N++1eg4qMLI7MFpWj/nA84a/wD3e5Z2PQjL92ODvupYtGX7EmKdcSQTlaCQQbgcRqljJvuI3NiYI1qT2CpzdgTvDrusb6KimoTzZbkdJw6zD0/mdBsLkZLQXVoD7EQ3VpmHEtJaOsRuWkukJX0Rwfw6K3Zk1SxpqNpuDgDrpabjrWUpOTuzrwyapq6sb+EqDmqYB4SJ0IF7KpaW5u4V1/8A4hSiOBFyzbOHp/5kelQqj8Vbk/UvQV1Nf/LOX2WxraLnHeIbf+Ij4X7lepVdzzXSSg0+Jz+1gTRqi0c8L2/oWad2dWBouNSHHunXYhhOFq/5Th3ZVRLUpQbdVJricfh3taA0h08Qe1S0+BxdM9SsU1Ujy1TLbw3KJMDcTrpoVnGUlI56tGlKhHK8uu5U8HgmQ5adZzOd4aW0WmWGYeAb3i2kKjqd4vDo1uDlPR8io/CvuT+V+taXRx/D0aIgC0idFZFqijJXVzSwVR2ojLu4xwVZ2W5zRwsq7ywWpIaXOTxnhoRuKjNY55N0XaRTr0XyYM8QN2iumjeEoNalfI7gVa6L3hzPTKuOMHKAP7nG/cBp7VS7Z9WlTi+f7FUBzyCbzvJJMdTf/A61mpJ7muVvZ2RJh2QJtALhmk6gmAI17iO9QnvcpOpGC9SJ1WBABiTu69DHuWMpvZHJXqN2GsZod8DdolKm6ktNjGTcpXRIvVjFRVkXSsZnKL/pqvYPvtSex14L4yPMqFSw7X+xgVGjphfjzZKx+n2CfaUZeL/4sa6pZvZ+KlLVmU5WhE0m3pM7fisowzTaO+vVVPCQbO95N7Se3Bkh4Di2qxpLS4tqU6L6jb7pa2b7x1K0sE+s0PJ7enG7Wpx2GYRHBWq0JU9TooYuFb5m7s98KkIX1LVZNHV7PrZo6mgdsTdRNJPQpC7WpY5RgGjT/wA6n7Wub+KpLY3wyvJr0ZwWz6hcGgxDWx1yZn2QqzemhxThfRlTalDLSqHcKoH/AGq0dzpwcGqsddLHcPpH6JVJ+qd9wqllcww8m60b+Y4PofxSDGoUd7dHN0xHDyxklO6eg7FUczAG3gjvEFVjO0m2c9WjehGMNSucM4DQ935LXNFnm9nrRfhJ6L3Cm43kTrru4rKSTnY9GjOpCg+d+JXZjXTfTrC16tcDhWImu9o2W6eN3KjpGi6SktHBE7HAi0LKcWjrweLp1pNKNnzGvxwEjNB6gVooyscVahhKlRuXqONffIvvJvv3FE3sZSweGkssJB9LPGml/Qp/DIedHZNw7Q4Qwk3vlEiODSYb2mT2K1r7Kx9S2oLV3Y1jmBokZnAAgGIFtXFZqpGCOavVcdCF9QmN5MmxjV144BYSbbuc9d3t8hafXut7SfMpp03Uemxk31lrbDpXrwgoKyNUrKyAFXBm8oXf4ap2D77VSex14J2rxOEqUwdRGt+0Qf0Vjc92cYS3X1Kr8KRpcCmW9c7lKZzSwzj4dVYpViQ1nYfvFXT1OCqmoxTNmk79xTPZ7iopO1RnXi1fBQNECqykHC1Nzg7xm6gOaLEzcPcOwrsjUTdjwZ0pJXDC1bgGL8D+S2ms0bGNFunLMjrOTuDovBdWfzYFozNk21ve3YvNlGUNonrKpGerZp7OIkwZF4MRI3GNyzne5rT8Jc5Qz9GzcKlE/wD2sH4qktjqwi/nfR/seb0MaGOc2HakeKdxVbFZ4SrJ3SJNq4xr6TmtDiS4O8UjRke9Wjoa4bB1IVFOS2Vj0LFYqn9Cqg1KZdzJAGdszkgACdVGhyUKdTrlePE80qsaSOlldH8Qt1QVWMmuBxdNUqc8W05WehNWpO5to1IN4vuOipBrMzir0pKhFQ1tyKb8Q5tg7uPwK1yRlwOSGIrw0uy9hsQXMLjuB8wWEoWnZHp0a7lRcpETMRTfq2OuPgtMs0cjrYaStKNhDTaTAIHafMrZ2lqc/Z4VJdyWhbpU8o1nuhYznc7sLgnRk5Jp3Rm1cOQXEjef1K6IyTPNrwnCVpIWnU6uxSczpsf9N6gmVEdQvU9AxOLmzZaOO90+1c1Srd2R7s6mtkVak9EWPRFjppqVzuxOIff+g8Hz7yN+9Wp03VlZGTl1tvQVexTpqCsjRK2wSrkiEoCntts4asYJADbjSTUbE9wd5lSex14H48Th1gfTCRw/JCjjxQ3EU2PaAWwRqZkHstY+xSmYSpqbtU+hNSwwNIMkgA2MTpIv51TO4yubywkatBU72sT16RfGaoSBo0CAOsCVeOItwOSXQyemf7BTw4G+e781qsXLkYvoKPn+xo4fFkSBJB1AtMaSAoli21sTHoKEXrM08Ltos/lE95H4LllUbdzsj0bCKspFx+3HYnJhyzm2Oc0uf4ximc4ABA3tClPM7FZ4eOGi6t724fMzeVHJrmMQWNqFwcBUktIA5wkxadFWc8js0deC/wBzR6y6T5XMw7CrahuccafT/wC0dId4RVFLYlpRdpaFYMi0R26qWbRtwY/F4QENcczM1g5wORxG4O4qIuSR8j01Spzxb1s7L5CYsPbTbBgg3I0iCqQyym7nFVz0qMbPYgp49xEPDXjrAWjpLhocyxj/AK0mXaT2mm62VpBmN3EhYyUlM7aUqc6LsrIrNwYPiVAf11fBa9a1ujklgoSXckI7B1J3EdRB9mqsqsWYTwNWPD2J8GwtJBBFuB4rOq01ob4BTjJ5kR1az5PC8LSMY20OOpiJSk03cH14AkcDYkaKHB30L08UrZZRD6S3+l3pFR1cuZt2ul5fudg4kmwk9thwhcKsi10tyTP1bh7FenTdSWhpN9dK/AUL16VJU1ZGiVlZCytCQlAEoCtyhgYN0Ou4y5oNgGuYGEjj0n9ypPY7MD8eJwcrA+kCVAAKQWsN4vn96zludFJWiSqpoKxskDTMQ2eGYgSrJX0M6k8kXLkeqcm8HSwzA1kl7gC50Xd1n4bl05LbHyVbFTrSzNm6Kp4O/XeosjPPLmI6Tq0ntAPvSyIzNj87uDv13pZBSa0Q+nUcNzv13pYnO+ZQ5S7DpY2nD2llRviVQ0Egnc6/Sad47wquFzqwmMnQlfdcTz/C4VmVlKo8AuztMua9rIcWkik8dGY8YX14rGnNLRnL013sU2+KX7EtTZdJlINYaTg4XeaodUaREhkQ1xN4BAFzdWcIpnCqrUElw/Yq0uTIJeX0qnRghgaGOe0gR0w4sza2vpulTGm073KucaitKPsQ4jY0h3NU6lKiWiXVgYbmgFx35d6ylFuadrHRDL1LjF7mdj+TLmhzqFRtZjR0nWYQb2EnpGBNlvo9TilRnFmM3FvboT2G/vWbhFiNepDiaGAxjnyDFhNlhVpqOqPQwuIlUbUiKtWY4mSReLiRbeIWkVJI46kMPOWmgOwwdGVw7iiqNbodji13JJifQHcQp65DsE+Z2sRaFwQi5yshGLkxzRC9qlSjTVkdKSSsLK0JBSBEAICDlm8cw4BhZkp02kOAa4uDmlxI6yT3Qs5eE68H8eJ56KiwPorjg9C1xQ5Bcu4XxfP71nLc6afhNujyerOwzsU3Kabbubm6YbMZsvDvTI7XMO20ut6rW5l0j02f5jPvBTDcvifhS+X/AEeobPf0m/ZH4rrkfGI2K2Hc83e5rIs2mSwk7y54v2AR1zuoaFnDU8gjM5323Fx85v51ALAchJFWw2c+PUbwyPyjzRfvlLkE4pOYyHuzn+qA0kSIkC09YgdQQHiG1XuFZ8aB7/a68riikzLpptYr6L9kIzajwwsBIDnS4CIJkSfMps0rXPL6zQ29lVHsFOpWrltH+EMc+oBvLKmXxPyI3LoV4q7ZeLe7J6+Oysa7mg3MXFj3vNRkHxf3d4PimDER3KlR22/zmaxqNRsPxu2ebyspClUpxmJNMtGYudADZsdd3uUurG1kVlUlHYyKeG+k03vFEuqAuc9wLG0gMxswG+g4hVyqV8rNoYhSVpRTRDsnZIdlqEOo0nWNRwMRraeO46KuST8ex0U+qScqe/IMZyYnO7DvFVjZzF0Mg3OUE2dbeFutVdHnVMPNSOeccu79dRVb3MernfUh5/r9qWRbvHoIqLShRVNHqpKKsh7XLoAIB0oBuZAS4Y9NsNLzmHREkugzFgoYMrlttDPTrOdZ1R8hs7zUDiBxgSqT0R2YKLlVTOAzLCx744OUi45rxfqU5dLnLHE3q5DSwR6A7T71jLc9aj4S2yu9rS0OcGu1aDAN5uN90zu1inZqXWdZbUjZ47Ptt+8FMNxivhy+TPS9nu8U/wBo95XYz4xbG8XMbQdicRX+j4ZhiRGZxByzJBgF1gGiTEzeFmXHYbFUH0RWw1V1Wn0ZFTMHgVLsd0gHQd0jfbRATvechLRJtA4lxho85CgkpY2vhcI+lRxmLqHEVYy06Wcb4nLTE5ZBu43g9inV7EaGtUxIc0ZXioxzWvZUEEOY/wAUyLbjp1KCeB5fWwOHdVfmfUHTdMZf6jxCosOimMSxFTPLTRfbQZtfYTaLW18PV5xjSJDmgPYZsSBZ7Z94VJwlDVHBVw+TVFrCbce7MKjyQRbm2szB4LeNtSFmsR5vchPQycdjw8ND2NOZ7XPqtAFVwETbT8PeojO67xSoyHlBjs72Na5zqbTIa8BtiBqW3M3vwParKS4bFaru0WdrYIuo88BSos05ukTmdJA4wdOHArRaq4nHQvYPE0JaKIdUaQ1sYhxNNvSjohxtae7Teq1JpvLzNqMlHXgaW08R9HaymcMx9PxpBhvRBdoWmHamOocVpOailcnM09DFo0hVc5wpuFQmWYfm3CmQ2PGqugQReRpwKpki3nRrHEPLlaNT6Xif/baf+pSWvWPkin0MoldB1CirCAU4hAArIBedQgt7Kx4pVWVCCQ2bCJktIHvUMsjF2xg212QbOF2u4Hr6iqyjdG+HrulO/A4mqwtcWuEEGCFhax78JqauhsoWuI0wwH+4+0kfBaLY8XM+uzepsbP8Qdp965pbn09HwFlVNhB4zPtt+8FeG5z4n4cvk/2PSNmHos+yPeV2M+MRp8qNgux+zxhQS1zHipSeIIluYZajSRaHuEidxiyzTsy7V0YvI7kfW2dSrc45pdWczMGElobTzFouLmXEz1Dvte5VKyO5weHc+l0CA4FrgTpmY4OE9UhUZc4X9oXIh+08Q2vScKdTIKdRlTpN6BMFrgZm5tG4XVoysVcbnXbM2McJhqVKZFOm1gPU2/vJPeouWPKa2K/e1Ptu+8VoiLF/BVc3RmzhlPYbJJXRSUboy6gDdJBkgi/63FeVbU8t6aIhFHphpOWNTrHtV29CqtfVjXUpuY1E7jodOr8kTViN9RtanYCL7j3m542sp4kvYtYDBveMwHRbeInMWz0IGszE9as4X1RrSpSkro0vpzGUXMqUXuqZQAXGwyiBYmQBqojZaS3LSlJLYqM25VfTDar5a23RADjIyiXROhJUzm/CjOE77mpzlPyap6yozw5F+9zM8vXoneNzoAzqQLzgQCZxxQEmExDQ9pMESJBuI3yFAF2jUa2o4AiJkRpBugZyO2qZdVJAnT7ossZ7nrYKplpOT5mWqHo30Jcv7k/ZB9xVuJwUo5qEn6mps4/ux2n3rCW57uHfcR2/JPkeMS1tSs8sa+SxjSGktBjO57gQ0E6AAk66K8ad0efi+knSm4Q35mlyn/ZzzLOdw7nODSHOY4h8tBk5XBoIMXggzxVlCzOZdJupFxqLdPYm2O7os+yPeVuzxEd1gcQ0NFx3rNmhS29tJrrC/Zp2TxUxIkZmB2s9tmseewD3zClkJmlsrGCXF1nEyRw0HuAUNFkXto4wFhHUoBwOxOQDKjnOxFV2dznOyMc1jW5jIaXFpL3QbxAGl1a4uQ8p+SbsDlqsLnUpAOYglsm3SAEibaDvUxkQYFcgucYB6Rub6zoNN+/qXlzXeZ5c3ZuxDSaAJFyCI6Mi/wDVKm7uZ3VuNwvlcDawkEXsRoOImbpbW7JzNKxC+hABI10gjQazwP5q0ZpsODST5lnA4nm8xE30aTaOM8VaNRxka0K6p/5oR7SxLqkbrRYzYwbxorSd9SK1XrHexnPYPdp+aXRziy7r9qi6JNIleiesV3uugGFxQmw1zigInOQETigI3vPFQSQ0xLwDYbz2KrWpoqrUHAr7YwzR0mGbHN8VRxOzDYl5XCX0LdbBMGzW1v5jqrmG+jBSJiO0TKNcScLUeWcPQi2b/wAod/vXPLxH0GG+EjtNlcoCW0xYc2wNgf2Bo/2+1dcLNHyuLjKFZpnft5ZUeYdmMdGI64gD3edGrMyV3ojmNluhlP7I95VmUsb9CkHxmuBNj1qjLIdsXDvqtLOjVdSc5jmyG1AGuOUwbOluUzbXejWlwt7E1bH81UFFlAmqRJBfThjf6qhYXR1DUqC2w2rgpIcTL5EkdEAC8Bu4ec9aXIsS1acNPYg2OOwPKOKxfqA50gfbn4rS10UvZmry75ZUTgKjZl9QhjRoc2YXA6gCVS1jSLuziYsD7J1t1XXmz8TPJqaTYhbJOgHCbX4BQtCjdx7GWcS3NGuti7STxVJS1SuWUZWbtoMaBIzXH6835qz9CsbLW1xCwbtPPf8ARUptAZUY2BFzOp9kjd3JG5GZPZfUicG5hmuJnW5B3E/iOKu3daE6J3YsN/RVMsi3WR8n3JiF656RXcgGlCRpQETkBE5AMBUEkFQQUJInICLE4s8y6l/CCXj0S2I4XWUnrY9HDU0qUpljZh/djv8AesZLU93DO1NFgayDChSaJq0KdXxIXMSWy4npDU9YV1JtmEsLSo05ZFwZ3+AdDKf2R7yus+WR0ezqoWbJRl7W5OitV5zOabzAdDC8OgQHNIIgxEhRcmxv7H2K2gzLTbbVzjq48SVDZJZeIsoBXxL+iexSiGfOWKxtRlWrkeWjnX6dbz5lKNcqK/Pue9pe4uuLkzAlSErHoTxYHURbzfrzrzJO8meLU8VxHP4Dznt+KgoWfpXQDW95AE9jjv7VnkSlmZdVJdX1fC/1ZX5uJBsdL/rqjvWjdilhKdQ5SNxt3b/cquKuTmktmMcLcT1E9X67lf1I14EdS0iLHjBjSYParJ8iH6kMf2j2KSC4SvTPWIKmqAYUJGlARuQETkBC9QSRvMoCFyElerTmRxEe1ZyXeO2lVUaElxLlLDPYIAkCdbW61RwudtHpKnGCTI/pR4KOrZt/E6YrMVcE7iD5ipUGmUq9I05QaO1w23cOGMmq0ENFjIIudQug8JF+hynw7f5zPOUYN3Z/LHCnWtTnrcB71nYk06n7QsFTEc8wk8DPuUZSbmOeWuFcb12Sdwn3xdTYrcZi+U2GDb1WidJn4KRc8lGymVHPdlJDnuIIJuMxQnMy9gdgUolzN+9zvdKxrKf9JScptaM2HNI0j9fr2rg+e55soSTFkfru1/W9CpYpYYTE5RfpeN16DuVJSdtC0IxcrSdkNxuDLYuDM7zIvbMDoTrvSFTNcvWpZLa7kMW3dVhe5A7fzWm+pkaGEwrH08xDujOZ4cLyTAyHT8/NyzqTjOy47I7KNOlOneV1l3ZmOox1njx4/iupM4rBk7PMfgl1zH0FK9c9QjqhCSEoBpQEbkBG5AQvCgkhcgGPahJHSMPBOgM+ZQwaGJ2lLSBFxHnQixkFSWGlCBpUEgpA2FBAuVCRQpBK6uSA0mw0UMg1MFjCGhrRMDdx/wDKgho2aJOUTrvViBxcsp0Yy3Gg1rh2Tv1sQuSpQcdjmq0b+EmZUykbz1DQjhdYJXdnsclSEktB9fFF8E6zruubWhVUVHRbCUpzeao9Ss6mbAfDXirJriBxxJAG+N5EyOEJZMrZIjnX8T7o/VlJYbzw/r9itZldCReqeqBEoBhpKQNNFQSMOHUgT6HKgXE8HE70FwOyetBctbN5P867IXQTp3ahQSmVsZyddTeWONx7eBCJC5B4D60sLjKmwjuKmwuM8Au4hLC4vgB/EKLC4v8Aw8/iEsLgOTj+IU2IuKeTdTiEsTmHDk4d5SwuRu2B/cosLkuE2SWOnN3ILmo0KSAc1ARmmo3AAkLGpRUkRLVWHkzF9N3dC4JU5Q4HNOgI5+/f18P0VW3A55RcXqJWMgZTv4aXHn/NQkVbISb3GvHTcr7i4vPjgPRSzFzROAqfVVPQd8F610emAwFT6qp6Dvgl0TYd4Pq/Vv8AQd8EugINnVfq3+g74JdCwvg2p9W/0HfBLoiw4bPqfVv9B3wS6FhzcBU+rf6Dvgl0LEgwFT6t/oO+CXQsPp4Kq0ghjwQZByOsRpuS6JVzb2tQFek1+VzawF2c2+/ETHeFVaEvUwfB9T6t/oO+CtdFdRPoFT6t/oO+CXQsKNn1Pq3+g74JdE2JG7PqfVv9B3wS6Isx30Cp9W/0HfBLoWY9uCqfVv8AQd8EuhYeMJU+rf6Lvgl0LDXYKp9W/wBF3wS6JsV37PqfVv8AQd8EuLEDsBU+rqeg74JdCxGcDU+rqeg74JdEDfoVX6qp6Dvgl0TYacFV+qqeg74KLoWIzgK31VT0H/BLoajfoNb6qp/pv+Cq0nuTYkbgap/lVP8ATd8Fy1aHGJlUpZhtXZ9UC1Kp2ZHfDsXPllxRzSoSWyEGCqb6VX0H/BRllwMsjXBkfg+p9VU9Gp8qm0iMsuR9FruPYBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEAIAQAgBACAEB//2Q==)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;buy-domain-1:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Buy domain&lt;/h1&gt;
-
-&lt;p&gt;A few suggestion:
-1. &lt;a href=&#34;https://www.godaddy.com&#34;&gt;godaddy&lt;/a&gt;
-2. &lt;a href=&#34;http://aliyun.com&#34;&gt;aliyun&lt;/a&gt;
-3. &amp;hellip;..&lt;/p&gt;
-
-&lt;h1 id=&#34;setting-1:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Setting&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Adding a CNAME file to your repository:
-&lt;strong&gt;Notice&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;In the file name field, type CNAME &lt;code&gt;(with all caps!).&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;use &lt;code&gt;tintinsnowy.com&lt;/code&gt;, not &lt;code&gt;https://tintinsnowy.com&lt;/code&gt;. Note that there can only be &lt;code&gt;one domain&lt;/code&gt; in the CNAME file.
-(well you should type in your own CNAME, instead of &lt;code&gt;tintinsnowy&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Setting your account&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;CNAME&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;@&lt;/th&gt;
-&lt;th align=&#34;right&#34;&gt;tintinsnowy.github.io.&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;www&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;192.30.252.153&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;A&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;www&lt;/td&gt;
-&lt;td align=&#34;right&#34;&gt;192.30.252.154&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Don&amp;rsquo;t forget the &lt;code&gt;.&lt;/code&gt; after &lt;code&gt;tintinsnowy.github.io&lt;/code&gt;
-If you want to know why should be setting like this, see the references.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;waiting..&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;checkout&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; tintinsnowy.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Writen by Sherry&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;reference-1:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Reference:&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/&#34;&gt;Setting up a custom domain with GitHub Pages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/user-organization-and-project-pages/&#34;&gt;Github Pages Setting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/&#34;&gt;cnfeat.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.coderzh.com/2015/08/29/hugo/&#34;&gt;coderzh&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://quantumman.me/blog/setting-up-a-domain-with-gitHub-pages.html&#34;&gt;quantumman.me&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -429,10 +357,10 @@ If you want to know why should be setting like this, see the references.&lt;/p&g
     
     <item>
       <title>Go is for lovers</title>
-      <link>http://tintinsnowy.com/2015/12/20/go-is-for-lovers</link>
-      <pubDate>Sun, 20 Dec 2015 13:47:08 +0200</pubDate>
+      <link>http://tintinsnowy.com/2015/12/25/go-is-for-lovers</link>
+      <pubDate>Fri, 25 Dec 2015 13:47:08 +0200</pubDate>
       
-      <guid>http://tintinsnowy.com/2015/12/20/go-is-for-lovers</guid>
+      <guid>http://tintinsnowy.com/2015/12/25/go-is-for-lovers</guid>
       <description>
 
 &lt;p&gt;Hugo uses the excellent &lt;a href=&#34;http://golang.org/&amp;gt;&#34;&gt;go&lt;/a&gt; &lt;a href=&#34;http://golang.org/pkg/html/template/&amp;gt;&#34;&gt;html/template&lt;/a&gt; library for
@@ -775,10 +703,10 @@ so, such as in this example:&lt;/p&gt;
     
     <item>
       <title>Introducing Icarus and it&#39;s features</title>
-      <link>http://tintinsnowy.com/2015/10/10/introducing-icarus-and-its-features</link>
-      <pubDate>Sat, 10 Oct 2015 16:56:43 +0200</pubDate>
+      <link>http://tintinsnowy.com/2015/12/24/introducing-icarus-and-its-features</link>
+      <pubDate>Thu, 24 Dec 2015 16:56:43 +0200</pubDate>
       
-      <guid>http://tintinsnowy.com/2015/10/10/introducing-icarus-and-its-features</guid>
+      <guid>http://tintinsnowy.com/2015/12/24/introducing-icarus-and-its-features</guid>
       <description>
 
 &lt;p&gt;Icarus is a responsive and customizable theme for bloggers. It&amp;rsquo;s a port of the same-named theme for &lt;a href=&#34;//hexo.io&#34;&gt;Hexo&lt;/a&gt; made by &lt;a href=&#34;https://github.com/ppoffice&#34;&gt;Ruipeng Zhang&lt;/a&gt;. Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (l10n) support, syntax highlighting for source code, optional widgets for the sidebar and a handful &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34;&gt;shortcodes&lt;/a&gt; to make your life easier.&lt;/p&gt;
