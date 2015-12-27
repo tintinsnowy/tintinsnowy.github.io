@@ -17,79 +17,84 @@
       <guid>http://tintinsnowy.com/2015/12/26/setup-a-free-blog-based-on-hugo-and-github</guid>
       <description>
 
-&lt;h1 id=&#34;hello-github:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Hello &lt;code&gt;github!&lt;/code&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;hello-github:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Hello &lt;code&gt;GitHub!&lt;/code&gt;&lt;/h1&gt;
 
-&lt;p&gt;Github is more than a collaborative tool to make your software development more effective. In fact, it is more like a community where you share and contribute your code.&lt;/p&gt;
+&lt;p&gt;GitHub is more than a collaborative tool to make your software development more effective. In fact, it is more like a community where you share and contribute your code.&lt;/p&gt;
 
-&lt;p&gt;Since we want to build our own blog, so the whole &lt;code&gt;static web&lt;/code&gt; should be store in github. Now here we go. sign up in &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Since we want to build our own blog, so the whole &lt;code&gt;static websites&lt;/code&gt; should be stored in Github. Now here we go. sign up in &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Okay！ you are now  a member of github, enjoy your coding journey!&lt;/p&gt;
 
 &lt;h1 id=&#34;bravo-hugo:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Bravo！  &lt;code&gt;Hugo&lt;/code&gt;&lt;/h1&gt;
 
-&lt;p&gt;A Powerful and Fast Website Engine is Hugo， which is design for &lt;code&gt;go lovers&lt;/code&gt;！
+&lt;p&gt;A powerful and fast Website engine is Hugo， which is designed for &lt;code&gt;go lovers&lt;/code&gt;！
 &lt;code&gt;Hugo&lt;/code&gt; flexibly works with many formats and is ideal for blogs, docs, portfolios and much more. Hugo’s speed fosters creativity and makes building a website fun again.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;It helps you to build your blog, you don&amp;rsquo;t have to know the details of &lt;code&gt;css&lt;/code&gt; , &lt;code&gt;js&lt;/code&gt;,&lt;code&gt;MySQL&lt;/code&gt; etc. It saves you a lot of trouble, and you can concentrate more on your writing and coding.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;why-is-static-web:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;why is static web?&lt;/h2&gt;
 
-&lt;p&gt;Because&amp;hellip;.
-* Quick to develop
-* Cheap to develop
-* Cheap to host.
-Those are what we want for blogs!&lt;/p&gt;
+&lt;p&gt;Because&amp;hellip;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quick to develop&lt;/li&gt;
+&lt;li&gt;Cheap to develop&lt;/li&gt;
+&lt;li&gt;Cheap to host.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Those are what we want for blogs!&lt;/p&gt;
 
 &lt;h2 id=&#34;usage-of-hugo:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Usage of Hugo&lt;/h2&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Install Hugo&lt;/strong&gt;
-two chice&lt;/li&gt;
+&lt;p&gt;&lt;strong&gt;Install Hugo&lt;/strong&gt;&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;**New  blog&amp;rsquo;s framework **
-enter  your hugo path&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd hugo
-$ ls -la
+&lt;pre&gt;&lt;code&gt;* [Download](http://gohugo.io/)
+* decompression
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;now you can start your first website.  &lt;code&gt;sherry.io&lt;/code&gt; should be replaced by your website  name&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;New  blog&amp;rsquo;s framework&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ hugo new site sherry.io
+&lt;p&gt;enter  your hugo path&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ cd hugo
+    $ ls -la
+
+now you can setup your first website.  `tintinsnowy.github.io` should                 be replaced by your website  name
+
+    $hugo new site tintinsnowy.github.io
+
+If you find something wrong with your path, then use the  absolute path
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;If you find something wrong with your path, then use the  absolute path
-for example:&lt;/p&gt;
+&lt;p&gt;for example:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ home/sherry/code/hugo/hugo new site sherry.io
+&lt;pre&gt;&lt;code&gt;    $ home/sherry/code/hugo/hugo new site tintinsnowy.github.io
+
+    Then you can see the tree:
+
+      ▸ archetypes/
+      ▸ content/
+      ▸ layouts/
+      ▸ static/
+      config.toml
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Then you can see the tree:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The content of blog&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  ▸ archetypes/
-  ▸ content/
-  ▸ layouts/
-  ▸ static/
-  config.toml
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;p&gt;your articles should be store in the path of : &lt;code&gt;content/post&lt;/code&gt;. adll the articles are in  markdown format.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fill  content in blog&lt;/strong&gt;
-    your articles should be store in the path of : &lt;code&gt;content/post&lt;/code&gt;. adll the articles are in  markdown format.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    $ cd tintinsnowy.github.io
+    $ hugo new about.md
+    $ hugo new post/firstblog.md
 
-&lt;pre&gt;&lt;code&gt;$ cd sherry.io
-$ hugo new about.md
-$ hugo new post/firstblog.md
+  Then open the `firstblog.md` , you can see the automatically generated file
+
+    +++
+    date = &amp;quot;2015-12-26T08:36:54-07:00&amp;quot;
+    draft = true
+    title = &amp;quot;firstblog&amp;quot;
+    +++ 
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then open the &lt;code&gt;firstblog.md&lt;/code&gt; , you can see the automatically generated file&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+++
-date = &amp;quot;2015-12-26T08:36:54-07:00&amp;quot;
-draft = true
-title = &amp;quot;firstblog&amp;quot;
-+++ 
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;p&gt;Now you can add the content into your file:&lt;/p&gt;
 
@@ -105,32 +110,31 @@ title = &amp;quot;firstblog&amp;quot;
      3. ccc 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Find a joyful theme for your blog&lt;/strong&gt;
-There are a few &lt;a href=&#34;https://github.com/spf13/hugoThemes&#34;&gt;opensource-theme&lt;/a&gt; .
-Every theme has detailed description of usage, but &lt;code&gt;NOT all&lt;/code&gt; the configurations are the same. You should see the &lt;code&gt;Homepage&lt;/code&gt; of what you&amp;rsquo;ve chosen.
-For example,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Find a joyful theme for your blog&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ pwd
-&amp;gt;/home/sherry/code/hugo/sherry.io
-$ mkdir themes
-$ cd themes
-$ git clone https://github.com/spf13/hyde.git
+&lt;p&gt;There are a few &lt;a href=&#34;https://github.com/spf13/hugoThemes&#34;&gt;opensource-themes&lt;/a&gt;   Every theme has detailed description of usage, but &lt;code&gt;NOT all&lt;/code&gt; the configurations are the same. You should see the &lt;code&gt;Homepage&lt;/code&gt; of what you&amp;rsquo;ve chosen.
+   For example,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ pwd
+    &amp;gt;/home/sherry/code/hugo/tintinsnowy.github.io
+    $ mkdir themes
+    $ cd themes
+    $ git clone https://github.com/spf13/hyde.git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;now  you can see that the theme has been in your &lt;code&gt;themes/&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;now  you can see that the theme has been in your &lt;code&gt;themes/&lt;/code&gt;&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Set configuration of your theme&lt;/strong&gt;
-This step is extremely important, different theme has different ways of setting, so it&amp;rsquo;s your time to design. But before you do, you should read the homepage of your theme.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Set configuration of your theme&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This step is &lt;code&gt;extremely important&lt;/code&gt;   , different theme has different ways of setting, so it&amp;rsquo;s your time to design. But before you do, you should read the homepage of your theme.&lt;/p&gt;
 
 &lt;p&gt;Hugo can read your configuration as JSON, YAML or TOML. Hugo supp
 orts parameters custom configuration too. Refer to the &lt;code&gt;theme&lt;/code&gt; that you&amp;rsquo;ve chosen  for details.&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip;&amp;hellip;..
-  you can see how it looks like in localhost:(the &lt;code&gt;hugo-icarus&lt;/code&gt; is the name of theme, you need to change it), open &amp;ldquo;&lt;a href=&#34;http://localhost:1313/&amp;quot;&#34;&gt;http://localhost:1313/&amp;quot;&lt;/a&gt;&lt;/p&gt;
+  you can see how it looks like in localhost:(the &lt;code&gt;hugo-icarus&lt;/code&gt; is the name of theme, you need to change it), open &lt;code&gt;http://localhost:1313/&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; sherry@sherry:~/code/hugo/sherry.io$ sudo /home/sherry/code/hugo/hugo server --theme=hugo-icarus --buildDrafts --watch
+&lt;pre&gt;&lt;code&gt; sherry@sherry:~/code/hugo/tintinsnowy.github.io$ sudo /home/sherry/code/hugo/hugo server --theme=hugo-icarus --buildDrafts --watch
 1 of 1 draft rendered
 0 future content
 8 pages created
@@ -138,7 +142,7 @@ orts parameters custom configuration too. Refer to the &lt;code&gt;theme&lt;/cod
 6 tags created
 4 categories created
 in 103 ms
-Watching for changes in /home/sherry/code/hugo/sherry.io/{data,content,layouts,static,themes}
+Watching for changes in /home/sherry/code/hugo/tintinsnowy.github.io/{data,content,layouts,static,themes}
 Serving pages from memory
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
@@ -178,8 +182,9 @@ $ git commit -m &amp;quot;first commit&amp;quot;
 $ git push -u origin master
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;See your website&lt;/strong&gt;
-  In your github repository &lt;code&gt;setting&lt;/code&gt;, you can see this:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;See your website&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In your github repository &lt;code&gt;setting&lt;/code&gt;, you can see this:&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
