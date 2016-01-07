@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tech Tool on Sherry&#39;s blog</title>
-    <link>http://tintinsnowy.com/tags/tech-tool/</link>
-    <description>Recent content in Tech Tool on Sherry&#39;s blog</description>
+    <title>2016/01 on Sherry&#39;s blog</title>
+    <link>http://tintinsnowy.com/categories/2016/01/</link>
+    <description>Recent content in 2016/01 on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Jan 2016 20:16:48 +0800</lastBuildDate>
-    <atom:link href="http://tintinsnowy.com/tags/tech-tool/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://tintinsnowy.com/categories/2016/01/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Github contributions 故障处理</title>
@@ -126,94 +126,6 @@
 &lt;h1 id=&#34;版本选择:e10a32ac6acf2d9f94be1e2faf9dba83&#34;&gt;版本选择&lt;/h1&gt;
 
 &lt;p&gt;#&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>博客工具</title>
-      <link>http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7</link>
-      <pubDate>Sun, 27 Dec 2015 12:40:57 +0800</pubDate>
-      
-      <guid>http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7</guid>
-      <description>
-
-&lt;h1 id=&#34;楔子:4396d87bf52c8e0d9b74841cebec2d9e&#34;&gt;楔子&lt;/h1&gt;
-
-&lt;p&gt;喜欢写Blog的人，会经历三个阶段。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
-  第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-  第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;搭建自己的博客是有点折腾，但是会乐在其中。 考虑到技术文章会涉及到大量的英文单词，或者命令就用英文写。 概述类和心得篇就用中文。
-p.s.&lt;a href=&#34;http://blog.csdn.net/u011613321&#34;&gt;&lt;code&gt;旧csdn博客地址&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;所以针对新博客搭建有几个plan：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;初期：基本功能&lt;code&gt;分类&lt;/code&gt;， &lt;code&gt;标签&lt;/code&gt;，&lt;code&gt;联系方式&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;中期：&lt;code&gt;评论&lt;/code&gt;， &lt;code&gt;网站分析&lt;/code&gt;， &lt;code&gt;rss&lt;/code&gt;， &lt;code&gt;图片托管&lt;/code&gt;，&lt;code&gt;Gallery&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;长期：和顶级域名分离，blog分&lt;code&gt;En&lt;/code&gt; 和&lt;code&gt;Ch&lt;/code&gt;， 兴许还有&lt;code&gt;De&lt;/code&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;初期已经差不多完成了，继续折腾。&lt;/p&gt;
-
-&lt;h1 id=&#34;disqus-添加评论功能:4396d87bf52c8e0d9b74841cebec2d9e&#34;&gt;Disqus 添加评论功能&lt;/h1&gt;
-
-&lt;p&gt;在很久以前评论还是属于博客主的资源，在搬迁的过程中文章评论一个不能丢。数据存在网站数据中。 近年网络社交兴起博客主为了吸引访客互动会使用第三方网站托管评论。Disqus就是这样的第三方社会化评论平台，注册Disqus后你会发现：这根本就是个社交平台啊！    所以同志们在你的博客上评论后，你登陆Disqus 后台，会看见&lt;code&gt;评论&lt;/code&gt;， &lt;code&gt;推荐&lt;/code&gt;，&lt;code&gt;喜爱&lt;/code&gt; 等等。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;个人信息&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Profile: Full Name(昵称，任意取)&lt;/li&gt;
-&lt;li&gt;Avatar:头像支持本地上传，网络图像URL，所在网站的默认头像，Facebook头像，Twitter头像。当然，后两者需要绑定对应的社交帐号。&lt;/li&gt;
-&lt;li&gt;Serives:第三方帐号的管理界面，可进行绑定、解绑社交帐号，目前所支持的除了三大社交网络帐号，还有Yahoo! 已绑定的帐号名在Disqus评论系统上是公开的。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;账户&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Username： &lt;code&gt;唯一&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Email ： 邮箱进行验证。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;开始加入Disqus&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;点击&lt;a href=&#34;https://disqus.com/admin/create/&#34;&gt;注册&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;这里注册的&lt;code&gt;Site name&lt;/code&gt; 就是我们将要用到的&lt;code&gt;shortname&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;注册后你会得到一个 &lt;code&gt;sherrysblog.disqus.com/&lt;/code&gt;东西，其中&lt;code&gt;sherrysblog&lt;/code&gt;就是我的&lt;code&gt;shortname&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;在我的账户内&lt;code&gt;https://sherrysblog.disqus.com/admin/settings/general/&lt;/code&gt;
-可以进行个人网站的设置， 语言设置等。&lt;/li&gt;
-&lt;li&gt;done.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;有收费的可能&lt;/li&gt;
-&lt;li&gt;不支持国内社交账号&lt;/li&gt;
-&lt;li&gt;没有私信功能。&lt;/li&gt;
-&lt;li&gt;可能被墙&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;google-analytics-网站分析:4396d87bf52c8e0d9b74841cebec2d9e&#34;&gt;Google Analytics 网站分析&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn.mycommerce.com/images/mycommercecorner/thumbnails/Google_Analytics/GASample.jpg&#34; alt=&#34;google analytics&#34; /&gt;
- 这其实是个很强大的工具，但是想想挺可怕的。因为如果作为商业用户，会实时监控我们大众用户的行为，这就是所谓大数据%&amp;gt;_&amp;lt;%&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;注册 google analytics的账号&lt;/li&gt;
-&lt;li&gt;填写自己blog 的位置&lt;code&gt;tintinsnowy.com&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;将Tracing code 粘贴到自己&lt;code&gt;config.toml&lt;/code&gt;中。&lt;/li&gt;
-&lt;li&gt;通过google analytics 后台账号查看用户访问情况。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&amp;mdash;&amp;ndash;&lt;strong&gt;TBC&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;writen by Sherry&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

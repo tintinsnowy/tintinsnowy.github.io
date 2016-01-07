@@ -6,8 +6,30 @@
     <description>Recent content in Tech Framework on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Dec 2015 22:54:05 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Jan 2016 18:51:41 +0800</lastBuildDate>
     <atom:link href="http://tintinsnowy.com/tags/tech-framework/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Apache Spark安装和环境配置</title>
+      <link>http://tintinsnowy.com/2016/01/07/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</link>
+      <pubDate>Thu, 07 Jan 2016 18:51:41 +0800</pubDate>
+      
+      <guid>http://tintinsnowy.com/2016/01/07/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</guid>
+      <description>
+
+&lt;h1 id=&#34;安装方式:e10a32ac6acf2d9f94be1e2faf9dba83&#34;&gt;安装方式&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;源码编译&lt;/p&gt;
+
+&lt;p&gt;需要从github&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;版本选择:e10a32ac6acf2d9f94be1e2faf9dba83&#34;&gt;版本选择&lt;/h1&gt;
+
+&lt;p&gt;#&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Apache Spark-初识</title>
