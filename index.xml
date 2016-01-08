@@ -6,20 +6,20 @@
     <description>Recent content on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2016 08:51:41 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2016 10:36:16 +0800</lastBuildDate>
     <atom:link href="http://tintinsnowy.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Apache Spark安装和环境配置</title>
       <link>http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</link>
-      <pubDate>Fri, 08 Jan 2016 08:51:41 +0800</pubDate>
+      <pubDate>Fri, 08 Jan 2016 10:36:16 +0800</pubDate>
       
       <guid>http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</guid>
       <description>
 
 &lt;p&gt;#楔子&lt;/p&gt;
 
-&lt;h2 id=&#34;the-desiderata-part-2:0bc69a2fc6a03f4597fc126839ebad62&#34;&gt;The Desiderata (part 2)&lt;/h2&gt;
+&lt;h2 id=&#34;the-desiderata-part-2:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;The Desiderata (part 2)&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;by Max Ehrmann, 1927&lt;/em&gt;&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 
 &lt;p&gt;&amp;ndash;TBC&lt;/p&gt;
 
-&lt;h1 id=&#34;安装方式:0bc69a2fc6a03f4597fc126839ebad62&#34;&gt;安装方式&lt;/h1&gt;
+&lt;h1 id=&#34;安装方式:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;安装方式&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;源码编译&lt;/p&gt;
@@ -64,7 +64,7 @@
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;环境构建:0bc69a2fc6a03f4597fc126839ebad62&#34;&gt;环境构建&lt;/h1&gt;
+&lt;h1 id=&#34;环境构建:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;环境构建&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;spark 支持多个版本的Hadoop， 无论是 Apache Hadoop 还是Cloudera 的CDH， Hartonworks的。 你用什么版本的hadoop所以问题不大&lt;/p&gt;&lt;/li&gt;
@@ -74,7 +74,7 @@
 &lt;li&gt;&lt;p&gt;Spark runs on Java 7+, Python 2.6+ and R 3.1+.  Spark 1.6.0 uses Scala 2.10. 所以Scala 配置 2.10.×版本的。&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;编译工具安装-sbt:0bc69a2fc6a03f4597fc126839ebad62&#34;&gt;编译工具安装 - sbt&lt;/h1&gt;
+&lt;h1 id=&#34;编译工具安装-sbt:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;编译工具安装 - sbt&lt;/h1&gt;
 
 &lt;p&gt;spark 官网上推荐 maven或者sbt 进行编译scala文件。 我个人推荐用sbt，轻便简单。但是容易在安装时遇到问题（gfw）。 sbt 在之后 运行spark工程时也需要，编译打包放在spark submit 上运行。&lt;/p&gt;
 
@@ -88,7 +88,7 @@
 &lt;li&gt;运行安装包&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;创建工程:0bc69a2fc6a03f4597fc126839ebad62&#34;&gt;创建工程：&lt;/h1&gt;
+&lt;h1 id=&#34;创建工程:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;创建工程：&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;新建工程文件夹&lt;/strong&gt;&lt;/p&gt;
@@ -153,7 +153,7 @@ libraryDependencies += &amp;quot;org.apache.spark&amp;quot; %% &amp;quot;spark-c
 
 &lt;p&gt;&lt;code&gt;**注意**&lt;/code&gt;： 略坑的是， 需要将调用的包手动加入  &amp;ndash; packages  ****&lt;/p&gt;
 
-&lt;h1 id=&#34;reference:0bc69a2fc6a03f4597fc126839ebad62&#34;&gt;reference&lt;/h1&gt;
+&lt;h1 id=&#34;reference:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;reference&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://blog.csdn.net/u011613321/article/details/47700211&#34;&gt;我的csdn博客&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
