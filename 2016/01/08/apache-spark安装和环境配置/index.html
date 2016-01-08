@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Tech Framework &middot; Sherry&#39;s blog</title>
+    <title>Apache Spark安装和环境配置 &middot; Sherry&#39;s blog</title>
     <meta name="generator" content="Hugo 0.15" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Sherry Yang">
     <meta name="description" content="I am sherry, welcome!">
-    
-      <link href="http://tintinsnowy.com/tags/tech-framework/index.xml" rel="alternate" type="application/rss+xml" title="Sherry&#39;s blog" />
-      <link href="http://tintinsnowy.com/tags/tech-framework/index.xml" rel="feed" type="application/rss+xml" title="Sherry&#39;s blog" />
     
     <link rel="icon" href="http://tintinsnowy.com/favicon.ico">
     <link rel="apple-touch-icon" href="http://tintinsnowy.com//apple-touch-icon.png" />
@@ -17,10 +14,10 @@
     <link rel="stylesheet" href="http://tintinsnowy.com/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://tintinsnowy.com/css/monokai.css">
     <link rel="stylesheet" href="http://tintinsnowy.com/fancybox/jquery.fancybox.css">
-    <meta property="og:title" content="Tech Framework" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://tintinsnowy.com/tags/tech-framework/" />
+    <meta property="og:title" content="Apache Spark安装和环境配置" />
+<meta property="og:description" content="#楔子 The Desiderata (part 2) by Max Ehrmann, 1927 If you compare yourself with others, you may become vain or bitter; for always there will be greater and lesser persons than yourself. Enjoy your achievements as well as your plans. Keep interested in your own career, however humble; it is a real possession in the changing fortunes of time. &ndash;TBC 安装方式 源码编译 需要从github上clone下来， 通过maven 或者 sbt 进行编译。读者可以到官网 上进行下载。 如果需要自己编译，那么需要配置环境（见下）， 然后通过 sbt 进行编译（见下）。当然如果觉得太麻烦可以直接下载预编译的版本。 预编译的版本 Prebuilt 版本就方便多了spark-1.6.0-bin-hadoop2.6.tgz 下载到制定位置 解压 运行shell cd spark/bin ./spark-shell 在shell脚本中可以看到很多信息，openjdk版本， scala版本等等。 同时可以通过web 的UI界面访问：http://localhost:4040/jobs/ 环境构建 spark 支持多个版本的Hadoop， 无论是 Apache Hadoop 还是Cloudera 的CDH， Hartonworks的。 你用什么版本的hadoop所以问题不大 Spark runs on both Windows and UNIX-like systems (e.g." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" />
 
 
 <meta property="og:updated_time" content="2016-01-08T08:51:41&#43;08:00"/>
@@ -33,17 +30,36 @@
 
 
 
-    
-    
-<meta itemprop="name" content="Tech Framework">
-<meta itemprop="description" content="">
-
 
     
+    
+<meta itemprop="name" content="Apache Spark安装和环境配置">
+<meta itemprop="description" content="#楔子 The Desiderata (part 2) by Max Ehrmann, 1927 If you compare yourself with others, you may become vain or bitter; for always there will be greater and lesser persons than yourself. Enjoy your achievements as well as your plans. Keep interested in your own career, however humble; it is a real possession in the changing fortunes of time. &ndash;TBC 安装方式 源码编译 需要从github上clone下来， 通过maven 或者 sbt 进行编译。读者可以到官网 上进行下载。 如果需要自己编译，那么需要配置环境（见下）， 然后通过 sbt 进行编译（见下）。当然如果觉得太麻烦可以直接下载预编译的版本。 预编译的版本 Prebuilt 版本就方便多了spark-1.6.0-bin-hadoop2.6.tgz 下载到制定位置 解压 运行shell cd spark/bin ./spark-shell 在shell脚本中可以看到很多信息，openjdk版本， scala版本等等。 同时可以通过web 的UI界面访问：http://localhost:4040/jobs/ 环境构建 spark 支持多个版本的Hadoop， 无论是 Apache Hadoop 还是Cloudera 的CDH， Hartonworks的。 你用什么版本的hadoop所以问题不大 Spark runs on both Windows and UNIX-like systems (e.g.">
+
+
+<meta itemprop="dateModified" content="2016-01-08T08:51:41&#43;08:00" />
+<meta itemprop="wordCount" content="234">
+
+
+
+<meta itemprop="keywords" content="2015/12,2016/01,hugo,tech-errors,tech-framework,tech-lang,tech-tool,tech-web,读书," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Apache Spark安装和环境配置"/>
+<meta name="twitter:description" content="#楔子 The Desiderata (part 2) by Max Ehrmann, 1927 If you compare yourself with others, you may become vain or bitter; for always there will be greater and lesser persons than yourself. Enjoy your achievements as well as your plans. Keep interested in your own career, however humble; it is a real possession in the changing fortunes of time. &ndash;TBC 安装方式 源码编译 需要从github上clone下来， 通过maven 或者 sbt 进行编译。读者可以到官网 上进行下载。 如果需要自己编译，那么需要配置环境（见下）， 然后通过 sbt 进行编译（见下）。当然如果觉得太麻烦可以直接下载预编译的版本。 预编译的版本 Prebuilt 版本就方便多了spark-1.6.0-bin-hadoop2.6.tgz 下载到制定位置 解压 运行shell cd spark/bin ./spark-shell 在shell脚本中可以看到很多信息，openjdk版本， scala版本等等。 同时可以通过web 的UI界面访问：http://localhost:4040/jobs/ 环境构建 spark 支持多个版本的Hadoop， 无论是 Apache Hadoop 还是Cloudera 的CDH， Hartonworks的。 你用什么版本的hadoop所以问题不大 Spark runs on both Windows and UNIX-like systems (e.g."/>
+
+
+
 </head>
 <body>
 <div class="container">
- <header id="header">
+
+<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="http://tintinsnowy.com/" id="logo"><i class="logo" style="background-image: url('http://tintinsnowy.com/css/images/logo.png')"></i><span class="site-title">Sherry&#39;s blog</span></a>
@@ -128,8 +144,8 @@
 
 
 <div id="container">
-    <div class="outer">
-        <aside id="profile">
+   <div class="outer">
+    <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       <img id="avatar" src="http://tintinsnowy.com/css/images/avatar.png">
@@ -209,73 +225,250 @@
 
 
 
-          <td><a href="http://tintinsnowy.com/tags/tech-framework/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
     </div>
   </div>
 </aside>
 
-        <section id="main">
-            <section class="archives-wrap">
-                <div class="archive-category-wrap">
-                    <span class="archive-category">Tech Framework</span>
-                </div>
-                <div class="archives">
-                    
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        
-        <div class="archive-article-thumbnail">
-            <a href="http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" class="thumbnail">
-                <span style="background-image:url(http://tintinsnowy.com/)" alt="Apache Spark安装和环境配置" class="thumbnail-image"></span>
-            </a>
-        </div>
-        
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-                <a class="archive-article-title" href="http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">Apache Spark安装和环境配置</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2016-01-08 08:51:41 &#43;0800 CST" itemprop="datePublished">2016-01-08</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-                    
-                        <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        
-        <div class="archive-article-thumbnail">
-            <a href="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86" class="thumbnail">
-                <span style="background-image:url(http://tintinsnowy.com/)" alt="Apache Spark-初识" class="thumbnail-image"></span>
-            </a>
-        </div>
-        
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-                <a class="archive-article-title" href="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86">Apache Spark-初识</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2015-12-29 22:54:05 &#43;0800 CST" itemprop="datePublished">2015-12-29</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-                    
-                </div>
-            </section>
-            <nav id="page-nav">
+    <section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
 
+            <header class="article-header">
+    <a href="http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">
+    <h1 class="article-title" itemprop="name">
+        Apache Spark安装和环境配置
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2016-01-08 08:51:41 &#43;0800 CST" itemprop="datePublished">2016-01-08</time>
+            &middot;
+            234
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        <div class="article-category">
+            
+            <i class="fa fa-folder"></i>
+            <a class="article-category-link" href="http://tintinsnowy.com/categories/2016/01">2016/01</a>
+            
+        </div>
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<p>#楔子</p>
+
+<h2 id="the-desiderata-part-2:ef77b7f3d87688388095627ab33492ec">The Desiderata (part 2)</h2>
+
+<p><em>by Max Ehrmann, 1927</em></p>
+
+<p>If you compare yourself with others,</p>
+
+<p>you may become vain or bitter;</p>
+
+<p>for always there will be greater and lesser persons than yourself.</p>
+
+<p>Enjoy your achievements as well as your plans.</p>
+
+<p>Keep interested in your own career, however humble;</p>
+
+<p>it is a real possession in the changing fortunes of time.</p>
+
+<p>&ndash;TBC</p>
+
+<h1 id="安装方式:ef77b7f3d87688388095627ab33492ec">安装方式</h1>
+
+<ul>
+<li><p>源码编译</p>
+
+<p>需要从github上clone下来， 通过maven 或者 sbt 进行编译。读者可以到<a href="http://spark.apache.org/docs/latest/">官网</a> 上进行下载。</p>
+
+<p>如果需要自己编译，那么需要配置环境（见下）， 然后通过 sbt 进行编译（见下）。当然如果觉得太麻烦可以直接下载<code>预编译的版本</code>。</p></li>
+
+<li><p>预编译的版本</p>
+
+<p>Prebuilt 版本就方便多了<a href="http://www.apache.org/dyn/closer.lua/spark/spark-1.6.0/spark-1.6.0-bin-hadoop2.6.tgz">spark-1.6.0-bin-hadoop2.6.tgz</a></p>
+
+<ol>
+<li><p>下载到制定位置</p></li>
+
+<li><p>解压</p></li>
+
+<li><p>运行shell</p>
+
+<p>cd spark/bin
+   ./spark-shell</p></li>
+
+<li><p>在shell脚本中可以看到很多信息，openjdk版本， scala版本等等。 同时可以通过web 的UI界面访问：<a href="http://localhost:4040/jobs/">http://localhost:4040/jobs/</a></p></li>
+</ol></li>
+</ul>
+
+<h1 id="环境构建:ef77b7f3d87688388095627ab33492ec">环境构建</h1>
+
+<ol>
+<li><p>spark 支持多个版本的Hadoop， 无论是 Apache Hadoop 还是Cloudera 的CDH， Hartonworks的。 你用什么版本的hadoop所以问题不大</p></li>
+
+<li><p>Spark runs on both Windows and UNIX-like systems (e.g. Linux, Mac OS). 所以window 就不行了，支持Unix家族的机器 Mac， Linux（Ubuntu， Redhat， Centos等）.</p></li>
+
+<li><p>Spark runs on Java 7+, Python 2.6+ and R 3.1+.  Spark 1.6.0 uses Scala 2.10. 所以Scala 配置 2.10.×版本的。</p></li>
+</ol>
+
+<h1 id="编译工具安装-sbt:ef77b7f3d87688388095627ab33492ec">编译工具安装 - sbt</h1>
+
+<p>spark 官网上推荐 maven或者sbt 进行编译scala文件。 我个人推荐用sbt，轻便简单。但是容易在安装时遇到问题（gfw）。 sbt 在之后 运行spark工程时也需要，编译打包放在spark submit 上运行。</p>
+
+<ul>
+<li>官网下载地址</li>
+</ul>
+
+<p><code>http://www.scala-sbt.org/</code></p>
+
+<ul>
+<li>运行安装包</li>
+</ul>
+
+<h1 id="创建工程:ef77b7f3d87688388095627ab33492ec">创建工程：</h1>
+
+<ol>
+<li><p><strong>新建工程文件夹</strong></p>
+
+<p>比如现在的工程名为“sparksample”。那么</p>
+
+<pre><code>cd sparksample
+mkdir project
+mkdir src/main/scala
+</code></pre>
+
+<p>一般的工程文件结构如下：</p>
+
+<ul>
+<li><p>project – 工程定义文件</p></li>
+
+<li><p>project/build/.scala – 主要的工程定义文件</p></li>
+
+<li><p>project/build.properties – 工程，sbt以及scala版本定义</p></li>
+
+<li><p>src/main – 你的应用代码放在这里，不同的子目录名称表示不同的编程语言（例如，src/main/scala,src/main/java)</p></li>
+
+<li><p>src/main/resources – 你想添加到jar包里的静态文件（例如日志配置文件）</p></li>
+
+<li><p>lib_managed – 你的工程所依赖的jar文件。会在sbt更新的时候添加到该目录</p></li>
+
+<li><p>target – 最终生成的文件存放的目录（例如，生成的thrift代码，class文件，jar文件）</p></li>
+</ul></li>
+
+<li><p><strong>编写build.sbt文件</strong></p>
+
+<pre><code>name := &quot;SparkSample&quot;
+version := &quot;1.0&quot;
+scalaVersion := &quot;2.10.3&quot;
+libraryDependencies += &quot;org.apache.spark&quot; %% &quot;spark-core&quot; % &quot;1.1.1&quot;
+</code></pre>
+
+<p><em>这里需要注意使用的版本，scala 和spark streaming的版本是否匹配等等。</em></p>
+
+<p>查看地址：
+<a href="http://mvnrepository.com/artifact/org.apache.spark/spark-streaming_2.10/1.4.1">http://mvnrepository.com/artifact/org.apache.spark/spark-streaming_2.10/1.4.1</a></p></li>
+
+<li><p><strong>构建jar 包</strong></p>
+
+<p>在project的文件目录下（e.g. &ldquo;sparksample&rdquo;）</p>
+
+<pre><code>sbt package
+</code></pre></li>
+
+<li><p><strong>提交到spark submit</strong>：</p>
+
+<pre><code>cd /opt/spark-verisonnuber/bin/
+
+
+./spark-submit --class &quot;org.apache.spark.examples.streaming.sparksample&quot; --packages org.apache.spark:spark-streaming-kafka_2.10:1.4.1 --master local[2]  /home/sherry/sparksample/target/scala-2.10/sparksample-1.0.jar 10.81.52.88:9092 tintin  
+</code></pre></li>
+</ol>
+
+<p>具体怎么写参数，请看官方：</p>
+
+<p><a href="http://spark.apache.org/docs/latest/submitting-applications.html#submitting-applications">http://spark.apache.org/docs/latest/submitting-applications.html#submitting-applications</a></p>
+
+<p><code>**注意**</code>： 略坑的是， 需要将调用的包手动加入  &ndash; packages  ****</p>
+
+<h1 id="reference:ef77b7f3d87688388095627ab33492ec">reference</h1>
+
+<ol>
+<li><p><a href="http://blog.csdn.net/u011613321/article/details/47700211">我的csdn博客</a></p></li>
+
+<li><p><a href="http://article.yeeyan.org/view/433044/378604">工具安装 </a></p></li>
+
+<li><p><a href="http://www.tuicool.com/articles/AJnIvq">http://www.tuicool.com/articles/AJnIvq</a></p></li>
+
+<li><p><a href="http://www.scala-sbt.org/release/docs/index.html">http://www.scala-sbt.org/release/docs/index.html</a></p></li>
+
+<li><p><a href="http://www.supergloo.com/fieldnotes/apache-spark-cluster-part-2-deploy-a-scala-program-to-spark-cluster/">http://www.supergloo.com/fieldnotes/apache-spark-cluster-part-2-deploy-a-scala-program-to-spark-cluster/</a></p></li>
+</ol>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" data-id="ef77b7f3d87688388095627ab33492ec" class="article-share-link">
+        Share
+    </a>
+    
+    <a href="http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://tintinsnowy.com/2016/01/07/github-contributions-%E6%95%85%E9%9A%9C%E5%A4%84%E7%90%86" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Github contributions 故障处理</div>
+    </a>
+    
+
+    
 </nav>
 
-        </section>
-        <aside id="sidebar">
+
+    </article>
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sherrysblog';
+    var disqus_identifier = 'http:\/\/tintinsnowy.com\/2016\/01\/08\/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE';
+    var disqus_title = 'Apache Spark安装和环境配置';
+    var disqus_url = 'http:\/\/tintinsnowy.com\/2016\/01\/08\/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+
+</section>
+
+    <aside id="sidebar">
     
 <div class="widget-wrap">
     <h3 class="widget-title">
@@ -321,8 +514,8 @@
             <li>
                 
                 <div class="item-thumbnail">
-                    <a href="http://tintinsnowy.com/tags/tech-framework/" class="thumbnail">
-                        <span style="background-image:url(http://tintinsnowy.com/banners/berlin%20library.jpg)" alt="Tech Framework" class="thumbnail-image"></span>
+                    <a href="http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" class="thumbnail">
+                        <span style="background-image:url(http://tintinsnowy.com/banners/berlin%20library.jpg)" alt="Apache Spark安装和环境配置" class="thumbnail-image"></span>
                     </a>
                 </div>
                 
@@ -361,8 +554,8 @@
             <li>
                 
                 <div class="item-thumbnail">
-                    <a href="http://tintinsnowy.com/tags/tech-framework/" class="thumbnail">
-                        <span style="background-image:url(http://tintinsnowy.com/banners/20151227.jpg)" alt="Tech Framework" class="thumbnail-image"></span>
+                    <a href="http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" class="thumbnail">
+                        <span style="background-image:url(http://tintinsnowy.com/banners/20151227.jpg)" alt="Apache Spark安装和环境配置" class="thumbnail-image"></span>
                     </a>
                 </div>
                 
@@ -508,7 +701,7 @@
     <div id="toTop" class="fa fa-chevron-up"></div>
 </aside>
 
-    </div>
+</div>
 </div>
 
 <footer id="footer">
