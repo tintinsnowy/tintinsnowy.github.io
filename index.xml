@@ -6,8 +6,120 @@
     <description>Recent content on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2016 10:36:16 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2016 11:23:55 +0800</lastBuildDate>
     <atom:link href="http://tintinsnowy.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>翻墙神器 lantern</title>
+      <link>http://tintinsnowy.com/2016/01/08/%E7%BF%BB%E5%A2%99%E7%A5%9E%E5%99%A8-lantern</link>
+      <pubDate>Fri, 08 Jan 2016 11:23:55 +0800</pubDate>
+      
+      <guid>http://tintinsnowy.com/2016/01/08/%E7%BF%BB%E5%A2%99%E7%A5%9E%E5%99%A8-lantern</guid>
+      <description>
+
+&lt;h1 id=&#34;楔子:653b18e85980fea4c791a575ea548276&#34;&gt;楔子&lt;/h1&gt;
+
+&lt;h2 id=&#34;the-desiderata-part-3:653b18e85980fea4c791a575ea548276&#34;&gt;The Desiderata (part 3)&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;by Max Ehrmann, 1927&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Exercise caution in your business affairs,&lt;/p&gt;
+
+&lt;p&gt;for the world is full of trickery.&lt;/p&gt;
+
+&lt;p&gt;But let not this blind you to what virtue there is;&lt;/p&gt;
+
+&lt;p&gt;many persons strive for high ideals,&lt;/p&gt;
+
+&lt;p&gt;and everywhere life is full of heroism.&lt;/p&gt;
+
+&lt;p&gt;Be yourself. Especially do not feign affection.&lt;/p&gt;
+
+&lt;p&gt;Neither be cynical about love;&lt;/p&gt;
+
+&lt;p&gt;for in the face of all aridity and&lt;/p&gt;
+
+&lt;p&gt;disenchantment it is as perennial as the grass.&lt;/p&gt;
+
+&lt;p&gt;Take kindly the counsel of the years,&lt;/p&gt;
+
+&lt;p&gt;gracefully surrendering the things of youth.&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash;TBC&lt;/p&gt;
+
+&lt;h1 id=&#34;资源:653b18e85980fea4c791a575ea548276&#34;&gt;资源&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Windows版       &lt;a href=&#34;http://pan.baidu.com/s/1hrgqgGc&#34;&gt;2016-1-5更新&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mac版           &lt;a href=&#34;http://pan.baidu.com/s/1bpVRQY&#34;&gt;2016-1-5更新&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Android版       &lt;a href=&#34;http://pan.baidu.com/s/1i4vhrTzs&#34;&gt;2016-1-5更新&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Linux版         &lt;a href=&#34;http://pan.baidu.com/s/1eRnLLJG&#34;&gt;2016-1-5更新&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;ubuntu:653b18e85980fea4c791a575ea548276&#34;&gt;Ubuntu&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;dpkg -i lantern-installer-beta-64-bit.deb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装完毕后&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lantern 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;不要关闭terminal， 在浏览器可以打开了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.iyaxi.com/wp-content/uploads/2015/11/20151117231654.jpg&#34; alt=&#34;lokk&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;p-s-deb文件的安装方法:653b18e85980fea4c791a575ea548276&#34;&gt;p.s.deb文件的安装方法&lt;/h1&gt;
+
+&lt;p&gt;以下是一些 Dpkg 的普通用法：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;dpkg -i &lt;package.deb&gt;
+安装一个 Debian 软件包，如你手动下载的文件。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;dpkg -c &lt;package.deb&gt;
+列出 &lt;package.deb&gt; 的内容。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;dpkg -I &lt;package.deb&gt;
+从 &lt;package.deb&gt; 中提取包裹信息。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;dpkg -r &lt;package&gt;
+移除一个已安装的包裹。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;dpkg -P &lt;package&gt;
+完全清除一个已安装的包裹。和 remove 不同的是，remove 只是删掉数据和可执行文件，purge 另外还删除所有的配制文件。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;dpkg -L &lt;package&gt;
+列出 &lt;package&gt; 安装的所有文件清单。同时请看 dpkg -c 来检查一个 .deb 文件的内容。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;dpkg -s &lt;package&gt;
+显示已安装包裹的信息。同时请看 apt-cache 显示 Debian 存档中的包裹信息，以及 dpkg -I 来显示从一个 .deb 文件中提取的包裹信息。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;dpkg-reconfigure &lt;package&gt;
+重新配制一个已经安装的包裹，如果它使用的是 debconf (debconf 为包裹安装提供了一个统一的配制界面)。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;reference:653b18e85980fea4c791a575ea548276&#34;&gt;Reference&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.iyaxi.com/2015-11-17/732.html&#34;&gt;http://www.iyaxi.com/2015-11-17/732.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/kevinhg/article/details/5934462&#34;&gt;ubuntu 中安装deb&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>lantern</title>
+      <link>http://tintinsnowy.com/2016/01/08/lantern</link>
+      <pubDate>Fri, 08 Jan 2016 11:23:20 +0800</pubDate>
+      
+      <guid>http://tintinsnowy.com/2016/01/08/lantern</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Apache Spark安装和环境配置</title>
