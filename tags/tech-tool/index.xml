@@ -17,12 +17,39 @@
       <guid>http://tintinsnowy.com/2016/01/12/ubuntu-%E4%B8%8B%E5%A5%BD%E7%94%A8%E7%9A%84pdf%E9%A2%84%E8%A7%88%E5%99%A8-okular</guid>
       <description>
 
-&lt;h1 id=&#34;ubuntu-下好用的pdf预览器:e51f4326ef99271429324eb5b74cb903&#34;&gt;Ubuntu 下好用的pdf预览器&lt;/h1&gt;
+&lt;h1 id=&#34;楔子:e51f4326ef99271429324eb5b74cb903&#34;&gt;楔子&lt;/h1&gt;
 
-&lt;p&gt;是的，这比Adobe PDF自己的预览器还好用，
-&lt;a href=&#34;https://okular.kde.org/&#34;&gt;官方网站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-desiderata-part-4:e51f4326ef99271429324eb5b74cb903&#34;&gt;The Desiderata (part 4)&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://img5.imgtn.bdimg.com/it/u=2726266437,82510556&amp;amp;fm=15&amp;amp;gp=0.jpg&#34; alt=&#34;样图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Max Ehrmann, 1927&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Nurture strength of spirit to shield you in sudden misfortune.&lt;/p&gt;
+
+&lt;p&gt;But do not distress yourself with dark imaginings.&lt;/p&gt;
+
+&lt;p&gt;Many fears are born of fatigue and loneliness.&lt;/p&gt;
+
+&lt;p&gt;Beyond a wholesome discipline,&lt;/p&gt;
+
+&lt;p&gt;be gentle with yourself.&lt;/p&gt;
+
+&lt;p&gt;You are a child of the universe,&lt;/p&gt;
+
+&lt;p&gt;no less than the trees and the stars;&lt;/p&gt;
+
+&lt;p&gt;you have a right to be here.&lt;/p&gt;
+
+&lt;p&gt;And whether or not it is clear to you,&lt;/p&gt;
+
+&lt;p&gt;no doubt the universe is unfolding as it should.&lt;/p&gt;
+
+&lt;p&gt;-TBC&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;是的，这okular比Adobe PDF自己的预览器还好用，&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://okular.kde.org/&#34;&gt;官方网站&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;     sudo apt-get install okular
 &lt;/code&gt;&lt;/pre&gt;
