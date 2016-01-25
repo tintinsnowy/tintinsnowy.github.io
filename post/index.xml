@@ -6,8 +6,30 @@
     <description>Recent content in Posts on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2016 11:23:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2016 22:17:20 +0800</lastBuildDate>
     <atom:link href="http://tintinsnowy.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ubuntu 下好用的pdf预览器-okular</title>
+      <link>http://tintinsnowy.com/2016/01/12/ubuntu-%E4%B8%8B%E5%A5%BD%E7%94%A8%E7%9A%84pdf%E9%A2%84%E8%A7%88%E5%99%A8-okular</link>
+      <pubDate>Tue, 12 Jan 2016 22:17:20 +0800</pubDate>
+      
+      <guid>http://tintinsnowy.com/2016/01/12/ubuntu-%E4%B8%8B%E5%A5%BD%E7%94%A8%E7%9A%84pdf%E9%A2%84%E8%A7%88%E5%99%A8-okular</guid>
+      <description>
+
+&lt;h1 id=&#34;ubuntu-下好用的pdf预览器:e51f4326ef99271429324eb5b74cb903&#34;&gt;Ubuntu 下好用的pdf预览器&lt;/h1&gt;
+
+&lt;p&gt;是的，这比Adobe PDF自己的预览器还好用，
+&lt;a href=&#34;https://okular.kde.org/&#34;&gt;官方网站&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://img5.imgtn.bdimg.com/it/u=2726266437,82510556&amp;amp;fm=15&amp;amp;gp=0.jpg&#34; alt=&#34;样图&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;     sudo apt-get install okular
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完成！有了好工具才能好工作～酱O(∩_∩)O&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>翻墙神器 lantern</title>
@@ -120,7 +142,7 @@
       <guid>http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</guid>
       <description>
 
-&lt;p&gt;#楔子&lt;/p&gt;
+&lt;h1 id=&#34;楔子:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;楔子&lt;/h1&gt;
 
 &lt;h2 id=&#34;the-desiderata-part-2:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;The Desiderata (part 2)&lt;/h2&gt;
 
@@ -160,8 +182,9 @@
 
 &lt;li&gt;&lt;p&gt;运行shell&lt;/p&gt;
 
-&lt;p&gt;cd spark/bin
-   ./spark-shell&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;cd spark/bin&lt;/p&gt;
+
+&lt;p&gt;./spark-shell&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;在shell脚本中可以看到很多信息，openjdk版本， scala版本等等。 同时可以通过web 的UI界面访问：&lt;a href=&#34;http://localhost:4040/jobs/&#34;&gt;http://localhost:4040/jobs/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
