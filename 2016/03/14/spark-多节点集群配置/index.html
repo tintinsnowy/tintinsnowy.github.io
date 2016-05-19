@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>博客工具 &middot; Sherry&#39;s blog</title>
+    <title>Spark-多节点集群配置 &middot; Sherry&#39;s blog</title>
     <meta name="generator" content="Hugo 0.15" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="http://tintinsnowy.com/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://tintinsnowy.com/css/monokai.css">
     <link rel="stylesheet" href="http://tintinsnowy.com/fancybox/jquery.fancybox.css">
-    <meta property="og:title" content="博客工具" />
-<meta property="og:description" content="楔子 喜欢写Blog的人，会经历三个阶段。 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。 第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。 第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。 搭建自己的博客是有点折腾，但是会乐在其中。 考虑到技术文章会涉及到大量的英文单词，或者命令就用英文写。 概述类和心得篇就用中文。 p.s.旧csdn博客地址 所以针对新博客搭建有几个plan： 初期：基本功能分类， 标签，联系方式 中期：评论， 网站分析， rss， 图片托管，Gallery 长期：和顶级域名分离，blog分En 和Ch， 兴许还有De。 初期已经差不多完成了，继续折腾。 Disqus 添加评论功能 在很久以前评论还是属于博客主的资源，在搬迁的过程中文章评论一个不能丢。数据存在网站数据中。 近年网络社交兴起博客主为了吸引访客互动会使用第三方网站托管评论。Disqus就是这样的第三方社会化评论平台，注册Disqus后你会发现：这根本就是个社交平台啊！ 所以同志们在你的博客上评论后，你登陆Disqus 后台，会看见评论， 推荐，喜爱 等等。 个人信息 Profile: Full Name(昵称，任意取) Avatar:头像支持本地上传，网络图像URL，所在网站的默认头像，Facebook头像，Twitter头像。当然，后两者需要绑定对应的社交帐号。 Serives:第三方帐号的管理界面，可进行绑定、解绑社交帐号，目前所支持的除了三大社交网络帐号，还有Yahoo! 已绑定的帐号名在Disqus评论系统上是公开的。 账户 Username： 唯一 Email ： 邮箱进行验证。 开始加入Disqus 点击注册 这里注册的Site name 就是我们将要用到的shortname 注册后你会得到一个 sherrysblog.disqus.com/东西，其中sherrysblog就是我的shortname 在我的账户内https://sherrysblog.disqus.com/admin/settings/general/ 可以进行个人网站的设置， 语言设置等。 done. 缺点 有收费的可能 不支持国内社交账号 没有私信功能。 可能被墙 Google Analytics 网站分析 这其实是个很强大的工具，但是想想挺可怕的。因为如果作为商业用户，会实时监控我们大众用户的行为，这就是所谓大数据%&gt;_&lt;% 注册 google analytics的账号 填写自己blog 的位置tintinsnowy.com 将Tracing code 粘贴到自己config.toml中。 通过google" />
+    <meta property="og:title" content="Spark-多节点集群配置" />
+<meta property="og:description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark[单节点]安装和环境配置 SCALA 环境 见Apache Spark[单节点]安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7" />
+<meta property="og:url" content="http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE" />
 
 
-<meta property="og:updated_time" content="2015-12-27T12:40:57&#43;08:00"/>
+<meta property="og:updated_time" content="2016-03-14T09:06:34&#43;08:00"/>
 
 
 
@@ -33,12 +33,12 @@
 
     
     
-<meta itemprop="name" content="博客工具">
-<meta itemprop="description" content="楔子 喜欢写Blog的人，会经历三个阶段。 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。 第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。 第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。 搭建自己的博客是有点折腾，但是会乐在其中。 考虑到技术文章会涉及到大量的英文单词，或者命令就用英文写。 概述类和心得篇就用中文。 p.s.旧csdn博客地址 所以针对新博客搭建有几个plan： 初期：基本功能分类， 标签，联系方式 中期：评论， 网站分析， rss， 图片托管，Gallery 长期：和顶级域名分离，blog分En 和Ch， 兴许还有De。 初期已经差不多完成了，继续折腾。 Disqus 添加评论功能 在很久以前评论还是属于博客主的资源，在搬迁的过程中文章评论一个不能丢。数据存在网站数据中。 近年网络社交兴起博客主为了吸引访客互动会使用第三方网站托管评论。Disqus就是这样的第三方社会化评论平台，注册Disqus后你会发现：这根本就是个社交平台啊！ 所以同志们在你的博客上评论后，你登陆Disqus 后台，会看见评论， 推荐，喜爱 等等。 个人信息 Profile: Full Name(昵称，任意取) Avatar:头像支持本地上传，网络图像URL，所在网站的默认头像，Facebook头像，Twitter头像。当然，后两者需要绑定对应的社交帐号。 Serives:第三方帐号的管理界面，可进行绑定、解绑社交帐号，目前所支持的除了三大社交网络帐号，还有Yahoo! 已绑定的帐号名在Disqus评论系统上是公开的。 账户 Username： 唯一 Email ： 邮箱进行验证。 开始加入Disqus 点击注册 这里注册的Site name 就是我们将要用到的shortname 注册后你会得到一个 sherrysblog.disqus.com/东西，其中sherrysblog就是我的shortname 在我的账户内https://sherrysblog.disqus.com/admin/settings/general/ 可以进行个人网站的设置， 语言设置等。 done. 缺点 有收费的可能 不支持国内社交账号 没有私信功能。 可能被墙 Google Analytics 网站分析 这其实是个很强大的工具，但是想想挺可怕的。因为如果作为商业用户，会实时监控我们大众用户的行为，这就是所谓大数据%&gt;_&lt;% 注册 google analytics的账号 填写自己blog 的位置tintinsnowy.com 将Tracing code 粘贴到自己config.toml中。 通过google">
+<meta itemprop="name" content="Spark-多节点集群配置">
+<meta itemprop="description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark[单节点]安装和环境配置 SCALA 环境 见Apache Spark[单节点]安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2.">
 
 
-<meta itemprop="dateModified" content="2015-12-27T12:40:57&#43;08:00" />
-<meta itemprop="wordCount" content="76">
+<meta itemprop="dateModified" content="2016-03-14T09:06:34&#43;08:00" />
+<meta itemprop="wordCount" content="215">
 
 
 
@@ -50,8 +50,8 @@
 
 
 
-<meta name="twitter:title" content="博客工具"/>
-<meta name="twitter:description" content="楔子 喜欢写Blog的人，会经历三个阶段。 第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。 第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。 第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。 搭建自己的博客是有点折腾，但是会乐在其中。 考虑到技术文章会涉及到大量的英文单词，或者命令就用英文写。 概述类和心得篇就用中文。 p.s.旧csdn博客地址 所以针对新博客搭建有几个plan： 初期：基本功能分类， 标签，联系方式 中期：评论， 网站分析， rss， 图片托管，Gallery 长期：和顶级域名分离，blog分En 和Ch， 兴许还有De。 初期已经差不多完成了，继续折腾。 Disqus 添加评论功能 在很久以前评论还是属于博客主的资源，在搬迁的过程中文章评论一个不能丢。数据存在网站数据中。 近年网络社交兴起博客主为了吸引访客互动会使用第三方网站托管评论。Disqus就是这样的第三方社会化评论平台，注册Disqus后你会发现：这根本就是个社交平台啊！ 所以同志们在你的博客上评论后，你登陆Disqus 后台，会看见评论， 推荐，喜爱 等等。 个人信息 Profile: Full Name(昵称，任意取) Avatar:头像支持本地上传，网络图像URL，所在网站的默认头像，Facebook头像，Twitter头像。当然，后两者需要绑定对应的社交帐号。 Serives:第三方帐号的管理界面，可进行绑定、解绑社交帐号，目前所支持的除了三大社交网络帐号，还有Yahoo! 已绑定的帐号名在Disqus评论系统上是公开的。 账户 Username： 唯一 Email ： 邮箱进行验证。 开始加入Disqus 点击注册 这里注册的Site name 就是我们将要用到的shortname 注册后你会得到一个 sherrysblog.disqus.com/东西，其中sherrysblog就是我的shortname 在我的账户内https://sherrysblog.disqus.com/admin/settings/general/ 可以进行个人网站的设置， 语言设置等。 done. 缺点 有收费的可能 不支持国内社交账号 没有私信功能。 可能被墙 Google Analytics 网站分析 这其实是个很强大的工具，但是想想挺可怕的。因为如果作为商业用户，会实时监控我们大众用户的行为，这就是所谓大数据%&gt;_&lt;% 注册 google analytics的账号 填写自己blog 的位置tintinsnowy.com 将Tracing code 粘贴到自己config.toml中。 通过google"/>
+<meta name="twitter:title" content="Spark-多节点集群配置"/>
+<meta name="twitter:description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark[单节点]安装和环境配置 SCALA 环境 见Apache Spark[单节点]安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2."/>
 
 
 
@@ -236,30 +236,28 @@
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-            <img src="http://tintinsnowy.com/banners/20151227.jpg" class="article-banner">
-            
 
             <header class="article-header">
-    <a href="http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7">
+    <a href="http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE">
     <h1 class="article-title" itemprop="name">
-        博客工具
+        Spark-多节点集群配置
     </h1>
     </a>
     <div class="article-meta">
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2015-12-27 12:40:57 &#43;0800 CST" itemprop="datePublished">2015-12-27</time>
+            <time datetime="2016-03-14 09:06:34 &#43;0800 CST" itemprop="datePublished">2016-03-14</time>
             &middot;
-            76
+            215
             words
             &middot;
-            1
+            2
             minute read
         </div>
         <div class="article-category">
             
             <i class="fa fa-folder"></i>
-            <a class="article-category-link" href="http://tintinsnowy.com/categories/2015/12">2015/12</a>
+            <a class="article-category-link" href="http://tintinsnowy.com/categories/2016/03">2016/03</a>
             
         </div>
     </div>
@@ -268,91 +266,250 @@
             <div class="article-entry" itemprop="articleBody">
                 
 
-<h1 id="楔子:4396d87bf52c8e0d9b74841cebec2d9e">楔子</h1>
+<h1 id="楔子:d7f0df7a88d75431aefaa0c11af54130">楔子</h1>
 
-<p>喜欢写Blog的人，会经历三个阶段。</p>
+<p>这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog</p>
 
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
-  第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-  第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
+<h2 id="本机配置:d7f0df7a88d75431aefaa0c11af54130">本机配置</h2>
 
-<p>搭建自己的博客是有点折腾，但是会乐在其中。 考虑到技术文章会涉及到大量的英文单词，或者命令就用英文写。 概述类和心得篇就用中文。
-p.s.<a href="http://blog.csdn.net/u011613321"><code>旧csdn博客地址</code></a></p>
+<p><code>Centos 5.8</code></p>
 
-<p>所以针对新博客搭建有几个plan：</p>
+<p><code>4 cores 8G</code></p>
 
-<ul>
-<li>初期：基本功能<code>分类</code>， <code>标签</code>，<code>联系方式</code></li>
-<li>中期：<code>评论</code>， <code>网站分析</code>， <code>rss</code>， <code>图片托管</code>，<code>Gallery</code></li>
-<li>长期：和顶级域名分离，blog分<code>En</code> 和<code>Ch</code>， 兴许还有<code>De</code>。</li>
-</ul>
-
-<p>初期已经差不多完成了，继续折腾。</p>
-
-<h1 id="disqus-添加评论功能:4396d87bf52c8e0d9b74841cebec2d9e">Disqus 添加评论功能</h1>
-
-<p>在很久以前评论还是属于博客主的资源，在搬迁的过程中文章评论一个不能丢。数据存在网站数据中。 近年网络社交兴起博客主为了吸引访客互动会使用第三方网站托管评论。Disqus就是这样的第三方社会化评论平台，注册Disqus后你会发现：这根本就是个社交平台啊！    所以同志们在你的博客上评论后，你登陆Disqus 后台，会看见<code>评论</code>， <code>推荐</code>，<code>喜爱</code> 等等。</p>
-
-<p><strong>个人信息</strong></p>
+<h2 id="节点布置-masters-slaves:d7f0df7a88d75431aefaa0c11af54130">节点布置 Masters&amp;Slaves</h2>
 
 <ol>
-<li>Profile: Full Name(昵称，任意取)</li>
-<li>Avatar:头像支持本地上传，网络图像URL，所在网站的默认头像，Facebook头像，Twitter头像。当然，后两者需要绑定对应的社交帐号。</li>
-<li>Serives:第三方帐号的管理界面，可进行绑定、解绑社交帐号，目前所支持的除了三大社交网络帐号，还有Yahoo! 已绑定的帐号名在Disqus评论系统上是公开的。</li>
+<li>Master   119.254.168.33</li>
+<li>Slaves1  119.254.168.34</li>
+<li>Slaves2  119.254.168.36</li>
+<li>Slaves3  119.254.168.38</li>
 </ol>
 
-<p><strong>账户</strong></p>
+<h1 id="环境配置-environment:d7f0df7a88d75431aefaa0c11af54130">环境配置 Environment</h1>
+
+<h3 id="java-环境:d7f0df7a88d75431aefaa0c11af54130">JAVA 环境</h3>
+
+<p>见<code>Apache Spark[单节点]安装和环境配置</code></p>
+
+<h3 id="scala-环境:d7f0df7a88d75431aefaa0c11af54130">SCALA 环境</h3>
+
+<p>见<code>Apache Spark[单节点]安装和环境配置</code></p>
+
+<h3 id="ssh-配置:d7f0df7a88d75431aefaa0c11af54130">SSH 配置</h3>
+
+<p>背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。
+在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。</p>
+
+<p>所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。</p>
 
 <ol>
-<li>Username： <code>唯一</code></li>
-<li>Email ： 邮箱进行验证。</li>
+<li><p>确保安装好</p>
+
+<pre><code>ssh：（ubuntu版）
+$ sudo apt-get update
+$ sudo apt-get install openssh-server
+$ sudo /etc/init.d/ssh start
+</code></pre>
+
+<p>ssh(centos): 确认系统已经安装了SSH。</p>
+
+<pre><code>rpm –qa | grep openssh
+rpm –qa | grep rsync
+
+
+yum install ssh //安装SSH协议
+yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件
+</code></pre></li>
 </ol>
 
-<p><strong>开始加入Disqus</strong></p>
+<p>service sshd restart &ndash;&gt;启动服务
+2. 生成并添加密钥：</p>
+
+<pre><code>    $ ssh-keygen -t rsa
+    $ cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+    $ chmod 0600 ~/.ssh/authorized_keys
+    service sshd restart //一般修改过都需要重启服务
+如果已经生成过密钥，只需执行后两行命令。
+测试ssh localhost
+
+    $ ssh localhost
+    $ exit
+
+查看端口：是否打开
+
+    netstat -anp |grep ssh
+</code></pre>
+
+<h1 id="hadoop-cluster-installation:d7f0df7a88d75431aefaa0c11af54130">Hadoop cluster Installation</h1>
+
+<p>基本和前面相同</p>
 
 <ol>
-<li>点击<a href="https://disqus.com/admin/create/">注册</a></li>
-<li>这里注册的<code>Site name</code> 就是我们将要用到的<code>shortname</code></li>
-<li>注册后你会得到一个 <code>sherrysblog.disqus.com/</code>东西，其中<code>sherrysblog</code>就是我的<code>shortname</code></li>
-<li>在我的账户内<code>https://sherrysblog.disqus.com/admin/settings/general/</code>
-可以进行个人网站的设置， 语言设置等。</li>
-<li>done.</li>
-</ol>
+<li><p>修改hdfs-site.xml</p>
 
-<p><strong>缺点</strong></p>
+<pre><code>&lt;configuration&gt;
+    &lt;property&gt;
+         &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;
+         &lt;value&gt;kexinyun1:9001&lt;/value&gt;
+    &lt;/property&gt;
 
-<ul>
-<li>有收费的可能</li>
-<li>不支持国内社交账号</li>
-<li>没有私信功能。</li>
-<li>可能被墙</li>
-</ul>
 
-<h1 id="google-analytics-网站分析:4396d87bf52c8e0d9b74841cebec2d9e">Google Analytics 网站分析</h1>
+    &lt;property&gt;
+        &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;
+        &lt;value&gt;file:///opt/hadoop-2.6.1/dfs/name&lt;/value&gt;
+    &lt;/property&gt;
 
-<p><img src="https://cdn.mycommerce.com/images/mycommercecorner/thumbnails/Google_Analytics/GASample.jpg" alt="google analytics" />
- 这其实是个很强大的工具，但是想想挺可怕的。因为如果作为商业用户，会实时监控我们大众用户的行为，这就是所谓大数据%&gt;_&lt;%</p>
+
+    &lt;property&gt;
+        &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;
+        &lt;value&gt;file:///opt/hadoop-2.6.1/dfs/data&lt;/value&gt;
+    &lt;/property&gt;
+
+
+    &lt;property&gt;
+        &lt;name&gt;dfs.replication&lt;/name&gt;
+    &lt;value&gt;3&lt;/value&gt;
+    &lt;/property&gt;
+
+
+    &lt;property&gt;
+        &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;
+    &lt;value&gt;true&lt;/value&gt;
+    &lt;/property&gt;
+</code></pre>
+
+<p></configuration></p>
 
 <ol>
-<li>注册 google analytics的账号</li>
-<li>填写自己blog 的位置<code>tintinsnowy.com</code></li>
-<li>将Tracing code 粘贴到自己<code>config.toml</code>中。</li>
-<li>通过google analytics 后台账号查看用户访问情况。</li>
+<li>mapred-site.xml</li>
 </ol>
 
-<p>&mdash;&ndash;<strong>TBC</strong></p>
+<p><configuration><br />
+    <property><br />
+    <name>mapreduce.framework.name</name><br />
+    <value>yarn</value><br />
+</property><br />
+<property><br />
+    <name>mapreduce.jobtracker.http.address</name><br />
+    <value>nameNode:50030</value><br />
+</property><br />
+<property><br />
+    <name>mapreduce.jobhistory.address</name><br />
+    <value>nameNode:10020</value><br />
+</property><br />
+<property><br />
+    <name>mapreduce.jobhistory.webapp.address</name><br />
+    <value>nameNode:19888</value><br />
+</property><br />
+</configuration></p></li>
 
-<p><em>writen by Sherry</em></p>
+<li><p>yarn</p>
+
+<p><configuration>
+    <!-- Site specific YARN configuration properties -->
+    <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+</property>
+<property>
+    <name>yarn.resourcemanager.address</name>
+    <value>kexinyun1:8032</value>
+</property>
+<property>
+    <name>yarn.resourcemanager.scheduler.address</name>
+    <value>kexinyun1:8030</value>
+</property>
+<property>
+    <name>yarn.resourcemanager.resource-tracker.address</name>
+    <value>kexinyun1:8031</value>
+</property>
+<property>
+    <name>yarn.resourcemanager.admin.address</name>
+    <value>kexinyun1:8033</value>
+</property>
+<property>
+    <name>yarn.resourcemanager.webapp.address</name>
+    <value>kexinyun1:8088</value>
+</property>
+</configuration></p></li>
+
+<li><p>slaves 文件</p>
+
+<pre><code>119.254.168.38 //(slaves3)
+119.254.168.36 //(slaves2)
+119.254.168.34 //(slaves1)
+</code></pre></li>
+
+<li><p>vi hadoop-env.sh</p>
+
+<pre><code>export JAVA_HOME=your java home
+</code></pre>
+
+<p>vi yarn-env.sh</p>
+
+<pre><code>export JAVA_HOME=your java home   
+</code></pre></li>
+
+<li><p>格式化（同以前）</p></li>
+</ol>
+
+<p>启动/停止</p>
+
+<p>查看：jsp</p>
+
+<p>访问:</p>
+
+<p><a href="http://ip:9001/">http://ip:9001/</a></p>
+
+<h1 id="spark-cluster-installation:d7f0df7a88d75431aefaa0c11af54130">Spark Cluster Installation</h1>
+
+<ol>
+<li>基本同单节点类似</li>
+
+<li><p>文件配置部分</p>
+
+<pre><code>export SCALA_HOME=/opt/scala-2.11.4
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.101.x86_64/
+export SPARK_HOME=/opt/spark
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export SPARK_JAR=/opt/spark/lib/spark-assembly-1.6.1-hadoop2.6.0.jar
+export SPARK_MASTER_IP=localhost
+export SPARK_MASTER_PORT=7077
+export SPARK_WORKER_CORES=1
+export SPARK_WORKER_INSTANCES=1
+export SPARK_WORKER_MEMORY=1g
+</code></pre></li>
+
+<li><p>启动</p>
+
+<pre><code>$SPARK_HOME/sbin/start-all.sh
+</code></pre></li>
+</ol>
+
+<h1 id="problem:d7f0df7a88d75431aefaa0c11af54130">problem</h1>
+
+<p><a href="http://www.2cto.com/os/201209/155681.html">http://www.2cto.com/os/201209/155681.html</a></p>
+
+<h1 id="english-version:d7f0df7a88d75431aefaa0c11af54130">english version</h1>
+
+<p><a href="http://pingax.com/install-hadoop2-6-0-on-ubuntu/">http://pingax.com/install-hadoop2-6-0-on-ubuntu/</a></p>
+
+<h1 id="reference:d7f0df7a88d75431aefaa0c11af54130">Reference</h1>
+
+<ol>
+<li><a href="http://www.cnblogs.com/lanxuezaipiao/p/3525554.html">http://www.cnblogs.com/lanxuezaipiao/p/3525554.html</a></li>
+<li><a href="http://pingax.com/install-hadoop2-6-0-on-ubuntu/">http://pingax.com/install-hadoop2-6-0-on-ubuntu/</a></li>
+<li><a href="http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html">http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html</a></li>
+<li><a href="http://blog.csdn.net/greensurfer/article/details/39450369">http://blog.csdn.net/greensurfer/article/details/39450369</a></li>
+</ol>
 
             </div>
             <footer class="article-footer">
-    <a data-url="http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7" data-id="4396d87bf52c8e0d9b74841cebec2d9e" class="article-share-link">
+    <a data-url="http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE" data-id="d7f0df7a88d75431aefaa0c11af54130" class="article-share-link">
         Share
     </a>
     
-    <a href="http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7/#disqus_thread" class="article-comment-link">
+    <a href="http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -363,20 +520,20 @@ p.s.<a href="http://blog.csdn.net/u011613321"><code>旧csdn博客地址</code></
         
 <nav id="article-nav">
     
-    <a href="http://tintinsnowy.com/2015/12/26/setup-a-free-blog-based-on-hugo-and-github" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="http://tintinsnowy.com/2016/01/25/%E8%BD%AC%E8%BD%BD-%E6%B5%85%E8%B0%88%E5%BE%B7%E8%AF%AD%E4%B8%ADviele%E8%BF%98%E6%98%AFviel-" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">Setup a free blog based on Hugo and Github</div>
+      <div class="article-nav-title">【转载】 浅谈德语中viele还是viel ?</div>
     </a>
     
 
     
-    <a href="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="http://tintinsnowy.com/2016/04/25/news-recommendation-part-1" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Newer
       </strong>
-      <div class="article-nav-title">Apache Spark-初识</div>
+      <div class="article-nav-title">News Recommendation part 1</div>
     </a>
     
 </nav>
@@ -388,9 +545,9 @@ p.s.<a href="http://blog.csdn.net/u011613321"><code>旧csdn博客地址</code></
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'sherrysblog';
-    var disqus_identifier = 'http:\/\/tintinsnowy.com\/2015\/12\/27\/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7';
-    var disqus_title = '博客工具';
-    var disqus_url = 'http:\/\/tintinsnowy.com\/2015\/12\/27\/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7';
+    var disqus_identifier = 'http:\/\/tintinsnowy.com\/2016\/03\/14\/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE';
+    var disqus_title = 'Spark-多节点集群配置';
+    var disqus_url = 'http:\/\/tintinsnowy.com\/2016\/03\/14\/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -468,8 +625,8 @@ p.s.<a href="http://blog.csdn.net/u011613321"><code>旧csdn博客地址</code></
             <li>
                 
                 <div class="item-thumbnail">
-                    <a href="http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7" class="thumbnail">
-                        <span style="background-image:url(http://tintinsnowy.com/banners/04.jpg)" alt="博客工具" class="thumbnail-image"></span>
+                    <a href="http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE" class="thumbnail">
+                        <span style="background-image:url(http://tintinsnowy.com/banners/04.jpg)" alt="Spark-多节点集群配置" class="thumbnail-image"></span>
                     </a>
                 </div>
                 
@@ -491,8 +648,8 @@ p.s.<a href="http://blog.csdn.net/u011613321"><code>旧csdn博客地址</code></
             <li>
                 
                 <div class="item-thumbnail">
-                    <a href="http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7" class="thumbnail">
-                        <span style="background-image:url(http://tintinsnowy.com/banners/03.jpg)" alt="博客工具" class="thumbnail-image"></span>
+                    <a href="http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE" class="thumbnail">
+                        <span style="background-image:url(http://tintinsnowy.com/banners/03.jpg)" alt="Spark-多节点集群配置" class="thumbnail-image"></span>
                     </a>
                 </div>
                 

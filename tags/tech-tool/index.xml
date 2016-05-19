@@ -6,8 +6,255 @@
     <description>Recent content in Tech Tool on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jan 2016 22:17:20 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Mar 2016 09:06:34 +0800</lastBuildDate>
     <atom:link href="http://tintinsnowy.com/tags/tech-tool/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Spark-多节点集群配置</title>
+      <link>http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE</link>
+      <pubDate>Mon, 14 Mar 2016 09:06:34 +0800</pubDate>
+      
+      <guid>http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE</guid>
+      <description>
+
+&lt;h1 id=&#34;楔子:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;楔子&lt;/h1&gt;
+
+&lt;p&gt;这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog&lt;/p&gt;
+
+&lt;h2 id=&#34;本机配置:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;本机配置&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;Centos 5.8&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;4 cores 8G&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;节点布置-masters-slaves:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;节点布置 Masters&amp;amp;Slaves&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Master   119.254.168.33&lt;/li&gt;
+&lt;li&gt;Slaves1  119.254.168.34&lt;/li&gt;
+&lt;li&gt;Slaves2  119.254.168.36&lt;/li&gt;
+&lt;li&gt;Slaves3  119.254.168.38&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;环境配置-environment:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;环境配置 Environment&lt;/h1&gt;
+
+&lt;h3 id=&#34;java-环境:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;JAVA 环境&lt;/h3&gt;
+
+&lt;p&gt;见&lt;code&gt;Apache Spark[单节点]安装和环境配置&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;scala-环境:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;SCALA 环境&lt;/h3&gt;
+
+&lt;p&gt;见&lt;code&gt;Apache Spark[单节点]安装和环境配置&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;ssh-配置:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;SSH 配置&lt;/h3&gt;
+
+&lt;p&gt;背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&amp;rdquo;公私钥&amp;rdquo;(RSA)认证的方式来进行ssh登录。
+在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。&lt;/p&gt;
+
+&lt;p&gt;所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;确保安装好&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh：（ubuntu版）
+$ sudo apt-get update
+$ sudo apt-get install openssh-server
+$ sudo /etc/init.d/ssh start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ssh(centos): 确认系统已经安装了SSH。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rpm –qa | grep openssh
+rpm –qa | grep rsync
+
+
+yum install ssh //安装SSH协议
+yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;service sshd restart &amp;ndash;&amp;gt;启动服务
+2. 生成并添加密钥：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ ssh-keygen -t rsa
+    $ cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
+    $ chmod 0600 ~/.ssh/authorized_keys
+    service sshd restart //一般修改过都需要重启服务
+如果已经生成过密钥，只需执行后两行命令。
+测试ssh localhost
+
+    $ ssh localhost
+    $ exit
+
+查看端口：是否打开
+
+    netstat -anp |grep ssh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;hadoop-cluster-installation:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;Hadoop cluster Installation&lt;/h1&gt;
+
+&lt;p&gt;基本和前面相同&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;修改hdfs-site.xml&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;configuration&amp;gt;
+    &amp;lt;property&amp;gt;
+         &amp;lt;name&amp;gt;dfs.namenode.secondary.http-address&amp;lt;/name&amp;gt;
+         &amp;lt;value&amp;gt;kexinyun1:9001&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+
+
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;dfs.namenode.name.dir&amp;lt;/name&amp;gt;
+        &amp;lt;value&amp;gt;file:///opt/hadoop-2.6.1/dfs/name&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+
+
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;dfs.datanode.data.dir&amp;lt;/name&amp;gt;
+        &amp;lt;value&amp;gt;file:///opt/hadoop-2.6.1/dfs/data&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+
+
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;dfs.replication&amp;lt;/name&amp;gt;
+    &amp;lt;value&amp;gt;3&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+
+
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;dfs.webhdfs.enabled&amp;lt;/name&amp;gt;
+    &amp;lt;value&amp;gt;true&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/configuration&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;mapred-site.xml&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;configuration&gt;&lt;br /&gt;
+    &lt;property&gt;&lt;br /&gt;
+    &lt;name&gt;mapreduce.framework.name&lt;/name&gt;&lt;br /&gt;
+    &lt;value&gt;yarn&lt;/value&gt;&lt;br /&gt;
+&lt;/property&gt;&lt;br /&gt;
+&lt;property&gt;&lt;br /&gt;
+    &lt;name&gt;mapreduce.jobtracker.http.address&lt;/name&gt;&lt;br /&gt;
+    &lt;value&gt;nameNode:50030&lt;/value&gt;&lt;br /&gt;
+&lt;/property&gt;&lt;br /&gt;
+&lt;property&gt;&lt;br /&gt;
+    &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;&lt;br /&gt;
+    &lt;value&gt;nameNode:10020&lt;/value&gt;&lt;br /&gt;
+&lt;/property&gt;&lt;br /&gt;
+&lt;property&gt;&lt;br /&gt;
+    &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;&lt;br /&gt;
+    &lt;value&gt;nameNode:19888&lt;/value&gt;&lt;br /&gt;
+&lt;/property&gt;&lt;br /&gt;
+&lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;yarn&lt;/p&gt;
+
+&lt;p&gt;&lt;configuration&gt;
+    &lt;!-- Site specific YARN configuration properties --&gt;
+    &lt;property&gt;
+    &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;
+    &lt;value&gt;kexinyun1:8032&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.resourcemanager.scheduler.address&lt;/name&gt;
+    &lt;value&gt;kexinyun1:8030&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;/name&gt;
+    &lt;value&gt;kexinyun1:8031&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.resourcemanager.admin.address&lt;/name&gt;
+    &lt;value&gt;kexinyun1:8033&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt;
+    &lt;value&gt;kexinyun1:8088&lt;/value&gt;
+&lt;/property&gt;
+&lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;slaves 文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;119.254.168.38 //(slaves3)
+119.254.168.36 //(slaves2)
+119.254.168.34 //(slaves1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;vi hadoop-env.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export JAVA_HOME=your java home
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;vi yarn-env.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export JAVA_HOME=your java home   
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;格式化（同以前）&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;启动/停止&lt;/p&gt;
+
+&lt;p&gt;查看：jsp&lt;/p&gt;
+
+&lt;p&gt;访问:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ip:9001/&#34;&gt;http://ip:9001/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;spark-cluster-installation:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;Spark Cluster Installation&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;基本同单节点类似&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;文件配置部分&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export SCALA_HOME=/opt/scala-2.11.4
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.101.x86_64/
+export SPARK_HOME=/opt/spark
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export SPARK_JAR=/opt/spark/lib/spark-assembly-1.6.1-hadoop2.6.0.jar
+export SPARK_MASTER_IP=localhost
+export SPARK_MASTER_PORT=7077
+export SPARK_WORKER_CORES=1
+export SPARK_WORKER_INSTANCES=1
+export SPARK_WORKER_MEMORY=1g
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;启动&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$SPARK_HOME/sbin/start-all.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;problem:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;problem&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.2cto.com/os/201209/155681.html&#34;&gt;http://www.2cto.com/os/201209/155681.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;english-version:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;english version&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pingax.com/install-hadoop2-6-0-on-ubuntu/&#34;&gt;http://pingax.com/install-hadoop2-6-0-on-ubuntu/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;reference:d7f0df7a88d75431aefaa0c11af54130&#34;&gt;Reference&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/lanxuezaipiao/p/3525554.html&#34;&gt;http://www.cnblogs.com/lanxuezaipiao/p/3525554.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pingax.com/install-hadoop2-6-0-on-ubuntu/&#34;&gt;http://pingax.com/install-hadoop2-6-0-on-ubuntu/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html&#34;&gt;http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/greensurfer/article/details/39450369&#34;&gt;http://blog.csdn.net/greensurfer/article/details/39450369&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Ubuntu 下好用的pdf预览器-okular</title>
@@ -162,11 +409,11 @@
     </item>
     
     <item>
-      <title>Apache Spark安装和环境配置</title>
-      <link>http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</link>
+      <title>Apache Spark[单节点]安装和环境配置</title>
+      <link>http://tintinsnowy.com/2016/01/08/apache-spark%E5%8D%95%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</link>
       <pubDate>Fri, 08 Jan 2016 10:36:16 +0800</pubDate>
       
-      <guid>http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</guid>
+      <guid>http://tintinsnowy.com/2016/01/08/apache-spark%E5%8D%95%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</guid>
       <description>
 
 &lt;h1 id=&#34;楔子:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;楔子&lt;/h1&gt;
@@ -189,7 +436,236 @@
 
 &lt;p&gt;&amp;ndash;TBC&lt;/p&gt;
 
-&lt;h1 id=&#34;安装方式:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;安装方式&lt;/h1&gt;
+&lt;h1 id=&#34;环境构建:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;环境构建&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;spark 支持多个版本的Hadoop， 无论是 Apache Hadoop 还是Cloudera 的CDH， Hartonworks的。 你用什么版本的hadoop所以问题不大&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Spark runs on both Windows and UNIX-like systems (e.g. Linux, Mac OS). 所以window 就不行了，支持Unix家族的机器 Mac， Linux（Ubuntu， Redhat， Centos等）.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Spark runs on &lt;strong&gt;Java 7+&lt;/strong&gt;, &lt;strong&gt;Python 2.6+&lt;/strong&gt; and &lt;strong&gt;R 3.1+&lt;/strong&gt;.  Spark 1.6.0 uses &lt;strong&gt;Scala 2.10&lt;/strong&gt;. 所以Scala 配置 2.10.×版本的。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;我的电脑是Ubuntu 15.4 还需要安装：&lt;/p&gt;
+
+&lt;h3 id=&#34;java:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;JAVA&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装JDK &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;解压安装&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（ubuntu系统）&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /home/tom
+$ tar -xzvf jdk-8u73-linux-x64.tar.gz       
+$ sudo vim /etc/profile
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;(Centos)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;查看yum库中的Java安装包。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yum -y list java* 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;用yum安装Java环境。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yum -y install java-1.7.0-openjdk* ，//以yum库中java-1.7.0为例。 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当结果显示为Complete！即安装完毕。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;查看是否成功&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ java -version
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;至于centos/ubuntu/debian 的&lt;strong&gt;区别&lt;/strong&gt; &lt;a href=&#34;http://blog.csdn.net/educast/article/details/38315433/&#34;&gt;请看&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;scala环境:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;SCALA环境&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;官网上下载，解压到任意目录&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd /opt
+$ tar -xzvf scala-2.11.6.tgz
+$ sudo vim /etc/profile  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;同上修改SCALA路径&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;ssh-配置:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;SSH 配置&lt;/h3&gt;
+
+&lt;p&gt;所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;确保安装好&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ssh：（ubuntu版）
+$ sudo apt-get update
+$ sudo apt-get install openssh-server
+$ sudo /etc/init.d/ssh start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ssh(centos): 确认系统已经安装了SSH。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rpm –qa | grep openssh
+rpm –qa | grep rsync
+
+
+yum install ssh //安装SSH协议
+yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;service sshd restart &amp;ndash;&amp;gt;启动服务
+2. 生成并添加密钥：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ ssh-keygen -t rsa
+    $ cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
+    $ chmod 0600 ~/.ssh/authorized_keys
+
+如果已经生成过密钥，只需执行后两行命令。
+测试ssh localhost
+
+    $ ssh localhost
+    $ exit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;hadoop-环境:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;Hadoop 环境&lt;/h3&gt;
+
+&lt;p&gt;个人觉得，单机可装可不装&amp;hellip;.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;解压hadoop2.6.0到任意目录：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd /opt
+$ wget http://apache.claz.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
+$ tar -xzvf hadoop-2.6.0.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;编辑/etc/profile文件，在最后加上java环境变量：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export HADOOP_HOME=/opt/hadoop-2.6.0
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;编辑 &lt;code&gt;$HADOOP_HOME/etc/hadoop/hadoop-env.sh&lt;/code&gt;文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ vim $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在最后加上：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export JAVA_HOME=/opt/jdk1.8.0_73/（你自己java的地址）
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;修改&lt;code&gt;configuration&lt;/code&gt;文件：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd $HADOOP_HOME/etc/hadoop
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;修改&lt;code&gt;core-site.xml&lt;/code&gt;：&lt;/p&gt;
+
+&lt;p&gt;&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;fs.default.name&lt;/name&gt;
+         &lt;value&gt;hdfs://localhost:9000&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;修改&lt;code&gt;hdfs-site.xml&lt;/code&gt;：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;configuration&amp;gt;
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;dfs.replication&amp;lt;/name&amp;gt;
+    &amp;lt;value&amp;gt;1&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+
+
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;dfs.name.dir&amp;lt;/name&amp;gt;
+    &amp;lt;value&amp;gt;file:///opt/hadoop-2.6.1/dfs/name&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+
+
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;dfs.data.dir&amp;lt;/name&amp;gt;
+        &amp;lt;value&amp;gt;file:///opt/hadoop-2.6.1/dfs/data&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+&amp;lt;/configuration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;第一个是dfs的备份数目，单机用1份就行，后面两个是namenode和datanode的目录。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;修改&lt;code&gt;mapred-site.xml&lt;/code&gt;：&lt;/p&gt;
+
+&lt;p&gt;&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+        &lt;value&gt;yarn&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;修改yarn-site.xml：&lt;/p&gt;
+
+&lt;p&gt;&lt;configuration&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;初始化hadoop：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ $HADOOP_HOME/bin/hdfs namenode -format
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;启动&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ $HADOOP_HOME/sbin/start-all.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;停止&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ $HADOOP_HOME/sbin/stop-all.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;检查WebUI，浏览器打开端口：&lt;a href=&#34;http://localhost:8088&#34;&gt;http://localhost:8088&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;port 8088: cluster and all applications&lt;/p&gt;
+
+&lt;p&gt;port 50070: Hadoop NameNode&lt;/p&gt;
+
+&lt;p&gt;port 50090: Secondary NameNode&lt;/p&gt;
+
+&lt;p&gt;port 50075: DataNode&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;hadoop运行后可使用jps命令查看,得到结果：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;10057 Jps
+9611 ResourceManager
+9451 SecondaryNameNode
+9260 DataNode
+9102 NameNode
+9743 NodeManager
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;spark-安装方式:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;SPARK 安装方式&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;源码编译&lt;/p&gt;
@@ -205,31 +681,66 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;下载到制定位置&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;解压&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;解压&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;运行shell&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; tar -xzvf spark-1.6.0-bin-hadoop2.6.tgz
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;p&gt;cd spark/bin&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;在&lt;code&gt;/etc/profile&lt;/code&gt;文件的末尾添加环境变量&lt;/p&gt;
 
-&lt;p&gt;./spark-shell&lt;/p&gt;&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;export SPARK_HOME=/opt/spark-1.6.0
+export PATH=$SPARK_HOME/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;li&gt;&lt;p&gt;在shell脚本中可以看到很多信息，openjdk版本， scala版本等等。 同时可以通过web 的UI界面访问：&lt;a href=&#34;http://localhost:4040/jobs/&#34;&gt;http://localhost:4040/jobs/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;保存更新同上&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ source /etc/profil
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;脚本配置
+conf目录下复制并重命名spark-env.sh.template为spark-env.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mv spark-env.sh.template spark-env.sh
+$ vim spark-env.sh //进行配置
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在&lt;code&gt;spark-env.sh&lt;/code&gt;中添加：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;export JAVA_HOME=/opt/jdk1.8.0_73/
+export SCALA_HOME=/opt/scala-2.10.6
+export SPARK_MASTER_IP=localhost
+export SPARK_WORKER_MEMORY=4G 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;启动&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ $SPARK_HOME/sbin/start-all.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;停止&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ $SPARK_HOME/sbin/stop-all.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;测试Spark是否安装成功：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ $SPARK_HOME/bin/run-example SparkPi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;得到结果：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Pi is roughly 3.14716
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;检查WebUI，浏览器打开端口：&lt;a href=&#34;http://localhost:8080&#34;&gt;http://localhost:8080&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在shell脚本中可以看到很多信息，openjdk版本， scala版本等等。 同时可以通过web 的UI界面访问：&lt;a href=&#34;http://localhost:4040/jobs/&#34;&gt;http://localhost:4040/jobs/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;环境构建:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;环境构建&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;spark 支持多个版本的Hadoop， 无论是 Apache Hadoop 还是Cloudera 的CDH， Hartonworks的。 你用什么版本的hadoop所以问题不大&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Spark runs on both Windows and UNIX-like systems (e.g. Linux, Mac OS). 所以window 就不行了，支持Unix家族的机器 Mac， Linux（Ubuntu， Redhat， Centos等）.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Spark runs on Java 7+, Python 2.6+ and R 3.1+.  Spark 1.6.0 uses Scala 2.10. 所以Scala 配置 2.10.×版本的。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
 &lt;h1 id=&#34;编译工具安装-sbt:1784e58cad9564fb26f40c083f1bce7b&#34;&gt;编译工具安装 - sbt&lt;/h1&gt;
 
-&lt;p&gt;spark 官网上推荐 maven或者sbt 进行编译scala文件。 我个人推荐用sbt，轻便简单。但是容易在安装时遇到问题（gfw）。 sbt 在之后 运行spark工程时也需要，编译打包放在spark submit 上运行。&lt;/p&gt;
+&lt;p&gt;spark 官网上推荐 maven或者sbt 进行编译scala文件。 我个人推荐用sbt，轻便简单。但是容易在安装时遇到问题（gfw）。 sbt 在之后 运行spark工程时也需要，编译打包放在spark submit 上运行&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;官网下载地址&lt;/li&gt;
@@ -258,7 +769,7 @@ mkdir src/main/scala
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;project – 工程定义文件&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;project/build/.scala – 主要的工程定义文件&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;project/build.sbt – 主要的工程定义文件&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;project/build.properties – 工程，sbt以及scala版本定义&lt;/p&gt;&lt;/li&gt;
 
@@ -318,6 +829,8 @@ libraryDependencies += &amp;quot;org.apache.spark&amp;quot; %% &amp;quot;spark-c
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.scala-sbt.org/release/docs/index.html&#34;&gt;http://www.scala-sbt.org/release/docs/index.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.supergloo.com/fieldnotes/apache-spark-cluster-part-2-deploy-a-scala-program-to-spark-cluster/&#34;&gt;http://www.supergloo.com/fieldnotes/apache-spark-cluster-part-2-deploy-a-scala-program-to-spark-cluster/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000004508993#articleHeader2&#34;&gt;https://segmentfault.com/a/1190000004508993#articleHeader2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>

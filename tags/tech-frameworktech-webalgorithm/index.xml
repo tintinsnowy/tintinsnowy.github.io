@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech Frameworktech Webalgorithm on Sherry&#39;s blog</title>
+    <link>http://tintinsnowy.com/tags/tech-frameworktech-webalgorithm/</link>
+    <description>Recent content in Tech Frameworktech Webalgorithm on Sherry&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Apr 2016 09:31:31 +0800</lastBuildDate>
+    <atom:link href="http://tintinsnowy.com/tags/tech-frameworktech-webalgorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>News Recommendation part 1</title>
+      <link>http://tintinsnowy.com/2016/04/25/news-recommendation-part-1</link>
+      <pubDate>Mon, 25 Apr 2016 09:31:31 +0800</pubDate>
+      
+      <guid>http://tintinsnowy.com/2016/04/25/news-recommendation-part-1</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
