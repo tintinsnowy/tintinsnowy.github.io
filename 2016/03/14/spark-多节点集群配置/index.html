@@ -38,7 +38,7 @@
 
 
 <meta itemprop="dateModified" content="2016-03-14T09:06:34&#43;08:00" />
-<meta itemprop="wordCount" content="236">
+<meta itemprop="wordCount" content="246">
 
 
 
@@ -248,7 +248,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2016-03-14 09:06:34 &#43;0800 CST" itemprop="datePublished">2016-03-14</time>
             &middot;
-            236
+            246
             words
             &middot;
             2
@@ -378,30 +378,29 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
     &lt;/property&gt;
 </code></pre>
 
-<p></configuration></p>
+<p></configuration></p></li>
 
-<ol>
 <li><p>mapred-site.xml</p>
 
-<p><configuration><br />
-    <property><br />
-<name>mapreduce.framework.name</name><br />
-<value>yarn</value><br />
-    </property><br />
-<property><br />
-    <name>mapreduce.jobtracker.http.address</name><br />
-    <value>nameNode:50030</value><br />
-</property><br />
-<property><br />
-    <name>mapreduce.jobhistory.address</name><br />
-    <value>nameNode:10020</value><br />
-</property><br />
-<property><br />
-    <name>mapreduce.jobhistory.webapp.address</name><br />
-    <value>nameNode:19888</value><br />
-</property><br />
-</configuration></p></li>
-</ol></li>
+<pre><code>&lt;configuration&gt;  
+    &lt;property&gt;  
+&lt;name&gt;mapreduce.framework.name&lt;/name&gt;  
+&lt;value&gt;yarn&lt;/value&gt;  
+    &lt;/property&gt;  
+&lt;property&gt;  
+    &lt;name&gt;mapreduce.jobtracker.http.address&lt;/name&gt;  
+    &lt;value&gt;nameNode:50030&lt;/value&gt;  
+&lt;/property&gt;  
+&lt;property&gt;  
+    &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;  
+    &lt;value&gt;nameNode:10020&lt;/value&gt;  
+&lt;/property&gt;  
+&lt;property&gt;  
+    &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;  
+    &lt;value&gt;nameNode:19888&lt;/value&gt;  
+&lt;/property&gt;  
+&lt;/configuration&gt; 
+</code></pre></li>
 
 <li><p>yarn</p>
 
@@ -444,14 +443,16 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
 <li><p>vi hadoop-env.sh</p>
 
 <pre><code>export JAVA_HOME=your java home
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p>vi yarn-env.sh</p>
 
-<pre><code>export JAVA_HOME=your java home   
-</code></pre></li>
+<pre><code>    export JAVA_HOME=your java home   
+</code></pre>
 
-<li><p>格式化（同以前）</p></li>
+<ol>
+<li>格式化（同以前）</li>
 </ol>
 
 <p>启动/停止</p>

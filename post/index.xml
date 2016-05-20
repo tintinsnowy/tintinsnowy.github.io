@@ -138,30 +138,29 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
     &amp;lt;/property&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;/configuration&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;mapred-site.xml&lt;/p&gt;
 
-&lt;p&gt;&lt;configuration&gt;&lt;br /&gt;
-    &lt;property&gt;&lt;br /&gt;
-&lt;name&gt;mapreduce.framework.name&lt;/name&gt;&lt;br /&gt;
-&lt;value&gt;yarn&lt;/value&gt;&lt;br /&gt;
-    &lt;/property&gt;&lt;br /&gt;
-&lt;property&gt;&lt;br /&gt;
-    &lt;name&gt;mapreduce.jobtracker.http.address&lt;/name&gt;&lt;br /&gt;
-    &lt;value&gt;nameNode:50030&lt;/value&gt;&lt;br /&gt;
-&lt;/property&gt;&lt;br /&gt;
-&lt;property&gt;&lt;br /&gt;
-    &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;&lt;br /&gt;
-    &lt;value&gt;nameNode:10020&lt;/value&gt;&lt;br /&gt;
-&lt;/property&gt;&lt;br /&gt;
-&lt;property&gt;&lt;br /&gt;
-    &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;&lt;br /&gt;
-    &lt;value&gt;nameNode:19888&lt;/value&gt;&lt;br /&gt;
-&lt;/property&gt;&lt;br /&gt;
-&lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;configuration&amp;gt;  
+    &amp;lt;property&amp;gt;  
+&amp;lt;name&amp;gt;mapreduce.framework.name&amp;lt;/name&amp;gt;  
+&amp;lt;value&amp;gt;yarn&amp;lt;/value&amp;gt;  
+    &amp;lt;/property&amp;gt;  
+&amp;lt;property&amp;gt;  
+    &amp;lt;name&amp;gt;mapreduce.jobtracker.http.address&amp;lt;/name&amp;gt;  
+    &amp;lt;value&amp;gt;nameNode:50030&amp;lt;/value&amp;gt;  
+&amp;lt;/property&amp;gt;  
+&amp;lt;property&amp;gt;  
+    &amp;lt;name&amp;gt;mapreduce.jobhistory.address&amp;lt;/name&amp;gt;  
+    &amp;lt;value&amp;gt;nameNode:10020&amp;lt;/value&amp;gt;  
+&amp;lt;/property&amp;gt;  
+&amp;lt;property&amp;gt;  
+    &amp;lt;name&amp;gt;mapreduce.jobhistory.webapp.address&amp;lt;/name&amp;gt;  
+    &amp;lt;value&amp;gt;nameNode:19888&amp;lt;/value&amp;gt;  
+&amp;lt;/property&amp;gt;  
+&amp;lt;/configuration&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;yarn&lt;/p&gt;
 
@@ -204,14 +203,16 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
 &lt;li&gt;&lt;p&gt;vi hadoop-env.sh&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;export JAVA_HOME=your java home
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;vi yarn-env.sh&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;export JAVA_HOME=your java home   
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;    export JAVA_HOME=your java home   
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;li&gt;&lt;p&gt;格式化（同以前）&lt;/p&gt;&lt;/li&gt;
+&lt;ol&gt;
+&lt;li&gt;格式化（同以前）&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;启动/停止&lt;/p&gt;
