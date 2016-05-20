@@ -141,14 +141,13 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
 &lt;p&gt;&lt;/configuration&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;mapred-site.xml&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;mapred-site.xml&lt;/p&gt;
 
 &lt;p&gt;&lt;configuration&gt;&lt;br /&gt;
     &lt;property&gt;&lt;br /&gt;
-    &lt;name&gt;mapreduce.framework.name&lt;/name&gt;&lt;br /&gt;
-    &lt;value&gt;yarn&lt;/value&gt;&lt;br /&gt;
-&lt;/property&gt;&lt;br /&gt;
+&lt;name&gt;mapreduce.framework.name&lt;/name&gt;&lt;br /&gt;
+&lt;value&gt;yarn&lt;/value&gt;&lt;br /&gt;
+    &lt;/property&gt;&lt;br /&gt;
 &lt;property&gt;&lt;br /&gt;
     &lt;name&gt;mapreduce.jobtracker.http.address&lt;/name&gt;&lt;br /&gt;
     &lt;value&gt;nameNode:50030&lt;/value&gt;&lt;br /&gt;
@@ -162,36 +161,38 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
     &lt;value&gt;nameNode:19888&lt;/value&gt;&lt;br /&gt;
 &lt;/property&gt;&lt;br /&gt;
 &lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;yarn&lt;/p&gt;
 
-&lt;p&gt;&lt;configuration&gt;
-    &lt;!-- Site specific YARN configuration properties --&gt;
-    &lt;property&gt;
-    &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
-    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-    &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;
-    &lt;value&gt;kexinyun1:8032&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-    &lt;name&gt;yarn.resourcemanager.scheduler.address&lt;/name&gt;
-    &lt;value&gt;kexinyun1:8030&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-    &lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;/name&gt;
-    &lt;value&gt;kexinyun1:8031&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-    &lt;name&gt;yarn.resourcemanager.admin.address&lt;/name&gt;
-    &lt;value&gt;kexinyun1:8033&lt;/value&gt;
-&lt;/property&gt;
-&lt;property&gt;
-    &lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt;
-    &lt;value&gt;kexinyun1:8088&lt;/value&gt;
-&lt;/property&gt;
-&lt;/configuration&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;configuration&amp;gt;
+    &amp;lt;!-- Site specific YARN configuration properties --&amp;gt;
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;yarn.nodemanager.aux-services&amp;lt;/name&amp;gt;
+        &amp;lt;value&amp;gt;mapreduce_shuffle&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;yarn.resourcemanager.address&amp;lt;/name&amp;gt;
+        &amp;lt;value&amp;gt;kexinyun1:8032&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;yarn.resourcemanager.scheduler.address&amp;lt;/name&amp;gt;
+        &amp;lt;value&amp;gt;kexinyun1:8030&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;yarn.resourcemanager.resource-tracker.address&amp;lt;/name&amp;gt;
+    &amp;lt;value&amp;gt;kexinyun1:8031&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;yarn.resourcemanager.admin.address&amp;lt;/name&amp;gt;
+    &amp;lt;value&amp;gt;kexinyun1:8033&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+    &amp;lt;property&amp;gt;
+        &amp;lt;name&amp;gt;yarn.resourcemanager.webapp.address&amp;lt;/name&amp;gt;
+        &amp;lt;value&amp;gt;kexinyun1:8088&amp;lt;/value&amp;gt;
+    &amp;lt;/property&amp;gt;
+&amp;lt;/configuration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;slaves 文件&lt;/p&gt;
 

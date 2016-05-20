@@ -38,7 +38,7 @@
 
 
 <meta itemprop="dateModified" content="2016-03-14T09:06:34&#43;08:00" />
-<meta itemprop="wordCount" content="215">
+<meta itemprop="wordCount" content="236">
 
 
 
@@ -248,7 +248,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2016-03-14 09:06:34 &#43;0800 CST" itemprop="datePublished">2016-03-14</time>
             &middot;
-            215
+            236
             words
             &middot;
             2
@@ -381,14 +381,13 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
 <p></configuration></p>
 
 <ol>
-<li>mapred-site.xml</li>
-</ol>
+<li><p>mapred-site.xml</p>
 
 <p><configuration><br />
     <property><br />
-    <name>mapreduce.framework.name</name><br />
-    <value>yarn</value><br />
-</property><br />
+<name>mapreduce.framework.name</name><br />
+<value>yarn</value><br />
+    </property><br />
 <property><br />
     <name>mapreduce.jobtracker.http.address</name><br />
     <value>nameNode:50030</value><br />
@@ -402,36 +401,38 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
     <value>nameNode:19888</value><br />
 </property><br />
 </configuration></p></li>
+</ol></li>
 
 <li><p>yarn</p>
 
-<p><configuration>
-    <!-- Site specific YARN configuration properties -->
-    <property>
-    <name>yarn.nodemanager.aux-services</name>
-    <value>mapreduce_shuffle</value>
-</property>
-<property>
-    <name>yarn.resourcemanager.address</name>
-    <value>kexinyun1:8032</value>
-</property>
-<property>
-    <name>yarn.resourcemanager.scheduler.address</name>
-    <value>kexinyun1:8030</value>
-</property>
-<property>
-    <name>yarn.resourcemanager.resource-tracker.address</name>
-    <value>kexinyun1:8031</value>
-</property>
-<property>
-    <name>yarn.resourcemanager.admin.address</name>
-    <value>kexinyun1:8033</value>
-</property>
-<property>
-    <name>yarn.resourcemanager.webapp.address</name>
-    <value>kexinyun1:8088</value>
-</property>
-</configuration></p></li>
+<pre><code>&lt;configuration&gt;
+    &lt;!-- Site specific YARN configuration properties --&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;
+        &lt;value&gt;kexinyun1:8032&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.scheduler.address&lt;/name&gt;
+        &lt;value&gt;kexinyun1:8030&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;/name&gt;
+    &lt;value&gt;kexinyun1:8031&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.admin.address&lt;/name&gt;
+    &lt;value&gt;kexinyun1:8033&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;property&gt;
+        &lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt;
+        &lt;value&gt;kexinyun1:8088&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
 
 <li><p>slaves 文件</p>
 
