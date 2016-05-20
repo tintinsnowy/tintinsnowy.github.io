@@ -153,7 +153,7 @@ yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快
 &amp;lt;/configuration&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;yarn&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;yarn 修改&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;configuration&amp;gt;
     &amp;lt;!-- Site specific YARN configuration properties --&amp;gt;
