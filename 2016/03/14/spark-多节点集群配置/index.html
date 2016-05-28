@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="http://tintinsnowy.com/css/monokai.css">
     <link rel="stylesheet" href="http://tintinsnowy.com/fancybox/jquery.fancybox.css">
     <meta property="og:title" content="Spark-多节点集群配置" />
-<meta property="og:description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark[单节点]安装和环境配置 SCALA 环境 见Apache Spark[单节点]安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2." />
+<meta property="og:description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark单节点安装和环境配置 SCALA 环境 见Apache Spark单节点安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE" />
 
@@ -34,7 +34,7 @@
     
     
 <meta itemprop="name" content="Spark-多节点集群配置">
-<meta itemprop="description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark[单节点]安装和环境配置 SCALA 环境 见Apache Spark[单节点]安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2.">
+<meta itemprop="description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark单节点安装和环境配置 SCALA 环境 见Apache Spark单节点安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2.">
 
 
 <meta itemprop="dateModified" content="2016-03-14T09:06:34&#43;08:00" />
@@ -51,7 +51,7 @@
 
 
 <meta name="twitter:title" content="Spark-多节点集群配置"/>
-<meta name="twitter:description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark[单节点]安装和环境配置 SCALA 环境 见Apache Spark[单节点]安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2."/>
+<meta name="twitter:description" content="楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog 本机配置 Centos 5.8 4 cores 8G 节点布置 Masters&amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38 环境配置 Environment JAVA 环境 见Apache Spark单节点安装和环境配置 SCALA 环境 见Apache Spark单节点安装和环境配置 SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为&rdquo;公私钥&rdquo;(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。 确保安装好 ssh：（ubuntu版） $ sudo apt-get update $ sudo apt-get install openssh-server $ sudo /etc/init.d/ssh start ssh(centos): 确认系统已经安装了SSH。 rpm –qa | grep openssh rpm –qa | grep rsync yum install ssh //安装SSH协议 yum install rsync //rsync是一个远程数据同步工具，可通过LAN/WAN快速同步多台主机间的文件 service sshd restart &ndash;&gt;启动服务 2."/>
 
 
 
@@ -289,11 +289,11 @@
 
 <h3 id="java-环境:d7f0df7a88d75431aefaa0c11af54130">JAVA 环境</h3>
 
-<p>见<code>Apache Spark[单节点]安装和环境配置</code></p>
+<p>见<code>Apache Spark单节点安装和环境配置</code></p>
 
 <h3 id="scala-环境:d7f0df7a88d75431aefaa0c11af54130">SCALA 环境</h3>
 
-<p>见<code>Apache Spark[单节点]安装和环境配置</code></p>
+<p>见<code>Apache Spark单节点安装和环境配置</code></p>
 
 <h3 id="ssh-配置:d7f0df7a88d75431aefaa0c11af54130">SSH 配置</h3>
 
