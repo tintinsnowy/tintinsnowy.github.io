@@ -7,18 +7,207 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Sat, 31 Dec 2016 16:05:52 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 31 Dec 2015 16:05:52 +0100</lastBuildDate>
     <atom:link href="http://tintinsnowy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setup a free blog based on Hugo and Github</title>
-      <link>http://tintinsnowy.github.io/2016/12/31/setup-a-free-blog-based-on-hugo-and-github</link>
-      <pubDate>Sat, 31 Dec 2016 16:05:52 +0100</pubDate>
+      <link>http://tintinsnowy.github.io/2015/12/31/setup-a-free-blog-based-on-hugo-and-github</link>
+      <pubDate>Thu, 31 Dec 2015 16:05:52 +0100</pubDate>
       
-      <guid>http://tintinsnowy.github.io/2016/12/31/setup-a-free-blog-based-on-hugo-and-github</guid>
-      <description>&lt;h2 id=&#34;hello-github&#34;&gt;Hello GitHub!&lt;/h2&gt;
+      <guid>http://tintinsnowy.github.io/2015/12/31/setup-a-free-blog-based-on-hugo-and-github</guid>
+      <description>
 
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;hello-github&#34;&gt;Hello GitHub!&lt;/h2&gt;
+
+&lt;p&gt;GitHub is more than a collaborative tool to make your software development more effective. In fact, it is more like a community where you share and contribute your code.&lt;/p&gt;
+
+&lt;p&gt;Since we want to build our own blog, so the whole &lt;code&gt;static websites&lt;/code&gt; should be stored in Github. Now here we go. sign up in Github&lt;/p&gt;
+
+&lt;p&gt;Okay！ you are now a member of github, enjoy your coding journey!&lt;/p&gt;
+
+&lt;h2 id=&#34;bravo-hugo&#34;&gt;Bravo！ Hugo&lt;/h2&gt;
+
+&lt;p&gt;A powerful and fast Website engine is Hugo， which is designed for go lovers！ Hugo flexibly works with many formats and is ideal for blogs, docs, portfolios and much more. Hugo’s speed fosters creativity and makes building a website fun again.&lt;/p&gt;
+
+&lt;p&gt;It helps you to build your blog, you don’t have to know the details of css , js,MySQL etc. It saves you a lot of trouble, and you can concentrate more on your writing and coding.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-is-static-web&#34;&gt;why is static web?&lt;/h2&gt;
+
+&lt;p&gt;Because….&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quick to develop&lt;/li&gt;
+&lt;li&gt;Cheap to develop&lt;/li&gt;
+&lt;li&gt;Cheap to host.&lt;/li&gt;
+&lt;li&gt;Those are what we want for blogs!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage-of-hugo&#34;&gt;Usage of Hugo&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-install-hugo&#34;&gt;1. Install Hugo&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    [Download](https://gohugo.io/)
+    tar -zxvf hugo*
+    ln -s /home/sherry/hugo_0.17_linux_amd64 hugo
+    hugo version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;###2. New blog’s framework
+choose a depository to store your webpages&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ hugo new site tintinsnowy.github.io(example-site)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then you can see the tree:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  ▸ archetypes/
+  ▸ content/
+  ▸ layouts/
+  ▸ static/
+  config.toml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-template-of-blog&#34;&gt;3. template of blog&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;here https://gohugo.io/showcase/[https://gohugo.io/showcase/]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;you can find the templates of your blog. Of course you may code yourself&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ mkdir themes
+    $ cd themes
+    $ git clone https://github.com/coderzh/hugo-rapid-theme.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-content-of-blog&#34;&gt;4. content of blog&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ cd tintinsnowy.github.io
+    $ hugo new about.md
+    $ hugo new post/firstblog.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;before you edit you should modify the content of &lt;strong&gt;config.toml&lt;/strong&gt;
+according to the template you use&lt;/p&gt;
+
+&lt;h2 id=&#34;5-debug&#34;&gt;5. Debug&lt;/h2&gt;
+
+&lt;p&gt;here you can see the local website of your blog&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    sherry@sherry:~/code/hugo/tintinsnowy.github.io$ sudo /home/sherry/code/hugo/hugo server --theme=hugo-icarus --buildDrafts --watch
+
+    1 of 1 draft rendered
+    0 future content
+    8 pages created
+    13 paginator pages created
+    6 tags created
+    4 categories created
+    in 103 ms
+    Watching for changes in /home/sherry/code/hugo/tintinsnowy.github.io/{data,content,layouts,static,themes}
+    Serving pages from memory
+    Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+    Press Ctrl+C to stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;6-publish-and-create-your-blog-s-repository-on-github&#34;&gt;6.Publish and create your blog’s repository on Github&lt;/h2&gt;
+
+&lt;p&gt;Aha, I suppose that you are familiar with git. If not, there is a whale of tutorial of git and github. So shall we start?&lt;/p&gt;
+
+&lt;p&gt;create a new repository&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;User &amp;amp; Organization&lt;/code&gt; Pages live in a special repository dedicated to GitHub Pages files. You will need to name this repository with the account name.&lt;/p&gt;
+
+&lt;p&gt;You &lt;strong&gt;must use the username.github.io&lt;/strong&gt; naming scheme. Content from the master branch will be used to build and publish your GitHub Pages site. A repository like joe/bob.github.io will not build a User Pages site. Don’t ask me why… see here .
+When User Pages are built, they are available at &lt;code&gt;http(s)://&amp;lt;username&amp;gt;.github.io.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, my account name is &lt;code&gt;tintinsnowy&lt;/code&gt; , so I have to name my repository tintinsnowy.github.io&lt;/p&gt;
+
+&lt;p&gt;Build your static website&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $hugo --theme=hugo-icarus --baseUrl=&amp;quot;http://tintinsnowy.github.io/&amp;quot;
+    $ cd public
+    $ git init
+    $ git remote add origin https://github.com/tintinsnowy/tintinsnowy.github.io.git
+    $ git add -A
+    $ git commit -m &amp;quot;first commit&amp;quot;
+    $ git push -u origin master
+    See your website
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In your github repository setting, you can see this:&lt;a href=&#34;http://tintinsnowy.github.io&#34;&gt;http://tintinsnowy.github.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7-buy-domain&#34;&gt;7. Buy domain&lt;/h2&gt;
+
+&lt;p&gt;A few suggestion:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;godaddy&lt;/li&gt;
+&lt;li&gt;aliyun&lt;/li&gt;
+&lt;li&gt;…..&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;8-setting&#34;&gt;8. Setting&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Adding a CNAME file to your repository: Notice:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the file name field, type CNAME &lt;code&gt;(with all caps!).&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;use &lt;code&gt;tintinsnowy.com&lt;/code&gt;, not &lt;code&gt;https://tintinsnowy.com&lt;/code&gt;. Note that there can only be &lt;code&gt;one domain&lt;/code&gt; in the CNAME file. (well you should type in your own CNAME, instead of tintinsnowy)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Setting your account&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;CNAME&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;@&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;tintinsnowy.github.io.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;www&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192.30.252.153&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;www&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192.30.252.154&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Don’t forget the&lt;code&gt;.&lt;/code&gt; after &lt;code&gt;tintinsnowy.github.io&lt;/code&gt; If you want to know why should be setting like this, see the references.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;waiting..&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;checkout&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tintinsnowy.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;9-references&#34;&gt;9. References&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugo(&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Setting up a custom domain with GitHub Pages(&lt;a href=&#34;https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/&#34;&gt;https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Github Pages Setting(&lt;a href=&#34;https://help.github.com/articles/user-organization-and-project-pages/&#34;&gt;https://help.github.com/articles/user-organization-and-project-pages/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;cnfeat.com(&lt;a href=&#34;http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/&#34;&gt;http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;coderzh(&lt;a href=&#34;http://blog.coderzh.com/2015/08/29/hugo/&#34;&gt;http://blog.coderzh.com/2015/08/29/hugo/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;quantumman.me(&lt;a href=&#34;http://quantumman.me/blog/setting-up-a-domain-with-gitHub-pages.html&#34;&gt;http://quantumman.me/blog/setting-up-a-domain-with-gitHub-pages.html&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;tonybai’s blog(&lt;a href=&#34;http://tonybai.com/2015/09/23/intro-of-gohugo/&#34;&gt;http://tonybai.com/2015/09/23/intro-of-gohugo/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>
