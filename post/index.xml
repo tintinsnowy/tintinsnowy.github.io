@@ -7,16 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Sat, 31 Dec 2016 14:15:37 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 31 Dec 2016 16:05:52 +0100</lastBuildDate>
     <atom:link href="http://tintinsnowy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>go is for lovers</title>
-      <link>http://tintinsnowy.github.io/2016/12/31/go-is-for-lovers</link>
-      <pubDate>Sat, 31 Dec 2016 14:15:37 +0100</pubDate>
+      <title>Setup a free blog based on Hugo and Github</title>
+      <link>http://tintinsnowy.github.io/2016/12/31/setup-a-free-blog-based-on-hugo-and-github</link>
+      <pubDate>Sat, 31 Dec 2016 16:05:52 +0100</pubDate>
       
-      <guid>http://tintinsnowy.github.io/2016/12/31/go-is-for-lovers</guid>
-      <description></description>
+      <guid>http://tintinsnowy.github.io/2016/12/31/setup-a-free-blog-based-on-hugo-and-github</guid>
+      <description>&lt;h2 id=&#34;hello-github&#34;&gt;Hello GitHub!&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
