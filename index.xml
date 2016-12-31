@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sherry&#39;s blog</title>
-    <link>http://tintinsnowy.com/index.xml</link>
+    <link>http://tintinsnowy.github.io/index.xml</link>
     <description>Recent content on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Sat, 31 Dec 2016 14:15:37 +0100</lastBuildDate>
-    <atom:link href="http://tintinsnowy.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://tintinsnowy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>go is for lovers</title>
-      <link>http://tintinsnowy.com/2016/12/31/go-is-for-lovers</link>
+      <link>http://tintinsnowy.github.io/2016/12/31/go-is-for-lovers</link>
       <pubDate>Sat, 31 Dec 2016 14:15:37 +0100</pubDate>
       
-      <guid>http://tintinsnowy.com/2016/12/31/go-is-for-lovers</guid>
+      <guid>http://tintinsnowy.github.io/2016/12/31/go-is-for-lovers</guid>
       <description></description>
     </item>
     
