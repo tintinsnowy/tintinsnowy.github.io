@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech Web on Sherry&#39;s blog</title>
+    <link>http://tintinsnowy.com/tags/tech-web/</link>
+    <description>Recent content in Tech Web on Sherry&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Dec 2015 13:07:31 +0200</lastBuildDate>
+    <atom:link href="http://tintinsnowy.com/tags/tech-web/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setup a free blog based on Hugo and Github</title>
+      <link>http://tintinsnowy.com/2015/12/26/setup-a-free-blog-based-on-hugo-and-github</link>
+      <pubDate>Sat, 26 Dec 2015 13:07:31 +0200</pubDate>
+      
+      <guid>http://tintinsnowy.com/2015/12/26/setup-a-free-blog-based-on-hugo-and-github</guid>
+      <description>
+
+&lt;h1 id=&#34;hello-github:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Hello &lt;code&gt;GitHub!&lt;/code&gt;&lt;/h1&gt;
+
+&lt;p&gt;GitHub is more than a collaborative tool to make your software development more effective. In fact, it is more like a community where you share and contribute your code.&lt;/p&gt;
+
+&lt;p&gt;Since we want to build our own blog, so the whole &lt;code&gt;static websites&lt;/code&gt; should be stored in Github. Now here we go. sign up in &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay！ you are now  a member of github, enjoy your coding journey!&lt;/p&gt;
+
+&lt;h1 id=&#34;bravo-hugo:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Bravo！  &lt;code&gt;Hugo&lt;/code&gt;&lt;/h1&gt;
+
+&lt;p&gt;A powerful and fast Website engine is Hugo， which is designed for &lt;code&gt;go lovers&lt;/code&gt;！
+&lt;code&gt;Hugo&lt;/code&gt; flexibly works with many formats and is ideal for blogs, docs, portfolios and much more. Hugo’s speed fosters creativity and makes building a website fun again.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;It helps you to build your blog, you don&amp;rsquo;t have to know the details of &lt;code&gt;css&lt;/code&gt; , &lt;code&gt;js&lt;/code&gt;,&lt;code&gt;MySQL&lt;/code&gt; etc. It saves you a lot of trouble, and you can concentrate more on your writing and coding.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;why-is-static-web:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;why is static web?&lt;/h2&gt;
+
+&lt;p&gt;Because&amp;hellip;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quick to develop&lt;/li&gt;
+&lt;li&gt;Cheap to develop&lt;/li&gt;
+&lt;li&gt;Cheap to host.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Those are what we want for blogs!&lt;/p&gt;
+
+&lt;h2 id=&#34;usage-of-hugo:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Usage of Hugo&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Install Hugo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* [Download](http://gohugo.io/)
+* decompression
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;New  blog&amp;rsquo;s framework&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;enter  your hugo path&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ cd hugo
+    $ ls -la
+
+now you can setup your first website.  `tintinsnowy.github.io` should                 be replaced by your website  name
+
+    $hugo new site tintinsnowy.github.io
+
+If you find something wrong with your path, then use the  absolute path
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;for example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ home/sherry/code/hugo/hugo new site tintinsnowy.github.io
+
+    Then you can see the tree:
+
+      ▸ archetypes/
+      ▸ content/
+      ▸ layouts/
+      ▸ static/
+      config.toml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;The content of blog&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;your articles should be store in the path of : &lt;code&gt;content/post&lt;/code&gt;. adll the articles are in  markdown format.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ cd tintinsnowy.github.io
+    $ hugo new about.md
+    $ hugo new post/firstblog.md
+
+  Then open the `firstblog.md` , you can see the automatically generated file
+
+    +++
+    date = &amp;quot;2015-12-26T08:36:54-07:00&amp;quot;
+    draft = true
+    title = &amp;quot;firstblog&amp;quot;
+    +++ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can add the content into your file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    +++
+    date = &amp;quot;2015-01-08T08:36:54-07:00&amp;quot;
+    draft = true
+    title = &amp;quot;first&amp;quot;
+    +++
+    ####Hello Hugo
+
+     1. aaa
+     2. bbb
+     3. ccc 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Find a joyful theme for your blog&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are a few &lt;a href=&#34;https://github.com/spf13/hugoThemes&#34;&gt;opensource-themes&lt;/a&gt;   Every theme has detailed description of usage, but &lt;code&gt;NOT all&lt;/code&gt; the configurations are the same. You should see the &lt;code&gt;Homepage&lt;/code&gt; of what you&amp;rsquo;ve chosen.
+   For example,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    $ pwd
+    &amp;gt;/home/sherry/code/hugo/tintinsnowy.github.io
+    $ mkdir themes
+    $ cd themes
+    $ git clone https://github.com/spf13/hyde.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;now  you can see that the theme has been in your &lt;code&gt;themes/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Set configuration of your theme&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This step is &lt;code&gt;extremely important&lt;/code&gt;   , different theme has different ways of setting, so it&amp;rsquo;s your time to design. But before you do, you should read the homepage of your theme.&lt;/p&gt;
+
+&lt;p&gt;Hugo can read your configuration as JSON, YAML or TOML. Hugo supp
+orts parameters custom configuration too. Refer to the &lt;code&gt;theme&lt;/code&gt; that you&amp;rsquo;ve chosen  for details.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&amp;hellip;..
+  you can see how it looks like in localhost:(the &lt;code&gt;hugo-icarus&lt;/code&gt; is the name of theme, you need to change it), open &lt;code&gt;http://localhost:1313/&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; sherry@sherry:~/code/hugo/tintinsnowy.github.io$ sudo /home/sherry/code/hugo/hugo server --theme=hugo-icarus --buildDrafts --watch
+1 of 1 draft rendered
+0 future content
+8 pages created
+13 paginator pages created
+6 tags created
+4 categories created
+in 103 ms
+Watching for changes in /home/sherry/code/hugo/tintinsnowy.github.io/{data,content,layouts,static,themes}
+Serving pages from memory
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you are satisfied with your blog in localhost, you want to display it on web right? Okay do the following steps!&lt;/p&gt;
+
+&lt;h1 id=&#34;create-your-blog-s-repository-on-github:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Create your blog&amp;rsquo;s repository on Github&lt;/h1&gt;
+
+&lt;p&gt;Aha, I suppose that you are familiar with git. If not, there is a whale of tutorial of git and github. So shall we start?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;create a new repository&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;User &amp;amp; Organization&lt;/code&gt; Pages live in a special repository dedicated to GitHub Pages files. You will need to name this repository with the &lt;code&gt;account name&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You must use the &lt;strong&gt;&lt;code&gt;username.github.io&lt;/code&gt;&lt;/strong&gt; naming scheme.
+Content from the master branch will be used to build and publish your GitHub Pages site. A repository like &lt;code&gt;joe/bob.github.io&lt;/code&gt; will &lt;code&gt;not&lt;/code&gt; build a User Pages site. Don&amp;rsquo;t ask me why&amp;hellip; &lt;a href=&#34;https://help.github.com/articles/user-organization-and-project-pages/&#34;&gt;see here&lt;/a&gt; .&lt;br /&gt;
+When User Pages are built, they are available at &lt;code&gt;http(s)://&amp;lt;username&amp;gt;.github.io.&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For example, my account name is &lt;code&gt;tintinsnowy&lt;/code&gt; , so I have to name my repository &lt;code&gt;tintinsnowy.github.io&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Build your static website&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $hugo --theme=hugo-icarus --baseUrl=&amp;quot;http://tintinsnowy.github.io/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Upload your website&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd public
+$ git init
+$ git remote add origin https://github.com/tintinsnowy/tintinsnowy.github.io.git
+$ git add -A
+$ git commit -m &amp;quot;first commit&amp;quot;
+$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;See your website&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In your github repository &lt;code&gt;setting&lt;/code&gt;, you can see this:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Your site is published at &lt;a href=&#34;http://tintinsnowy.github.io&#34;&gt;http://tintinsnowy.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Now, it seems like the end of our Project. Yet if you wish your blog&amp;rsquo;s address more unique, you may buy a custom domain.&lt;/p&gt;
+
+&lt;h1 id=&#34;buy-domain:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Buy domain&lt;/h1&gt;
+
+&lt;p&gt;A few suggestion:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.godaddy.com&#34;&gt;godaddy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://aliyun.com&#34;&gt;aliyun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&amp;hellip;..&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;setting:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Setting&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Adding a CNAME file to your repository:
+&lt;strong&gt;Notice&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the file name field, type CNAME &lt;code&gt;(with all caps!).&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;use &lt;code&gt;tintinsnowy.com&lt;/code&gt;, not &lt;code&gt;https://tintinsnowy.com&lt;/code&gt;. Note that there can only be &lt;code&gt;one domain&lt;/code&gt; in the CNAME file.
+(well you should type in your own CNAME, instead of &lt;code&gt;tintinsnowy&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Setting your account&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;CNAME&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;@&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;tintinsnowy.github.io.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;www&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192.30.252.153&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;www&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;192.30.252.154&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Don&amp;rsquo;t forget the &lt;code&gt;.&lt;/code&gt; after &lt;code&gt;tintinsnowy.github.io&lt;/code&gt;
+If you want to know why should be setting like this, see the references.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;waiting..&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;checkout&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; tintinsnowy.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Writen by Sherry&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;reference:9555be3a2c94fddd2b0e40a3a2f9e383&#34;&gt;Reference:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/&#34;&gt;Setting up a custom domain with GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.github.com/articles/user-organization-and-project-pages/&#34;&gt;Github Pages Setting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/&#34;&gt;cnfeat.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.coderzh.com/2015/08/29/hugo/&#34;&gt;coderzh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://quantumman.me/blog/setting-up-a-domain-with-gitHub-pages.html&#34;&gt;quantumman.me&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tonybai.com/2015/09/23/intro-of-gohugo/&#34;&gt;tonybai&amp;rsquo;s blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing Icarus and it&#39;s features</title>
+      <link>http://tintinsnowy.com/2015/12/24/introducing-icarus-and-its-features</link>
+      <pubDate>Thu, 24 Dec 2015 16:56:43 +0200</pubDate>
+      
+      <guid>http://tintinsnowy.com/2015/12/24/introducing-icarus-and-its-features</guid>
+      <description>
+
+&lt;p&gt;Icarus is a responsive and customizable theme for bloggers. It&amp;rsquo;s a port of the same-named theme for &lt;a href=&#34;//hexo.io&#34;&gt;Hexo&lt;/a&gt; made by &lt;a href=&#34;https://github.com/ppoffice&#34;&gt;Ruipeng Zhang&lt;/a&gt;. Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (l10n) support, syntax highlighting for source code, optional widgets for the sidebar and a handful &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34;&gt;shortcodes&lt;/a&gt; to make your life easier.&lt;/p&gt;
+
+&lt;h2 id=&#34;get-the-theme:33ea911532f0c95309659f2412cd62cb&#34;&gt;Get the theme&lt;/h2&gt;
+
+&lt;p&gt;I assume you&amp;rsquo;ve Git installed. Inside the folder of your Hugo site run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir themes
+$ cd themes
+$ git clone git@github.com:digitalcraftsman/hugo-icarus-theme.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should see a folder called &lt;code&gt;hugo-icarus-theme&lt;/code&gt; inside the &lt;code&gt;themes&lt;/code&gt; directory, that we created a few moments ago. For more information read the official &lt;a href=&#34;https://gohugo.io/overview/installing/&#34;&gt;setup guide&lt;/a&gt; of Hugo.&lt;/p&gt;
+
+&lt;h2 id=&#34;setup:33ea911532f0c95309659f2412cd62cb&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;In the next step navigate to the &lt;code&gt;exampleSite&lt;/code&gt; folder at &lt;code&gt;themes/hugo-icarus-theme/exampleSite/&lt;/code&gt;. It&amp;rsquo;s structure shoud look similar to this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;exampleSite
+├── config.toml
+├── content
+│   └── post
+│       ├── creating-a-new-theme.md
+│       ├── go-is-for-lovers.md
+│       ├── hugo-is-for-lovers.md
+│       ├── introducing-icarus-and-its-features.md
+│       ├── linked-post.md
+│       └── migrate-from-jekyll.md
+├── data
+│   └── l10n.toml
+└── static
+    └── banners
+        └── placeholder.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In order to get your site running, you need to copy &lt;code&gt;config.toml&lt;/code&gt; and &lt;code&gt;data/l10n.toml&lt;/code&gt; into the root folders.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-config-file:33ea911532f0c95309659f2412cd62cb&#34;&gt;The config file&lt;/h2&gt;
+
+&lt;p&gt;Now, let us take a look into the &lt;code&gt;config.toml&lt;/code&gt;. Feel free to play around with the settings.&lt;/p&gt;
+
+&lt;h3 id=&#34;comments:33ea911532f0c95309659f2412cd62cb&#34;&gt;Comments&lt;/h3&gt;
+
+&lt;p&gt;The opional comment system is powered by Disqus. Enter your shortname to enable the comment section under your posts.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;disqusShortname = &amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;menu:33ea911532f0c95309659f2412cd62cb&#34;&gt;Menu&lt;/h3&gt;
+
+&lt;p&gt;You can also define the items menu entries as you like. First, let us link a post that you&amp;rsquo;ve written. We can do this in the frontmatter of the post&amp;rsquo;s content file by setting &lt;code&gt;menu&lt;/code&gt; to &lt;code&gt;main&lt;/code&gt;. Take a look at the menu if you want to see a live example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+menu = &amp;quot;main&amp;quot;
++++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Furthermore, we can add entries that don&amp;rsquo;t link to posts. Back in the &lt;code&gt;config.toml&lt;/code&gt; you&amp;rsquo;ll find a section for the menus:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[params.menu]]
+    before = true
+    label  = &amp;quot;Home&amp;quot;
+    link   = &amp;quot;/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Define a label and enter the URL to resource you want to link. With &lt;code&gt;before&lt;/code&gt; you can decide wether the link should appear before &lt;strong&gt;or&lt;/strong&gt; after all linked posts in the menu. &lt;code&gt;Home&lt;/code&gt; appears before the linked post, &lt;code&gt;Tags&lt;/code&gt; and &lt;code&gt;Categories&lt;/code&gt; after them (as in the menu above).&lt;/p&gt;
+
+&lt;h3 id=&#34;tell-me-who-you-re:33ea911532f0c95309659f2412cd62cb&#34;&gt;Tell me who you&amp;rsquo;re&lt;/h3&gt;
+
+&lt;p&gt;Maybe you noticed the profile section on the left. Add your social network accounts to the profile section on the left by entering your username under &lt;code&gt;social&lt;/code&gt;. The links to your account will be create automatically.&lt;/p&gt;
+
+&lt;h3 id=&#34;widgets:33ea911532f0c95309659f2412cd62cb&#34;&gt;Widgets&lt;/h3&gt;
+
+&lt;p&gt;On the right, you can see some useful widgets that you can activate as you like. You can deactivate them under &lt;code&gt;params.widgets&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[params.widgets]
+    recent_articles = false
+    categories = true
+    tags = true
+    tag_cloud = true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;localization-l10n:33ea911532f0c95309659f2412cd62cb&#34;&gt;Localization (l10n)&lt;/h2&gt;
+
+&lt;p&gt;You don&amp;rsquo;t blog in english and you want to translate the theme into your native locale? No problem. Take a look in the &lt;code&gt;data&lt;/code&gt; folder and you&amp;rsquo;ll find a file &lt;code&gt;l10n.toml&lt;/code&gt; that we&amp;rsquo;ve copied at the beginning. It contains all strings related to the theme. Just replace the original strings with your own.&lt;/p&gt;
+
+&lt;h2 id=&#34;linking-thumbnails:33ea911532f0c95309659f2412cd62cb&#34;&gt;Linking thumbnails&lt;/h2&gt;
+
+&lt;p&gt;After creating a new post you can define a banner by entering the relative path to the image.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;banner = &amp;quot;banners/placeholder.png&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This way you can store them either next to the content file or in the &lt;code&gt;static&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h2 id=&#34;mathematical-equations:33ea911532f0c95309659f2412cd62cb&#34;&gt;Mathematical equations&lt;/h2&gt;
+
+&lt;p&gt;In case you need to display equations you can insert your Latex or MathML code and it works out of the box thanks to &lt;a href=&#34;https://www.mathjax.org&#34;&gt;MathJax&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\[ z = r \cdot (\sin{\phi} + \cos{\phi} \cdot i) \]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[ z = r \cdot (\sin{\phi} + \cos{\phi} \cdot i) ]&lt;/p&gt;
+
+&lt;h2 id=&#34;shortcodes:33ea911532f0c95309659f2412cd62cb&#34;&gt;Shortcodes&lt;/h2&gt;
+
+&lt;p&gt;Last but not least I included some useful &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34;&gt;shortcodes&lt;/a&gt; to make your like easier.&lt;/p&gt;
+
+&lt;h3 id=&#34;gallery:33ea911532f0c95309659f2412cd62cb&#34;&gt;Gallery&lt;/h3&gt;
+
+&lt;p&gt;This way you can include a gallery into your post. Copy the code below into your content file and enter the relative paths to your images.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ &amp;lt; gallery
+    &amp;quot;/banners/placeholder.png&amp;quot;
+    &amp;quot;/banners/placeholder.png&amp;quot;
+    &amp;quot;/banners/placeholder.png&amp;quot;
+&amp;gt; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note: In order to prevent the execution of the shortcodes I added a space between &lt;code&gt;{{&lt;/code&gt; and &lt;code&gt;&amp;lt;&lt;/code&gt; at the beginning and the end of the shortcode. Revert this after copying.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&#34;article-gallery&#34;&gt;
+    &lt;div class=&#34;article-gallery-photos&#34;&gt;
+        
+        &lt;a class=&#34;article-gallery-img fancybox&#34; href=&#34;http://tintinsnowy.com/banners/placeholder.png&#34; rel=&#34;group1&#34;&gt;
+            &lt;img src=&#34;http://tintinsnowy.com/banners/placeholder.png&#34; itemprop=&#34;image&#34;&gt;
+        &lt;/a&gt;
+        
+        &lt;a class=&#34;article-gallery-img fancybox&#34; href=&#34;http://tintinsnowy.com/banners/placeholder.png&#34; rel=&#34;group1&#34;&gt;
+            &lt;img src=&#34;http://tintinsnowy.com/banners/placeholder.png&#34; itemprop=&#34;image&#34;&gt;
+        &lt;/a&gt;
+        
+        &lt;a class=&#34;article-gallery-img fancybox&#34; href=&#34;http://tintinsnowy.com/banners/placeholder.png&#34; rel=&#34;group1&#34;&gt;
+            &lt;img src=&#34;http://tintinsnowy.com/banners/placeholder.png&#34; itemprop=&#34;image&#34;&gt;
+        &lt;/a&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;github-gists:33ea911532f0c95309659f2412cd62cb&#34;&gt;Github Gists&lt;/h3&gt;
+
+&lt;p&gt;Enter the id of your gist and you&amp;rsquo;re ready to go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ &amp;lt;  gist &amp;quot;85f59771b5ae1e2091a8&amp;quot; &amp;gt; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note, that this only works with public gists since authentification is not supported.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/digitalcraftsman/85f59771b5ae1e2091a8.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;jsfidde:33ea911532f0c95309659f2412cd62cb&#34;&gt;JSFidde&lt;/h3&gt;
+
+&lt;p&gt;It works the same with JSFiddle examples you want to showcase. The parameter &lt;code&gt;id&lt;/code&gt; consists of the username and id of the example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ &amp;lt; jsfiddle id=&amp;quot;zalun/NmudS&amp;quot; &amp;gt; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;iframe
+  style=&#34;width: 100%; height: auto;&#34; frameBorder=&#34;0&#34; allowfullscreen=&#34;allowfullscreen&#34;
+  src=&#34;https://jsfiddle.net/zalun/NmudS/embedded/&#34;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;&lt;br&gt;
+
+
+&lt;p&gt;As descibed in the &lt;a href=&#34;http://doc.jsfiddle.net/use/embedding.html&#34;&gt;docs of JSFiddle&lt;/a&gt;, you can define which tabs will be shown. Enter the tabs you want to see separated by a comma in the &lt;code&gt;tabs&lt;/code&gt; parameter.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ &amp;lt; jsfiddle id=&amp;quot;zalun/NmudS&amp;quot; tabs=&amp;quot;html,result&amp;quot; &amp;gt; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Do you see the difference?&lt;/p&gt;
+
+&lt;iframe
+  style=&#34;width: 100%; height: auto;&#34; frameBorder=&#34;0&#34; allowfullscreen=&#34;allowfullscreen&#34;
+  src=&#34;https://jsfiddle.net/zalun/NmudS/embedded/html,result/&#34;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;&lt;br&gt;
+
+
+&lt;h3 id=&#34;vimeo-and-youtube:33ea911532f0c95309659f2412cd62cb&#34;&gt;Vimeo and Youtube&lt;/h3&gt;
+
+&lt;p&gt;The embedding of videos from Vimeo and Youtube is also supported.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ &amp;lt; youtube &amp;quot;w7Ft2ymGmfc&amp;quot; &amp;gt; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div class=&#34;video-container&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;https://www.youtube.com/embed/w7Ft2ymGmfc&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ &amp;lt; vimeo &amp;quot;137643804&amp;quot; &amp;gt; }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;video-container&#34;&gt;
+&lt;iframe src=&#34;http://player.vimeo.com/video/137643804&#34; frameborder=&#34;0&#34; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;nearly-finished:33ea911532f0c95309659f2412cd62cb&#34;&gt;Nearly finished&lt;/h2&gt;
+
+&lt;p&gt;In order to see your site in action, run Hugo&amp;rsquo;s built-in local server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo server -w
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now enter &lt;a href=&#34;//localhost:1313&#34;&gt;&lt;code&gt;localhost:1313&lt;/code&gt;&lt;/a&gt; in the address bar of your browser.&lt;/p&gt;
+
+&lt;h2 id=&#34;contributing:33ea911532f0c95309659f2412cd62cb&#34;&gt;Contributing&lt;/h2&gt;
+
+&lt;p&gt;Did you found a bug or got an idea for a new feature? Feel free to use the &lt;a href=&#34;//github.com/digitalcraftsman/hugo-icarus-theme/issues&#34;&gt;issue tracker&lt;/a&gt; to let me know. Or make directly a &lt;a href=&#34;//github.com/digitalcraftsman/hugo-icarus-theme/pulls&#34;&gt;pull request&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;license:33ea911532f0c95309659f2412cd62cb&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;This theme is released under the MIT license. For more information read the &lt;a href=&#34;https://github.com/digitalcraftsman/hugo-icarus-theme/blob/master/LICENSE.md&#34;&gt;License&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;annotations:33ea911532f0c95309659f2412cd62cb&#34;&gt;Annotations&lt;/h2&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;//github.com/spf13&#34;&gt;Steve Francia&lt;/a&gt; for creating Hugo and the awesome community around the project.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

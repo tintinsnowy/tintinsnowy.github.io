@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Apache Spark-初识 &middot; Sherry&#39;s blog</title>
+    <meta name="generator" content="Hugo 0.15" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Sherry Yang">
+    <meta name="description" content="I am sherry, welcome!">
+    
+    <link rel="icon" href="http://tintinsnowy.com/favicon.ico">
+    <link rel="apple-touch-icon" href="http://tintinsnowy.com//apple-touch-icon.png" />
+    <link rel="stylesheet" href="http://tintinsnowy.com/css/style.css">
+    <link rel="stylesheet" href="http://tintinsnowy.com/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://tintinsnowy.com/css/monokai.css">
+    <link rel="stylesheet" href="http://tintinsnowy.com/fancybox/jquery.fancybox.css">
+    <meta property="og:title" content="Apache Spark-初识" />
+<meta property="og:description" content="楔子 Every day I remind myself that my inner and outer life are based on the labors of other men,living and dead,and that I must exert myself in order to give in the same measure as I have received and am still receiving. &mdash;-Albert Einstein Apache Spark 了解一项新技术的最好方式就是看官网&#43;源码&#43;文档 Apache Spark is a fast and general engine for large-scale data processing. 它是一种快速、通用的大数据分析引擎。spark 是集批处理、实时流处理（spark streaming）、交互式查询（spark SQL）、图计算（GraphX）于一体的。 Spark core Spark Core是一个基本引擎，用于大规模并行和分布式数据处理。它主要负责： 内存管理和故障恢复 在集群上安排、分布和监控作业" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86" />
+
+
+<meta property="og:updated_time" content="2015-12-29T22:54:05&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Apache Spark-初识">
+<meta itemprop="description" content="楔子 Every day I remind myself that my inner and outer life are based on the labors of other men,living and dead,and that I must exert myself in order to give in the same measure as I have received and am still receiving. &mdash;-Albert Einstein Apache Spark 了解一项新技术的最好方式就是看官网&#43;源码&#43;文档 Apache Spark is a fast and general engine for large-scale data processing. 它是一种快速、通用的大数据分析引擎。spark 是集批处理、实时流处理（spark streaming）、交互式查询（spark SQL）、图计算（GraphX）于一体的。 Spark core Spark Core是一个基本引擎，用于大规模并行和分布式数据处理。它主要负责： 内存管理和故障恢复 在集群上安排、分布和监控作业">
+
+
+<meta itemprop="dateModified" content="2015-12-29T22:54:05&#43;08:00" />
+<meta itemprop="wordCount" content="187">
+
+
+
+<meta itemprop="keywords" content="2015/12,2016/01,2016/03,2016/04,hugo,language,tech-errors,tech-framework,tech-frameworktech-webalgorithm,tech-lang,tech-tool,tech-web,读书," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="Apache Spark-初识"/>
+<meta name="twitter:description" content="楔子 Every day I remind myself that my inner and outer life are based on the labors of other men,living and dead,and that I must exert myself in order to give in the same measure as I have received and am still receiving. &mdash;-Albert Einstein Apache Spark 了解一项新技术的最好方式就是看官网&#43;源码&#43;文档 Apache Spark is a fast and general engine for large-scale data processing. 它是一种快速、通用的大数据分析引擎。spark 是集批处理、实时流处理（spark streaming）、交互式查询（spark SQL）、图计算（GraphX）于一体的。 Spark core Spark Core是一个基本引擎，用于大规模并行和分布式数据处理。它主要负责： 内存管理和故障恢复 在集群上安排、分布和监控作业"/>
+
+
+
+</head>
+<body>
+<div class="container">
+
+<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://tintinsnowy.com/" id="logo"><i class="logo" style="background-image: url('http://tintinsnowy.com/css/images/logo.png')"></i><span class="site-title">Sherry&#39;s blog</span></a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://tintinsnowy.com/">Home</a>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="http://tintinsnowy.com/tags/">Blog</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://tintinsnowy.com/categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://tintinsnowy.com/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="q" value="site:http://tintinsnowy.com/">
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://tintinsnowy.com/">Home</a></td>
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="http://tintinsnowy.com/tags/">Blog</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://tintinsnowy.com/categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" results="0" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="q" value="site:http://tintinsnowy.com/">
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+
+<div id="container">
+   <div class="outer">
+    <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://tintinsnowy.com/css/images/avatar.png">
+      <h2 id="name">Sherry Yang</h2>
+      <h3 id="title">Programmer - Learner</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Beijing</span>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        14
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        9
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+<td><a href="//github.com/tintinsnowy" target="_blank" title="Github"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//plus.google.com/+111267085447127624461" target="_blank" title="Google+"><i class="fa fa-googleplus"></i></a></td>
+
+
+
+<td><a href="//facebook.com/100011002713908" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></td>
+
+
+
+
+          <td><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    <section id="main">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <div class="article-inner">
+            
+
+            <header class="article-header">
+    <a href="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86">
+    <h1 class="article-title" itemprop="name">
+        Apache Spark-初识
+    </h1>
+    </a>
+    <div class="article-meta">
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2015-12-29 22:54:05 &#43;0800 CST" itemprop="datePublished">2015-12-29</time>
+            &middot;
+            187
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        <div class="article-category">
+            
+            <i class="fa fa-folder"></i>
+            <a class="article-category-link" href="http://tintinsnowy.com/categories/2015/12">2015/12</a>
+            
+        </div>
+    </div>
+</header>
+
+            <div class="article-entry" itemprop="articleBody">
+                
+
+<h1 id="楔子:146e0fea47803fba4b54094cf148e79e">楔子</h1>
+
+<blockquote>
+<p>Every day I remind myself that my inner and outer life are based on the labors of other men,living and dead,and that I must exert myself in order to give in the same measure as I have received and am still receiving.
+                                                   &mdash;-Albert Einstein</p>
+</blockquote>
+
+<h1 id="apache-spark:146e0fea47803fba4b54094cf148e79e">Apache Spark</h1>
+
+<p>了解一项新技术的最好方式就是看<a href="http://spark.apache.org/">官网+源码+文档</a></p>
+
+<p>Apache Spark is a fast and general <code>engine</code> for large-scale data processing.
+它是一种快速、通用的大数据分析引擎。spark 是集批处理、实时流处理（spark streaming）、交互式查询（spark SQL）、图计算（GraphX）于一体的。</p>
+
+<p><img src="http://qinxuye.me/static/uploads/spark.png" alt="structure of spark" /></p>
+
+<h1 id="spark-core:146e0fea47803fba4b54094cf148e79e">Spark core</h1>
+
+<p>Spark Core是一个基本引擎，用于大规模并行和分布式数据处理。它主要负责：</p>
+
+<ul>
+<li>内存管理和故障恢复</li>
+<li>在集群上安排、分布和监控作业</li>
+<li>和存储系统进行交互</li>
+</ul>
+
+<p>Spark引入了一个称为弹性分布式数据集（RDD，Resilient Distributed Dataset）的概念，它是一个不可变的、容错的、分布式对象集合，我们可以并行的操作这个集合。RDD可以包含任何类型的对象，它在加载外部数据集或者从驱动应用程序分发集合时创建。</p>
+
+<p>RDD支持两种操作类型：</p>
+
+<ul>
+<li>转换是一种操作（例如映射、过滤、联接、联合等等），它在一个RDD上执行操作，然后创建一个新的RDD来保存结果。</li>
+<li>行动是一种操作（例如归并、计数、第一等等），它在一个RDD上执行某种计算，然后将结果返回。</li>
+</ul>
+
+<p>在Spark中，转换是“懒惰”(lazy)的，也就是说它们不会立刻计算出结果。相反，它们只是“记住”要执行的操作以及要操作的数据集（例如文件）。只有当行为被调用时，转换才会真正的进行计算，并将结果返回给驱动器程序。这种设计让Spark运行得更有效率。例如，如果一个大文件要通过各种方式进行转换操作，并且文件被传递给第一个行为，那么Spark只会处理文件的第一行内容并将结果返回，而不会处理整个文件。</p>
+
+<p>默认情况下，当你在经过转换的RDD上运行一个行为时，这个RDD有可能会被重新计算。然而，你也可以通过使用持久化或者缓存的方法，将一个RDD持久化从在尽可能多地在内存中而然后才往磁盘中去写，这样，Spark就会在集群上保留这些元素，当你下一次查询它时，查询速度会快很多。</p>
+
+<h1 id="sparksql:146e0fea47803fba4b54094cf148e79e">SparkSQL</h1>
+
+<pre><code> // sc is an existing SparkContext.启动shell后sc is available
+ val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc)
+ 
+ sqlContext.sql(&quot;CREATE TABLE IF NOT EXISTS src (key INT, value STRING)&quot;)
+ sqlContext.sql(&quot;LOAD DATA LOCAL INPATH     examples/src/main/resources/kv1.txt' INTO TABLE src&quot;)
+ 
+ // Queries are expressed in HiveQL
+ sqlContext.sql(&quot;FROM src SELECT key, value&quot;).collect().foreach(println)
+
+</code></pre>
+
+<p>或者从Hdfs中读入数据表：</p>
+
+<pre><code>   val sqlContext = new SQLContext(sc)
+   df = sqlContext.read.format(&quot;com.databricks.spark.csv&quot;).options(opts).load(hdfs
+          + &quot;/s_user&quot;)  //将hdfs dfs ls /s_user/*下所有文件读入形成dataframe的格式
+
+</code></pre>
+
+<p>可以通过JDBC API将Spark数据集暴露出去，而且还可以用传统的BI和可视化工具在Spark数据上执行类似SQL的查询（比如Tableau）。也可以从外部（hive，文件，hdfs）上读入文件，进行sql语句的查询。</p>
+
+<p>关于sparksql 的使用会在后面几篇文章中重点介绍。</p>
+
+<h1 id="spark-streaming:146e0fea47803fba4b54094cf148e79e">Spark Streaming</h1>
+
+<p>Spark Streaming支持对流数据的实时处理，例如产品环境web服务器的日志文件（例如Apache Flume和HDFS/S3）、诸如Twitter的社交媒体以及像Kafka那样的各种各样的消息队列。在这背后，Spark Streaming会接收输入数据，然后将其分为不同的批次，接下来Spark引擎来处理这些批次，并根据批次中的结果，生成最终的流。整个过程如下所示。
+<img src="http://img1.imgtn.bdimg.com/it/u=1793884862,2093564393&amp;fm=21&amp;gp=0.jpg" alt="the process" /></p>
+
+<h1 id="mllib:146e0fea47803fba4b54094cf148e79e">MLlib</h1>
+
+<p>MLlib是一个机器学习库，它提供了各种各样的算法，这些算法用来在集群上针对分类、回归、聚类、协同过滤等（可以在 machine learning 上查看Toptal的文章，来获取更过的信息）。其中一些算法也可以应用到流数据上，例如使用普通最小二乘法或者K均值聚类（还有更多）来计算线性回归。Apache Mahout（一个针对Hadoop的机器学习库）已经脱离MapReduce，转而加入Spark MLlib。</p>
+
+<h1 id="graphx:146e0fea47803fba4b54094cf148e79e">GraphX</h1>
+
+<p><img src="http://ww2.sinaimg.cn/mw690/6941baebjw1ev5gmlwad0j20o008875e.jpg" alt="GraphX" /></p>
+
+<p>GraphX是一个库，用来处理图，执行基于图的并行操作。它针对ETL、探索性分析和迭代图计算提供了统一的工具。除了针对图处理的内置操作，GraphX还提供了一个库，用于通用的图算法，例如PageRank。</p>
+
+<h1 id="spark特性:146e0fea47803fba4b54094cf148e79e">Spark特性</h1>
+
+<p>Spark通过在数据处理过程中成本更低的洗牌（Shuffle）方式，将MapReduce提升到一个更高的层次。利用内存数据存储和接近实时的处理能力，Spark比其他的大数据处理技术的性能要快很多倍。</p>
+
+<p>Spark还支持大数据查询的延迟计算，这可以帮助优化大数据处理流程中的处理步骤。Spark还提供高级的API以提升开发者的生产力，除此之外还为大数据解决方案提供一致的体系架构模型。</p>
+
+<p>Spark将中间结果保存在内存中而不是将其写入磁盘，当需要多次处理同一数据集时，这一点特别实用。Spark的设计初衷就是既可以在内存中又可以在磁盘上工作的执行引擎。当内存中的数据不适用时，Spark操作符就会执行外部操作。Spark可以用于处理大于集群内存容量总和的数据集。</p>
+
+<p>Spark会尝试在内存中存储尽可能多的数据然后将其写入磁盘。它可以将某个数据集的一部分存入内存而剩余部分存入磁盘。开发者需要根据数据和用例评估对内存的需求。Spark的性能优势得益于这种内存中的数据存储。</p>
+
+<h1 id="spark的其他特性包括:146e0fea47803fba4b54094cf148e79e">Spark的其他特性包括：</h1>
+
+<ul>
+<li>支持比Map和Reduce更多的函数。</li>
+<li>优化任意操作算子图（operator graphs）。</li>
+<li>可以帮助优化整体数据处理流程的大数据查询的延迟计算。</li>
+<li>提供简明、一致的Scala，Java和Python API。</li>
+<li>支持语言：scala、java、Python、R</li>
+<li>提供交互式Scala和Python Shell。目前暂不支持Java。</li>
+</ul>
+
+<h1 id="spark体系架构:146e0fea47803fba4b54094cf148e79e">Spark体系架构</h1>
+
+<p><img src="http://cdn4.infoqstatic.com/statics_s1_20151224-0209/resource/articles/apache-spark-introduction/zh/resources/0304082.png" alt="3大体系" /></p>
+
+<h2 id="1-数据存储:146e0fea47803fba4b54094cf148e79e">1.数据存储</h2>
+
+<p>支持从hadoop存储框架里的任何读入包括HDFS，HBase，Cassandra，hive。同时也可支持本地文件，输入</p>
+
+<h2 id="2-api:146e0fea47803fba4b54094cf148e79e">2.API</h2>
+
+<p>通过API 开发者可以制定任何基于spark的应用。API的文档在spark 官方网站中</p>
+
+<h2 id="3-资源调度:146e0fea47803fba4b54094cf148e79e">3.资源调度</h2>
+
+<p>spark可以安装在单机pc下，也支持部署在yarn这样的分布式计算框架下</p>
+
+<h1 id="reference:146e0fea47803fba4b54094cf148e79e">Reference</h1>
+
+<ol>
+<li><a href="http://www.infoq.com/cn/articles/apache-spark-introduction">用Apache Spark进行大数据处理</a></li>
+<li><a href="http://blog.jobbole.com/89446/">Apache Spark 入门简介</a></li>
+<li><a href="http://qinxuye.me/article/dpark-source-code-analysis/">Spark源码剖析</a></li>
+</ol>
+
+            </div>
+            <footer class="article-footer">
+    <a data-url="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86" data-id="146e0fea47803fba4b54094cf148e79e" class="article-share-link">
+        Share
+    </a>
+    
+    <a href="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+</footer>
+
+        </div>
+
+        
+<nav id="article-nav">
+    
+    <a href="http://tintinsnowy.com/2015/12/27/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">博客工具</div>
+    </a>
+    
+
+    
+    <a href="http://tintinsnowy.com/2015/12/31/%E5%91%8A%E8%AF%89%E6%88%91%E4%BD%A0%E6%80%8E%E6%A0%B7%E5%8E%BB%E7%94%9F%E6%B4%BB-2015%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">告诉我,你怎样去生活-2015读书笔记</div>
+    </a>
+    
+</nav>
+
+
+    </article>
+    <section id="comments">
+        <div id="disqus_thread">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sherrysblog';
+    var disqus_identifier = 'http:\/\/tintinsnowy.com\/2015\/12\/29\/apache-spark-%E5%88%9D%E8%AF%86';
+    var disqus_title = 'Apache Spark-初识';
+    var disqus_url = 'http:\/\/tintinsnowy.com\/2015\/12\/29\/apache-spark-%E5%88%9D%E8%AF%86';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </section>
+
+</section>
+
+    <aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://tintinsnowy.com/categories/2016/04">
+                        2016/04
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://tintinsnowy.com/2016/04/25/news-recommendation-part-1" class="title">News Recommendation part 1</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-04-25 09:31:31 &#43;0800 CST" itemprop="datePublished">2016-04-25</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://tintinsnowy.com/categories/2016/03">
+                        2016/03
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://tintinsnowy.com/2016/03/14/spark-%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE" class="title">Spark-多节点集群配置</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-03-14 09:06:34 &#43;0800 CST" itemprop="datePublished">2016-03-14</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://tintinsnowy.com/categories/2016/01">
+                        2016/01
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://tintinsnowy.com/2016/01/25/%E8%BD%AC%E8%BD%BD-%E6%B5%85%E8%B0%88%E5%BE%B7%E8%AF%AD%E4%B8%ADviele%E8%BF%98%E6%98%AFviel-" class="title">【转载】 浅谈德语中viele还是viel ?</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-01-25 11:40:41 &#43;0800 CST" itemprop="datePublished">2016-01-25</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                
+                <div class="item-thumbnail">
+                    <a href="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86" class="thumbnail">
+                        <span style="background-image:url(http://tintinsnowy.com/banners/04.jpg)" alt="Apache Spark-初识" class="thumbnail-image"></span>
+                    </a>
+                </div>
+                
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://tintinsnowy.com/categories/2016/01">
+                        2016/01
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://tintinsnowy.com/2016/01/25/%E5%BE%B7%E8%AF%AD%E5%BD%A2%E5%AE%B9%E8%AF%8D%E8%AF%8D%E5%B0%BE%E5%8F%98%E5%8C%96%E8%A7%84%E5%BE%8B" class="title">德语形容词词尾变化规律</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-01-25 08:54:45 &#43;0800 CST" itemprop="datePublished">2016-01-25</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                
+                <div class="item-thumbnail">
+                    <a href="http://tintinsnowy.com/2015/12/29/apache-spark-%E5%88%9D%E8%AF%86" class="thumbnail">
+                        <span style="background-image:url(http://tintinsnowy.com/banners/03.jpg)" alt="Apache Spark-初识" class="thumbnail-image"></span>
+                    </a>
+                </div>
+                
+                <div class="item-inner">
+                    
+                    <p class="item-category">
+                        <a class="article-category-link" href="http://tintinsnowy.com/categories/2016/01">
+                        2016/01
+                        </a>
+                    </p>
+                    
+                    <p class="item-title"><a href="http://tintinsnowy.com/2016/01/12/ubuntu-%E4%B8%8B%E5%A5%BD%E7%94%A8%E7%9A%84pdf%E9%A2%84%E8%A7%88%E5%99%A8-okular" class="title">Ubuntu 下好用的pdf预览器-okular</a></p>
+                    <p class="item-date">
+                        <time datetime="2016-01-12 22:17:20 &#43;0800 CST" itemprop="datePublished">2016-01-12</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com//categories/2015/12">
+                    2015/12
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com//categories/2016/01">
+                    2016/01
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com//categories/2016/03">
+                    2016/03
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com//categories/2016/04">
+                    2016/04
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/language">
+                    language
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/tech-errors">
+                    tech-errors
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/tech-framework">
+                    tech-framework
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/tech-frameworktech-webalgorithm">
+                    tech-frameworktech-webalgorithm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/tech-lang">
+                    tech-lang
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/tech-tool">
+                    tech-tool
+                </a>
+                <span class="category-list-count">6</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/tech-web">
+                    tech-web
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                <a class="category-list-link" href="http://tintinsnowy.com/tags/%e8%af%bb%e4%b9%a6">
+                    读书
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+    
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        <a href="http://tintinsnowy.com/tags/hugo" style="font-size: 12px;">hugo</a>
+        
+        <a href="http://tintinsnowy.com/tags/language" style="font-size: 12px;">language</a>
+        
+        <a href="http://tintinsnowy.com/tags/tech-errors" style="font-size: 12px;">tech-errors</a>
+        
+        <a href="http://tintinsnowy.com/tags/tech-framework" style="font-size: 12px;">tech-framework</a>
+        
+        <a href="http://tintinsnowy.com/tags/tech-frameworktech-webalgorithm" style="font-size: 12px;">tech-frameworktech-webalgorithm</a>
+        
+        <a href="http://tintinsnowy.com/tags/tech-lang" style="font-size: 12px;">tech-lang</a>
+        
+        <a href="http://tintinsnowy.com/tags/tech-tool" style="font-size: 12px;">tech-tool</a>
+        
+        <a href="http://tintinsnowy.com/tags/tech-web" style="font-size: 12px;">tech-web</a>
+        
+        <a href="http://tintinsnowy.com/tags/%e8%af%bb%e4%b9%a6" style="font-size: 12px;">读书</a>
+        
+    </div>
+</div>
+
+
+
+
+    <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+
+</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016<br>
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://tintinsnowy.com/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://tintinsnowy.com/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- MathJax -->
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+
+</body>
+</html>
