@@ -23,9 +23,9 @@
 
 &lt;p&gt;Since we want to build our own blog, so the whole &lt;code&gt;static websites&lt;/code&gt; should be stored in Github. Now here we go. sign up in Github&lt;/p&gt;
 
-&lt;p&gt;Okay！ you are now a member of github, enjoy your coding journey!&lt;/p&gt;
+&lt;p&gt;Okay you are now a member of github, enjoy your coding journey!&lt;/p&gt;
 
-&lt;h2 id=&#34;bravo-hugo&#34;&gt;Bravo！ Hugo&lt;/h2&gt;
+&lt;h2 id=&#34;bravo-hugo&#34;&gt;Bravo Hugo&lt;/h2&gt;
 
 &lt;p&gt;A powerful and fast Website engine is Hugo， which is designed for go lovers！ Hugo flexibly works with many formats and is ideal for blogs, docs, portfolios and much more. Hugo’s speed fosters creativity and makes building a website fun again.&lt;/p&gt;
 
@@ -69,7 +69,7 @@ choose a depository to store your webpages&lt;/p&gt;
 
 &lt;h2 id=&#34;3-template-of-blog&#34;&gt;3. template of blog&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;here https://gohugo.io/showcase/[https://gohugo.io/showcase/]
+&lt;pre&gt;&lt;code&gt;here [https://gohugo.io/showcase/](https://gohugo.io/showcase/)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;you can find the templates of your blog. Of course you may code yourself&lt;/p&gt;
