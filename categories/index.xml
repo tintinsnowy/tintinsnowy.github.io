@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sherry&#39;s blog</title>
-    <link>http://tintinsnowy.github.io/categories/index.xml</link>
-    <description>Recent content on Sherry&#39;s blog</description>
+    <title>Categories on Sherry&#39;s Erdstall</title>
+    <link>http://tintinsnowy.github.io/categories/</link>
+    <description>Recent content in Categories on Sherry&#39;s Erdstall</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <atom:link href="http://tintinsnowy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Setup a free blog based on Hugo and Github</title>
-      <link>http://tintinsnowy.github.io/2016/12/31/setup-a-free-blog-based-on-hugo-and-github</link>
-      <pubDate>Sat, 31 Dec 2016 16:05:52 +0100</pubDate>
-      
-      <guid>http://tintinsnowy.github.io/2016/12/31/setup-a-free-blog-based-on-hugo-and-github</guid>
-      <description>&lt;h2 id=&#34;hello-github&#34;&gt;Hello GitHub!&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
+    <copyright>Copyright</copyright>
+    <atom:link href="http://tintinsnowy.github.io/categories/" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
