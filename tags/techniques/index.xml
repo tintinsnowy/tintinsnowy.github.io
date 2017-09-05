@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Techniques on Sherry&#39;s blog</title>
-    <link>http://tintinsnowy.github.io/tags/techniques/</link>
+    <link>http://tintinsnowy.com/tags/techniques/</link>
     <description>Recent content in Techniques on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Sun, 27 Dec 2015 13:26:32 +0200</lastBuildDate>
     
-	<atom:link href="http://tintinsnowy.github.io/tags/techniques/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tintinsnowy.com/tags/techniques/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog Tool</title>
-      <link>http://tintinsnowy.github.io/2015/12/27/blog-tool/</link>
+      <link>http://tintinsnowy.com/2015/12/27/blog-tool/</link>
       <pubDate>Sun, 27 Dec 2015 13:26:32 +0200</pubDate>
       
-      <guid>http://tintinsnowy.github.io/2015/12/27/blog-tool/</guid>
+      <guid>http://tintinsnowy.com/2015/12/27/blog-tool/</guid>
       <description>Excerpt  For most blog lovers, they usually experience these three phases. First step, as beginners we feel curious and excited to try all kinds way, where we can post our articles. Writing on a free platform,though the templates or layout looks monotonous,still it is a good choice. Later you may have more requirements which the platform can no longer fulfil, then you choose to buy the domain and setup your own website.</description>
     </item>
     
