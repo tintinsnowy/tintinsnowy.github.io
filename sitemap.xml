@@ -3,85 +3,102 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://tintinsnowy.github.io/about/</loc>
+    <loc>http://tintinsnowy.com/about/</loc>
     <lastmod>2017-05-19T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/2016/03/14/spark%E5%A4%9A%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE/</loc>
+    <loc>http://tintinsnowy.com/2016/03/14/spark%E5%A4%9A%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <loc>http://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2016-01-08T13:26:32+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/2015/12/27/blog-tool/</loc>
+    <loc>http://tintinsnowy.com/2015/12/27/blog-tool/</loc>
     <lastmod>2015-12-27T13:26:32+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/2015/12/01/joie-de-vivre/</loc>
+    <loc>http://tintinsnowy.com/2015/12/21/set-up-a-blog-based-on-hugo/</loc>
+    <lastmod>2015-12-21T16:22:23+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://tintinsnowy.com/2015/12/01/joie-de-vivre/</loc>
     <lastmod>2015-12-01T16:22:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/tags/bigdata/</loc>
+    <loc>http://tintinsnowy.com/tags/bigdata/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/categories/</loc>
+    <loc>http://tintinsnowy.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/tags/framework/</loc>
+    <loc>http://tintinsnowy.com/tags/framework/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/categories/life/</loc>
+    <loc>http://tintinsnowy.com/tags/frontend/</loc>
+    <lastmod>2015-12-21T16:22:23+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tintinsnowy.com/categories/life/</loc>
     <lastmod>2015-12-01T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/post/</loc>
+    <loc>http://tintinsnowy.com/post/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/tags/reading/</loc>
+    <loc>http://tintinsnowy.com/tags/reading/</loc>
     <lastmod>2015-12-01T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/</loc>
+    <loc>http://tintinsnowy.com/tags/review/</loc>
+    <lastmod>2015-12-01T16:22:23+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://tintinsnowy.com/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/tags/</loc>
+    <loc>http://tintinsnowy.com/tags/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/categories/tech/</loc>
+    <loc>http://tintinsnowy.com/categories/tech/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://tintinsnowy.github.io/tags/techniques/</loc>
+    <loc>http://tintinsnowy.com/tags/techniques/</loc>
     <lastmod>2015-12-27T13:26:32+02:00</lastmod>
     <priority>0</priority>
   </url>
