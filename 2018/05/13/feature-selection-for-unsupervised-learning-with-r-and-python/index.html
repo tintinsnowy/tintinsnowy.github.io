@@ -49,11 +49,11 @@
 
 <meta itemprop="datePublished" content="2018-05-13T09:57:55&#43;01:00" />
 <meta itemprop="dateModified" content="2018-05-13T09:57:55&#43;01:00" />
-<meta itemprop="wordCount" content="365">
+<meta itemprop="wordCount" content="342">
 
 
 
-<meta itemprop="keywords" content="Data Mining,Machine Learning," />
+<meta itemprop="keywords" content="Data Mining,Machine Learning,bigdata," />
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Feature Selection for unsupervised Learning with R and Python"/>
@@ -286,7 +286,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-05-13 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">May 13, 2018</time>
             &middot;
-            365
+            342
             words
             &middot;
             2
@@ -319,6 +319,10 @@
                 
                 
                 <a class="article-category-link" href="http://tintinsnowy.com/tags/machine-learning">Machine Learning</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="http://tintinsnowy.com/tags/bigdata">bigdata</a>
                 
                 
             </div>
@@ -332,13 +336,16 @@
 
 <h1 id="starting-from-dimensionality-reduction">Starting from dimensionality reduction</h1>
 
-<p>Feature selection is a part technique of <em>data dimensionality reduction</em>.
-According to the book <code>Data minging: concepts and techniques</code>, the most ubiquitous methods are:
-- wavelet transforms
-- principal components analysis (PCA)
-- attribute subset selection(or feature selection)</p>
+<p>Feature selection is a part technique of <em>data dimensional reduction</em>.
+According to the book <code>Data minging: concepts and techniques</code>, the most ubiquitous methods are:</p>
 
-<p>It is worth mentioning, that PCA, Exploratory Factor Analysis (EFA), SVD, etc are all methods which reconstruct our original attributes. PCA is essentially creates new variables that are linear combinations of the original variables.</p>
+<ul>
+<li>wavelet transforms</li>
+<li>principal components analysis (PCA)</li>
+<li>attribute subset selection(or feature selection)</li>
+</ul>
+
+<p>It is worth mentioning, that <strong>PCA</strong>, <strong>Exploratory Factor Analysis (EFA)</strong>, <strong>SVD</strong>, etc are all methods which reconstruct our original attributes. PCA is essentially creates new variables that are linear combinations of the original variables.</p>
 
 <p>However, if we want to reserve the original attributes, then take a look at <strong>Feature selection</strong>.</p>
 
@@ -350,9 +357,9 @@ According to the book <code>Data minging: concepts and techniques</code>, the mo
 <p>Yet From the problem solving prospective,I divide the part of techniques into those ways:</p>
 
 <ul>
-<li>supervised(regression): LASSO, REF, Autoencoder, etc. The regression area has been investigated
+<li><strong>Supervised(regression)</strong>: LASSO, REF, Autoencoder, etc. The regression area has been investigated
 extensively <a href="https://machinelearningmastery.com/feature-selection-with-the-caret-r-package/">more information</a></li>
-<li>unspervised: principal feature analysis(PFA)</li>
+<li><strong>Unsupervised</strong>: principal feature analysis(PFA)</li>
 </ul>
 
 <h1 id="concepts-of-unsupervised-method-pfa">Concepts of unsupervised method(PFA)</h1>
@@ -364,11 +371,11 @@ extensively <a href="https://machinelearningmastery.com/feature-selection-with-t
 <ol>
 <li>Compute the sample covariance matrix,</li>
 <li>Compute the Principal components and eigenvalues of the
-Covariance/Correlation matrix <em>A</em>.</li>
-<li>Choose the subspace dimension <em>n</em>, we get new matrix A_n,
-the vectors <em>Vi</em> are the rows of <em>A_n</em>.</li>
-<li>Cluster the vectors <em>|Vi|</em>, using K-Means</li>
-<li>For each cluster, find the corresponding vector <em>Vi</em> which is closest to the mean of the cluster.</li>
+Covariance /Correlation matrix <strong>A</strong>.</li>
+<li>Choose the subspace dimension <strong>n</strong>, we get new matrix <strong>A_n</strong>,
+the vectors <strong>Vi</strong> are the rows of <strong>A_n</strong>.</li>
+<li>Cluster the vectors <strong>|Vi|</strong>, using K-Means</li>
+<li>For each cluster, find the corresponding vector <strong>Vi</strong> which is closest to the mean of the cluster.</li>
 </ol>
 
 <h1 id="code">Code</h1>
@@ -410,15 +417,6 @@ x = pfa.features_
 # To get the column indices of the kept features
 column_indices = pfa.indices_
 </code></pre>
-
-<h1 id="to-get-the-transformed-matrix">To get the transformed matrix</h1>
-
-<p>x = pfa.features_</p>
-
-<h1 id="to-get-the-column-indices-of-the-kept-features">To get the column indices of the kept features</h1>
-
-<p>column<em>indices = pfa.indices</em>
-```</p>
 
 <h1 id="conclusion">Conclusion</h1>
 
@@ -751,7 +749,7 @@ column_indices = pfa.indices_
                 <a class="category-list-link" href="http://tintinsnowy.com/tags/bigdata">
                     bigdata
                 </a>
-                <span class="category-list-count">2</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">

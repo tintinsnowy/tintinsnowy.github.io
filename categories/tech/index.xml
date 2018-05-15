@@ -17,8 +17,8 @@
       <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
       
       <guid>http://tintinsnowy.com/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/</guid>
-      <description>Starting from dimensionality reduction Feature selection is a part technique of data dimensionality reduction. According to the book Data minging: concepts and techniques, the most ubiquitous methods are: - wavelet transforms - principal components analysis (PCA) - attribute subset selection(or feature selection)
-It is worth mentioning, that PCA, Exploratory Factor Analysis (EFA), SVD, etc are all methods which reconstruct our original attributes. PCA is essentially creates new variables that are linear combinations of the original variables.</description>
+      <description>Starting from dimensionality reduction Feature selection is a part technique of data dimensional reduction. According to the book Data minging: concepts and techniques, the most ubiquitous methods are:
+ wavelet transforms principal components analysis (PCA) attribute subset selection(or feature selection)  It is worth mentioning, that PCA, Exploratory Factor Analysis (EFA), SVD, etc are all methods which reconstruct our original attributes. PCA is essentially creates new variables that are linear combinations of the original variables.</description>
     </item>
     
     <item>
