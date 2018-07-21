@@ -18,8 +18,7 @@
       
       <guid>http://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/</guid>
       <description>Hyperledger Fabric Sample Application This is originally from the Introduction to Hyperledger Technologies course on edX. Link However, if follow the instructions, you may not successfully run the example.
-the overview graph
-Node.js version When an error occurs, in most case it has something to do with the version of Node.js&amp;rsquo;s version
+the overview graph Node.js version When an error occurs, in most case it has something to do with the version of Node.js&amp;rsquo;s version
 completely remove Node.js old version completely uninstall node + npm is to do the following:
  go to /usr/local/lib and delete any node and node_modules go to /usr/local/include and delete any node and node_modules directory check your Home directory for any local or lib or include folders, and delete any node or node_modules from there go to /usr/local/bin and delete any node executable  sudo rm -rf /opt/local/bin/node /opt/local/include/node /opt/local/lib/node_modules sudo rm -rf /usr/local/bin/npm /usr/local/share/man/man1/node.</description>
     </item>
