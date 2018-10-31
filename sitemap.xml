@@ -3,175 +3,203 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/</loc>
+    <loc>uild/2018/06/21/errors-and-solutions-with-hyperledger-fabric/</loc>
+    <lastmod>2018-06-21T16:22:23+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>uild/2018/05/18/know-about-your-cpu/</loc>
+    <lastmod>2018-05-18T09:57:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>uild/2018/05/15/running-first-hyperledger-fabric-sample/</loc>
     <lastmod>2018-05-15T13:57:55+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/</loc>
+    <loc>uild/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/</loc>
     <lastmod>2018-05-13T09:57:55+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2017/12/11/test-swift-via-docker-on-ubuntu/</loc>
+    <loc>uild/2018/05/13/generate-your-own-python-package/</loc>
+    <lastmod>2018-05-13T09:57:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>uild/2017/12/11/test-swift-via-docker-on-ubuntu/</loc>
     <lastmod>2017-12-11T16:22:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2017/11/09/blockchain-glossary/</loc>
+    <loc>uild/2017/11/09/blockchain-glossary/</loc>
     <lastmod>2017-11-09T09:57:55+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2017/11/05/bruges/</loc>
-    <lastmod>2017-11-05T15:59:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tintinsnowy.com/about/</loc>
+    <loc>uild/about/</loc>
     <lastmod>2017-05-19T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2016/03/14/spark%E5%A4%9A%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE/</loc>
+    <loc>uild/2016/03/14/spark%E5%A4%9A%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <loc>uild/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2016-01-08T13:26:32+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2015/12/27/blog-tool/</loc>
+    <loc>uild/2015/12/27/blog-tool/</loc>
     <lastmod>2015-12-27T13:26:32+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2015/12/21/set-up-a-blog-based-on-hugo/</loc>
+    <loc>uild/2015/12/21/set-up-a-blog-based-on-hugo/</loc>
     <lastmod>2015-12-21T16:22:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/2015/12/01/joie-de-vivre/</loc>
+    <loc>uild/2015/12/01/joie-de-vivre/</loc>
     <lastmod>2015-12-01T16:22:23+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/backend/</loc>
+    <loc>uild/tags/backend/</loc>
     <lastmod>2017-12-11T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/bigdata/</loc>
+    <loc>uild/tags/bigdata/</loc>
     <lastmod>2018-05-13T09:57:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/blockchain/</loc>
-    <lastmod>2018-05-15T13:57:55+01:00</lastmod>
+    <loc>uild/tags/blockchain/</loc>
+    <lastmod>2018-06-21T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/categories/</loc>
+    <loc>uild/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/concepts/</loc>
+    <loc>uild/tags/concepts/</loc>
     <lastmod>2017-11-09T09:57:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/data-mining/</loc>
+    <loc>uild/tags/cpu/</loc>
+    <lastmod>2018-05-18T09:57:55+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>uild/tags/data-mining/</loc>
     <lastmod>2018-05-13T09:57:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/docker/</loc>
+    <loc>uild/tags/debug/</loc>
+    <lastmod>2018-06-21T16:22:23+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>uild/tags/docker/</loc>
     <lastmod>2017-12-11T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/framework/</loc>
+    <loc>uild/tags/framework/</loc>
     <lastmod>2016-03-14T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/frontend/</loc>
+    <loc>uild/tags/frontend/</loc>
     <lastmod>2015-12-21T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/hyperledger-fabric/</loc>
-    <lastmod>2018-05-15T13:57:55+01:00</lastmod>
+    <loc>uild/tags/hardware/</loc>
+    <lastmod>2018-05-18T09:57:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/categories/life/</loc>
+    <loc>uild/tags/hyperledger-fabric/</loc>
+    <lastmod>2018-06-21T16:22:23+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>uild/categories/life/</loc>
     <lastmod>2015-12-01T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/linux/</loc>
-    <lastmod>2017-12-11T16:22:23+02:00</lastmod>
+    <loc>uild/tags/linux/</loc>
+    <lastmod>2018-05-18T09:57:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/machine-learning/</loc>
+    <loc>uild/tags/machine-learning/</loc>
     <lastmod>2018-05-13T09:57:55+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/post/</loc>
-    <lastmod>2018-05-15T13:57:55+01:00</lastmod>
+    <loc>uild/post/</loc>
+    <lastmod>2018-06-21T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/reading/</loc>
+    <loc>uild/tags/reading/</loc>
     <lastmod>2015-12-01T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/review/</loc>
+    <loc>uild/tags/review/</loc>
     <lastmod>2015-12-01T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/</loc>
-    <lastmod>2018-05-15T13:57:55+01:00</lastmod>
+    <loc>uild/</loc>
+    <lastmod>2018-06-21T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/</loc>
+    <loc>uild/tags/</loc>
     <lastmod>2017-12-11T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/categories/tech/</loc>
-    <lastmod>2018-05-15T13:57:55+01:00</lastmod>
+    <loc>uild/categories/tech/</loc>
+    <lastmod>2018-06-21T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/tags/techniques/</loc>
+    <loc>uild/tags/techniques/</loc>
     <lastmod>2017-12-11T16:22:23+02:00</lastmod>
     <priority>0</priority>
   </url>
