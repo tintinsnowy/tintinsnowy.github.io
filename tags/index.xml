@@ -2,165 +2,165 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sherry&#39;s blog</title>
-    <link>uild/tags/</link>
+    <link>tintinsnowy.com/tags/</link>
     <description>Recent content in Tags on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Dec 2017 16:22:23 +0200</lastBuildDate>
     
-	<atom:link href="uild/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="tintinsnowy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Backend</title>
-      <link>uild/tags/backend/</link>
+      <link>tintinsnowy.com/tags/backend/</link>
       <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/backend/</guid>
+      <guid>tintinsnowy.com/tags/backend/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bigdata</title>
-      <link>uild/tags/bigdata/</link>
+      <link>tintinsnowy.com/tags/bigdata/</link>
       <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>uild/tags/bigdata/</guid>
+      <guid>tintinsnowy.com/tags/bigdata/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blockchain</title>
-      <link>uild/tags/blockchain/</link>
+      <link>tintinsnowy.com/tags/blockchain/</link>
       <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/blockchain/</guid>
+      <guid>tintinsnowy.com/tags/blockchain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Concepts</title>
-      <link>uild/tags/concepts/</link>
+      <link>tintinsnowy.com/tags/concepts/</link>
       <pubDate>Thu, 09 Nov 2017 09:57:55 +0100</pubDate>
       
-      <guid>uild/tags/concepts/</guid>
+      <guid>tintinsnowy.com/tags/concepts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cpu</title>
-      <link>uild/tags/cpu/</link>
+      <link>tintinsnowy.com/tags/cpu/</link>
       <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>uild/tags/cpu/</guid>
+      <guid>tintinsnowy.com/tags/cpu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Mining</title>
-      <link>uild/tags/data-mining/</link>
+      <link>tintinsnowy.com/tags/data-mining/</link>
       <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>uild/tags/data-mining/</guid>
+      <guid>tintinsnowy.com/tags/data-mining/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Debug</title>
-      <link>uild/tags/debug/</link>
+      <link>tintinsnowy.com/tags/debug/</link>
       <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/debug/</guid>
+      <guid>tintinsnowy.com/tags/debug/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>uild/tags/docker/</link>
+      <link>tintinsnowy.com/tags/docker/</link>
       <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/docker/</guid>
+      <guid>tintinsnowy.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Framework</title>
-      <link>uild/tags/framework/</link>
+      <link>tintinsnowy.com/tags/framework/</link>
       <pubDate>Mon, 14 Mar 2016 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/framework/</guid>
+      <guid>tintinsnowy.com/tags/framework/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Frontend</title>
-      <link>uild/tags/frontend/</link>
+      <link>tintinsnowy.com/tags/frontend/</link>
       <pubDate>Mon, 21 Dec 2015 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/frontend/</guid>
+      <guid>tintinsnowy.com/tags/frontend/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hardware</title>
-      <link>uild/tags/hardware/</link>
+      <link>tintinsnowy.com/tags/hardware/</link>
       <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>uild/tags/hardware/</guid>
+      <guid>tintinsnowy.com/tags/hardware/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hyperledger Fabric</title>
-      <link>uild/tags/hyperledger-fabric/</link>
+      <link>tintinsnowy.com/tags/hyperledger-fabric/</link>
       <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/hyperledger-fabric/</guid>
+      <guid>tintinsnowy.com/tags/hyperledger-fabric/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>uild/tags/linux/</link>
+      <link>tintinsnowy.com/tags/linux/</link>
       <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>uild/tags/linux/</guid>
+      <guid>tintinsnowy.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Machine Learning</title>
-      <link>uild/tags/machine-learning/</link>
+      <link>tintinsnowy.com/tags/machine-learning/</link>
       <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>uild/tags/machine-learning/</guid>
+      <guid>tintinsnowy.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reading</title>
-      <link>uild/tags/reading/</link>
+      <link>tintinsnowy.com/tags/reading/</link>
       <pubDate>Tue, 01 Dec 2015 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/reading/</guid>
+      <guid>tintinsnowy.com/tags/reading/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Review</title>
-      <link>uild/tags/review/</link>
+      <link>tintinsnowy.com/tags/review/</link>
       <pubDate>Tue, 01 Dec 2015 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/review/</guid>
+      <guid>tintinsnowy.com/tags/review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Techniques</title>
-      <link>uild/tags/techniques/</link>
+      <link>tintinsnowy.com/tags/techniques/</link>
       <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
       
-      <guid>uild/tags/techniques/</guid>
+      <guid>tintinsnowy.com/tags/techniques/</guid>
       <description></description>
     </item>
     
