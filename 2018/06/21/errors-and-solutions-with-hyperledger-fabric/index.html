@@ -49,7 +49,7 @@
 
 <meta itemprop="datePublished" content="2018-06-21T16:22:23&#43;02:00" />
 <meta itemprop="dateModified" content="2018-06-21T16:22:23&#43;02:00" />
-<meta itemprop="wordCount" content="523">
+<meta itemprop="wordCount" content="564">
 
 
 
@@ -286,7 +286,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-06-21 16:22:23 &#43;0200 CEST" itemprop="datePublished">June 21, 2018</time>
             &middot;
-            523
+            564
             words
             &middot;
             3
@@ -390,7 +390,7 @@ version: '2'
 services:
 
   orderer.example.com:
-    extends:
+    extends:R
       file:   base/docker-compose-base.yaml
       service: orderer.example.com
     container_name: orderer.example.com
@@ -420,9 +420,18 @@ rm -fr channel-artifacts/*
 rm -fr crypto-config/*
 </code></pre>
 
-<h2 id="error-no2">Error No2</h2>
+<h2 id="error-no-2-channel-creation-failed">Error No.2: channel creation failed</h2>
 
-<p>TBC</p>
+<pre><code>Error: got unexpected status: BAD_REQUEST -- Attempted to include a member which is not in the consortium
+</code></pre>
+
+<h3 id="reason-failed-to-set-the-channel-name">Reason:  failed to set the channel name.</h3>
+
+<h3 id="solution">Solution:</h3>
+
+<pre><code>export CHANNEL_NAME=mychannel
+peer channel create -o orderer.example.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel.tx --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+</code></pre>
 
         </div>
         <footer class="article-footer">
