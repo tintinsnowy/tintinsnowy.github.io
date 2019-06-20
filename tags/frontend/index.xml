@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Frontend on Sherry&#39;s blog</title>
-    <link>https://tintinsnowy.com/tags/frontend/</link>
+    <link>tintinsnowy.com/tags/frontend/</link>
     <description>Recent content in Frontend on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Dec 2015 16:22:23 +0200</lastBuildDate>
     
-	<atom:link href="https://tintinsnowy.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="tintinsnowy.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Set up a Blog based on Hugo</title>
-      <link>https://tintinsnowy.com/2015/12/21/set-up-a-blog-based-on-hugo/</link>
+      <link>tintinsnowy.com/2015/12/21/set-up-a-blog-based-on-hugo/</link>
       <pubDate>Mon, 21 Dec 2015 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/2015/12/21/set-up-a-blog-based-on-hugo/</guid>
+      <guid>tintinsnowy.com/2015/12/21/set-up-a-blog-based-on-hugo/</guid>
       <description>Hello GitHub! GitHub is more than a collaborative tool to make your software development more effective. In fact, it is more like a community where you share and contribute your code.
 Since we want to build our own blog, so the whole static websites should be stored in Github. Now here we go. sign up in Github
 Okay！ you are now a member of github, enjoy your coding journey!</description>
