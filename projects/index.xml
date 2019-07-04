@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Sherry&#39;s blog</title>
-    <link>https://tintinsnowy.com/projects/</link>
+    <link>tintinsnowy.com/projects/</link>
     <description>Recent content in Projects on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 May 2017 21:49:20 +0200</lastBuildDate>
     
-	<atom:link href="https://tintinsnowy.com/projects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="tintinsnowy.com/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Projects</title>
-      <link>https://tintinsnowy.com/projects/projects/</link>
+      <link>tintinsnowy.com/projects/projects/</link>
       <pubDate>Fri, 19 May 2017 21:49:20 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/projects/projects/</guid>
+      <guid>tintinsnowy.com/projects/projects/</guid>
       <description> Projects Android Application React.js game </description>
     </item>
     
