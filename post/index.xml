@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 May 2019 13:26:32 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jun 2019 09:57:55 +0100</lastBuildDate>
     
 	<atom:link href="https://tintinsnowy.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://tintinsnowy.com/2019/06/28/</link>
+      <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/2019/06/28/</guid>
+      <description>Git tips in DevOps workflow This is the second phase of my current project. After the Beta version of the project, I upgraded and shift the whole project into DevOps workflow. Git, is most essential part of the version control. So in this post, I will share some tips that I have encountered
+Git Branching Models There should be at least two models: Dev and Master. Dev branch is the front line defensing bugs.</description>
+    </item>
     
     <item>
       <title>Build blob trigger and storage queue for microservice</title>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sde on Sherry&#39;s blog</title>
+    <link>https://tintinsnowy.com/tags/sde/</link>
+    <description>Recent content in Sde on Sherry&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jun 2019 09:57:55 +0100</lastBuildDate>
+    
+	<atom:link href="https://tintinsnowy.com/tags/sde/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://tintinsnowy.com/2019/06/28/</link>
+      <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/2019/06/28/</guid>
+      <description>Git tips in DevOps workflow This is the second phase of my current project. After the Beta version of the project, I upgraded and shift the whole project into DevOps workflow. Git, is most essential part of the version control. So in this post, I will share some tips that I have encountered
+Git Branching Models There should be at least two models: Dev and Master. Dev branch is the front line defensing bugs.</description>
+    </item>
+    
+  </channel>
+</rss>
