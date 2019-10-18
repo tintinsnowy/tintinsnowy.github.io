@@ -186,15 +186,15 @@ code {
   #main {
     display: inline;
     float: left;
-    width: 52.307692307692314%;
+    width: 60.307692307692314%;
     margin: 0 0.769230769230769%;
   }
 }
-@media screen and (min-width: 800px) and (max-width: 1199px) {
+@media screen and (min-width: 300px) and (max-width: 1200px) {
   #main {
     display: inline;
     float: left;
-    width: 67.6923076923077%;
+    width: 60.6923076923077%;
     margin: 0 0.769230769230769%;
   }
 }
@@ -635,7 +635,7 @@ code {
 #profile {
   display: inline;
   float: left;
-  width: 21.53846153846154%;
+  width: 17.53846153846154%;
   margin: 0 0.769230769230769%;
   display: none;
 }
@@ -1665,19 +1665,19 @@ ol.toc {
   line-height: 1.6em;
   font-size: 0.85em;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 100px) {
   #sidebar {
     display: inline;
-    float: left;
-    width: 21.53846153846154%;
+    float: right;
+    width: 17.53846153846154%;
     margin: 0 0.769230769230769%;
   }
 }
-@media screen and (min-width: 800px) and (max-width: 1199px) {
+@media screen and (min-width: 100px) and (max-width: 1199px) {
   #sidebar {
     display: inline;
-    float: left;
-    width: 29.230769230769234%;
+    float: right;
+    width: 17.230769230769234%;
     margin: 0 0.769230769230769%;
   }
 }

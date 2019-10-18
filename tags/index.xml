@@ -2,237 +2,255 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sherry&#39;s blog</title>
-    <link>https://tintinsnowy.com/tags/</link>
+    <link>http://tintinsnowy.github.io/tags/</link>
     <description>Recent content in Tags on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 May 2019 13:26:32 +0200</lastBuildDate>
     
-	<atom:link href="https://tintinsnowy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tintinsnowy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Azure</title>
-      <link>https://tintinsnowy.com/tags/azure/</link>
+      <link>http://tintinsnowy.github.io/tags/azure/</link>
       <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/azure/</guid>
+      <guid>http://tintinsnowy.github.io/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Backend</title>
-      <link>https://tintinsnowy.com/tags/backend/</link>
+      <link>http://tintinsnowy.github.io/tags/backend/</link>
       <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/backend/</guid>
+      <guid>http://tintinsnowy.github.io/tags/backend/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bigdata</title>
-      <link>https://tintinsnowy.com/tags/bigdata/</link>
+      <link>http://tintinsnowy.github.io/tags/bigdata/</link>
       <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/bigdata/</guid>
+      <guid>http://tintinsnowy.github.io/tags/bigdata/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blockchain</title>
-      <link>https://tintinsnowy.com/tags/blockchain/</link>
+      <link>http://tintinsnowy.github.io/tags/blockchain/</link>
       <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/blockchain/</guid>
+      <guid>http://tintinsnowy.github.io/tags/blockchain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud</title>
-      <link>https://tintinsnowy.com/tags/cloud/</link>
-      <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
+      <link>http://tintinsnowy.github.io/tags/cloud/</link>
+      <pubDate>Tue, 08 Oct 2019 09:07:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/cloud/</guid>
+      <guid>http://tintinsnowy.github.io/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Concepts</title>
-      <link>https://tintinsnowy.com/tags/concepts/</link>
+      <link>http://tintinsnowy.github.io/tags/concepts/</link>
       <pubDate>Thu, 09 Nov 2017 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/concepts/</guid>
+      <guid>http://tintinsnowy.github.io/tags/concepts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cpu</title>
-      <link>https://tintinsnowy.com/tags/cpu/</link>
+      <link>http://tintinsnowy.github.io/tags/cpu/</link>
       <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/cpu/</guid>
+      <guid>http://tintinsnowy.github.io/tags/cpu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Mining</title>
-      <link>https://tintinsnowy.com/tags/data-mining/</link>
+      <link>http://tintinsnowy.github.io/tags/data-mining/</link>
       <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/data-mining/</guid>
+      <guid>http://tintinsnowy.github.io/tags/data-mining/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Debug</title>
-      <link>https://tintinsnowy.com/tags/debug/</link>
+      <link>http://tintinsnowy.github.io/tags/debug/</link>
       <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/debug/</guid>
+      <guid>http://tintinsnowy.github.io/tags/debug/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Devops</title>
-      <link>https://tintinsnowy.com/tags/devops/</link>
+      <link>http://tintinsnowy.github.io/tags/devops/</link>
       <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/devops/</guid>
+      <guid>http://tintinsnowy.github.io/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://tintinsnowy.com/tags/docker/</link>
+      <link>http://tintinsnowy.github.io/tags/docker/</link>
       <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/docker/</guid>
+      <guid>http://tintinsnowy.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Framework</title>
-      <link>https://tintinsnowy.com/tags/framework/</link>
+      <link>http://tintinsnowy.github.io/tags/framework/</link>
       <pubDate>Mon, 14 Mar 2016 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/framework/</guid>
+      <guid>http://tintinsnowy.github.io/tags/framework/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Frontend</title>
-      <link>https://tintinsnowy.com/tags/frontend/</link>
+      <link>http://tintinsnowy.github.io/tags/frontend/</link>
       <pubDate>Mon, 21 Dec 2015 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/frontend/</guid>
+      <guid>http://tintinsnowy.github.io/tags/frontend/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>https://tintinsnowy.com/tags/git/</link>
+      <link>http://tintinsnowy.github.io/tags/git/</link>
       <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/git/</guid>
+      <guid>http://tintinsnowy.github.io/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hardware</title>
-      <link>https://tintinsnowy.com/tags/hardware/</link>
+      <link>http://tintinsnowy.github.io/tags/hardware/</link>
       <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/hardware/</guid>
+      <guid>http://tintinsnowy.github.io/tags/hardware/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hyperledger Fabric</title>
-      <link>https://tintinsnowy.com/tags/hyperledger-fabric/</link>
+      <link>http://tintinsnowy.github.io/tags/hyperledger-fabric/</link>
       <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/hyperledger-fabric/</guid>
+      <guid>http://tintinsnowy.github.io/tags/hyperledger-fabric/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infrastruct</title>
+      <link>http://tintinsnowy.github.io/tags/infrastruct/</link>
+      <pubDate>Tue, 08 Oct 2019 09:07:55 +0100</pubDate>
+      
+      <guid>http://tintinsnowy.github.io/tags/infrastruct/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://tintinsnowy.github.io/tags/kubernetes/</link>
+      <pubDate>Tue, 08 Oct 2019 09:07:55 +0100</pubDate>
+      
+      <guid>http://tintinsnowy.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://tintinsnowy.com/tags/linux/</link>
+      <link>http://tintinsnowy.github.io/tags/linux/</link>
       <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/linux/</guid>
+      <guid>http://tintinsnowy.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Machine Learning</title>
-      <link>https://tintinsnowy.com/tags/machine-learning/</link>
+      <link>http://tintinsnowy.github.io/tags/machine-learning/</link>
       <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/machine-learning/</guid>
+      <guid>http://tintinsnowy.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microservice</title>
-      <link>https://tintinsnowy.com/tags/microservice/</link>
+      <link>http://tintinsnowy.github.io/tags/microservice/</link>
       <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/microservice/</guid>
+      <guid>http://tintinsnowy.github.io/tags/microservice/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Msg Queue</title>
-      <link>https://tintinsnowy.com/tags/msg-queue/</link>
+      <link>http://tintinsnowy.github.io/tags/msg-queue/</link>
       <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/msg-queue/</guid>
+      <guid>http://tintinsnowy.github.io/tags/msg-queue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reading</title>
-      <link>https://tintinsnowy.com/tags/reading/</link>
+      <link>http://tintinsnowy.github.io/tags/reading/</link>
       <pubDate>Tue, 01 Dec 2015 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/reading/</guid>
+      <guid>http://tintinsnowy.github.io/tags/reading/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Review</title>
-      <link>https://tintinsnowy.com/tags/review/</link>
+      <link>http://tintinsnowy.github.io/tags/review/</link>
       <pubDate>Tue, 01 Dec 2015 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/review/</guid>
+      <guid>http://tintinsnowy.github.io/tags/review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sde</title>
-      <link>https://tintinsnowy.com/tags/sde/</link>
+      <link>http://tintinsnowy.github.io/tags/sde/</link>
       <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/sde/</guid>
+      <guid>http://tintinsnowy.github.io/tags/sde/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Storage Queue</title>
-      <link>https://tintinsnowy.com/tags/storage-queue/</link>
+      <link>http://tintinsnowy.github.io/tags/storage-queue/</link>
       <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/storage-queue/</guid>
+      <guid>http://tintinsnowy.github.io/tags/storage-queue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Techniques</title>
-      <link>https://tintinsnowy.com/tags/techniques/</link>
+      <link>http://tintinsnowy.github.io/tags/techniques/</link>
       <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/techniques/</guid>
+      <guid>http://tintinsnowy.github.io/tags/techniques/</guid>
       <description></description>
     </item>
     

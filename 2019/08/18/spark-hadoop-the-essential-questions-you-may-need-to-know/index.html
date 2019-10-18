@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>About &middot; Sherry&#39;s blog</title>
+    <title>Spark Hadoop: the essential questions you may need to know &middot; Sherry&#39;s blog</title>
     <meta name="generator" content="Hugo 0.40.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Sherry Yang">
     
-      <meta name="description" content="">
+      <meta name="description" content="In this series of blogs contain some essential questions about Spark and Hadoop, which are frequently being asked in many interviews. At the same time, those Q&amp;A will help you better understand the big data framework, ecoystem, especially know hot to better apply them">
     
     
-      <link href="https://tintinsnowy.com/about/index.xml" rel="alternate" type="application/rss+xml" title="Sherry&#39;s blog" />
-      <link href="https://tintinsnowy.com/about/index.xml" rel="feed" type="application/rss+xml" title="Sherry&#39;s blog" />
-    
-    <link rel="canonical" href="https://tintinsnowy.com/about/"/>
+    <link rel="canonical" href="https://tintinsnowy.com/2019/08/18/spark-hadoop-the-essential-questions-you-may-need-to-know/"/>
     <link rel="icon" href="https://tintinsnowy.com/favicon.ico">
     <link rel="apple-touch-icon" href="https://tintinsnowy.com/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://tintinsnowy.com/css/style.css">
@@ -23,14 +20,17 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="About" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tintinsnowy.com/about/" />
+    <meta property="og:title" content="Spark Hadoop: the essential questions you may need to know" />
+<meta property="og:description" content="In this series of blogs contain some essential questions about Spark and Hadoop, which are frequently being asked in many interviews. At the same time, those Q&amp;A will help you better understand the big data framework, ecoystem, especially know hot to better apply them" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tintinsnowy.com/2019/08/18/spark-hadoop-the-essential-questions-you-may-need-to-know/" />
 
 
 
-<meta property="og:updated_time" content="2017-05-19T21:49:20&#43;02:00"/>
+<meta property="article:published_time" content="2019-08-18T16:31:00&#43;02:00"/>
+
+<meta property="article:modified_time" content="2019-08-18T16:31:00&#43;02:00"/>
+
 
 
 
@@ -43,13 +43,21 @@
 
     
     
-<meta itemprop="name" content="About">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Spark Hadoop: the essential questions you may need to know">
+<meta itemprop="description" content="In this series of blogs contain some essential questions about Spark and Hadoop, which are frequently being asked in many interviews. At the same time, those Q&amp;A will help you better understand the big data framework, ecoystem, especially know hot to better apply them">
 
+
+<meta itemprop="datePublished" content="2019-08-18T16:31:00&#43;02:00" />
+<meta itemprop="dateModified" content="2019-08-18T16:31:00&#43;02:00" />
+<meta itemprop="wordCount" content="60">
+
+
+
+<meta itemprop="keywords" content="bigdata,framework," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Spark Hadoop: the essential questions you may need to know"/>
+<meta name="twitter:description" content="In this series of blogs contain some essential questions about Spark and Hadoop, which are frequently being asked in many interviews. At the same time, those Q&amp;A will help you better understand the big data framework, ecoystem, especially know hot to better apply them"/>
 
     
 
@@ -68,7 +76,7 @@
     <div class="outer">
       <a href="https://tintinsnowy.com" id="logo">
           
-          <i class="logo" style="background-image: url('https://s3.eu-central-1.amazonaws.com/tintinsnowy.staitc/profile/logo.jpg')"></i>
+          <i class="logo" style="background-image: url('https://tintinsnowy.com/css/images/logo.jpg')"></i>
           
           <span class="site-title">Sherry&#39;s blog</span>
       </a>
@@ -84,7 +92,9 @@
           
 
           
-          <a class="main-nav-link" href="/about/">About</a>
+          <a class="main-nav-link" href="/about-me/">About</a>
+          
+          <a class="main-nav-link" href="/projects/projects/">Projects</a>
           
 
           
@@ -101,7 +111,7 @@
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://s3.eu-central-1.amazonaws.com/tintinsnowy.staitc/profile/tintin.jpg"><i class="fa fa-caret-down"></i></a>
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://tintinsnowy.com/css/tintin.jpg"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
         <div id="search-form-wrap">
@@ -129,7 +139,9 @@
           
 
           
-          <td><a class="main-nav-link" href="/about/">About</a></td>
+          <td><a class="main-nav-link" href="/about-me/">About</a></td>
+          
+          <td><a class="main-nav-link" href="/projects/projects/">Projects</a></td>
           
 
           
@@ -162,25 +174,25 @@
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       
-      <img id="avatar" src="https://s3.eu-central-1.amazonaws.com/tintinsnowy.staitc/profile/tintin.jpg">
+      <img id="avatar" src="https://tintinsnowy.com/css/tintin.jpg">
       
       <h2 id="name">Sherry Yang</h2>
       <h3 id="title">Think - Code - Art</h3>
-      <span id="location"><i class="fa fa-map-marker"></i>Aachen</span>
+      <span id="location"><i class="fa fa-map-marker"></i>Germany</span>
       
           <a id="follow" href="https://github.com/tintinsnowy">
-              Follow
+              Follow me
           </a>
       
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        12
+        17
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          17
+          27
         
         <span>
             Tags
@@ -259,17 +271,16 @@
 
     <section id="main">
     
-    
-    
-    
-        <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
     <div class="article-inner">
+        
+            <img src="https://tintinsnowy.com/banners/spark-multi-nodes.jpg" class="article-banner">
         
 
         <header class="article-header">
-    <a href="https://tintinsnowy.com/about/">
+    <a href="https://tintinsnowy.com/2019/08/18/spark-hadoop-the-essential-questions-you-may-need-to-know/">
     <h1 class="article-title" itemprop="name">
-        About
+        Spark Hadoop: the essential questions you may need to know
     </h1>
     </a>
     <div class="article-meta">
@@ -277,9 +288,9 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-19 21:49:20 &#43;0200 CEST" itemprop="datePublished">May 19, 2017</time>
+            <time datetime="2019-08-18 16:31:00 &#43;0200 CEST" itemprop="datePublished">August 18, 2019</time>
             &middot;
-            53
+            60
             words
             &middot;
             1
@@ -287,7 +298,35 @@
         </div>
         
         
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">tech</a>
+                
+                
+            </div>
+            
+        
 
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/bigdata">bigdata</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/framework">framework</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
@@ -295,21 +334,52 @@
         <div class="article-entry" itemprop="articleBody">
             
 
-<h1 id="about-me">About me</h1>
+<h1 id="eco-system-hadoop">Eco-system Hadoop</h1>
 
-<p>Hello, I&rsquo;m Sherry from China. Since 2016,
-I&rsquo;ve been studying Software Systems Engineering at RWTH Aachen.</p>
+<h2 id="basic-concept">Basic Concept</h2>
 
-<p>5 years ago, I decided to signed up a blog in internet out of knowledge archivement.
-Gradually more elements have been added in. <code>Thinking</code>,<code>Book review</code>,<code>Life</code>,<code>Travel</code>,<code>Photograph</code>,maybe more will be included.</p>
+<ol>
+<li><p>How do you know about RedHat, Apache.
+I know, it is straightforward google-it questions. however</p></li>
 
-<p>Writing is a kind of lifestyle.</p>
+<li><p>Hadoop ecosystem</p></li>
+</ol>
+
+<h2 id="hdfs">HDFS</h2>
+
+<ol>
+<li>what is the mechanism. Can we change a part of it?</li>
+</ol>
+
+<p>[structure] Namenode, Datanode</p>
+
+<p>namenode containes the metadata, import so, usually it has at least</p>
+
+<p>sequentialized</p>
+
+<ol>
+<li><p>what is a block?
+in windows, the block is x KB</p></li>
+
+<li></li>
+</ol>
+
+<h3 id="rdd">RDD</h3>
+
+<ol>
+<li></li>
+</ol>
 
         </div>
+
         <footer class="article-footer">
-    <a data-url="https://tintinsnowy.com/about/" data-id="a69934980f795699f7cc4d8a50a604b2" class="article-share-link">
+    <a data-url="https://tintinsnowy.com/2019/08/18/spark-hadoop-the-essential-questions-you-may-need-to-know/" data-id="399c068592660bfa71a9c012dca3720c" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
+    </a>
+    
+    <a href="https://tintinsnowy.com/2019/08/18/spark-hadoop-the-essential-questions-you-may-need-to-know/#disqus_thread" class="article-comment-link">
+        Comments
     </a>
     
 
@@ -380,13 +450,60 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
 </footer>
 
     </div>
+            <div id="likecoin_thread">
+            <iframe src="https://button.like.co/tintinsnowy" float=center width=100% height="700"></iframe> 
+        </div>
 
     
+<nav id="article-nav">
+    
+    <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Git tips in DevOPs workflow</div>
+    </a>
+    
+
+    
+    <a href="https://tintinsnowy.com/2019/10/08/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title"></div>
+    </a>
+    
+</nav>
+
 
 </article>
 
 
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "sherrysblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
 
     </section>
 
@@ -402,9 +519,9 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2018/06/21/errors-and-solutions-with-hyperledger-fabric/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2019/10/08/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/fabric-logo.png)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/d2e0b66b-1525-4965-8700-ef5f7ebe4cd7/PSX_20191018_225433.jpg?search=Blog)" alt="Spark Hadoop: the essential questions you may need to know" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -419,18 +536,18 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2018/06/21/errors-and-solutions-with-hyperledger-fabric/" class="title">Errors and Solutions with Hyperledger Fabric</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/10/08/" class="title"></a></p>
                     <p class="item-date">
-                        <time datetime="2018-06-21 16:22:23 &#43;0200 CEST" itemprop="datePublished">June 21, 2018</time>
+                        <time datetime="2019-10-08 09:07:55 &#43;0100 &#43;0100" itemprop="datePublished">October 08, 2019</time>
                     </p>
                 </div>
             </li>
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2018/05/18/know-about-your-cpu/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2019/08/18/spark-hadoop-the-essential-questions-you-may-need-to-know/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/cpus.jpg)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/spark-multi-nodes.jpg)" alt="Spark Hadoop: the essential questions you may need to know" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -445,18 +562,18 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2018/05/18/know-about-your-cpu/" class="title">Know about your CPU</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/08/18/spark-hadoop-the-essential-questions-you-may-need-to-know/" class="title">Spark Hadoop: the essential questions you may need to know</a></p>
                     <p class="item-date">
-                        <time datetime="2018-05-18 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">May 18, 2018</time>
+                        <time datetime="2019-08-18 16:31:00 &#43;0200 CEST" itemprop="datePublished">August 18, 2019</time>
                     </p>
                 </div>
             </li>
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/bread.JPG)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/IMGP5712.JPG)" alt="Spark Hadoop: the essential questions you may need to know" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -471,18 +588,18 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/" class="title">Running First Hyperledger Fabric Sample</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="title">Git tips in DevOPs workflow</a></p>
                     <p class="item-date">
-                        <time datetime="2018-05-15 13:57:55 &#43;0100 &#43;0100" itemprop="datePublished">May 15, 2018</time>
+                        <time datetime="2019-06-28 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">June 28, 2019</time>
                     </p>
                 </div>
             </li>
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/w.e.2.jpg)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="Spark Hadoop: the essential questions you may need to know" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -497,18 +614,18 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/" class="title">Feature Selection for unsupervised Learning with R and Python</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="title">Build blob trigger and storage queue for microservice</a></p>
                     <p class="item-date">
-                        <time datetime="2018-05-13 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">May 13, 2018</time>
+                        <time datetime="2019-05-07 13:26:32 &#43;0200 CEST" itemprop="datePublished">May 07, 2019</time>
                     </p>
                 </div>
             </li>
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2018/05/13/generate-your-own-python-package/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2019/05/07/how-to-setup-storage-account-trigger-with-event-grid-1/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/pythonp.JPG)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/spring.jpg)" alt="Spark Hadoop: the essential questions you may need to know" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -523,9 +640,9 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2018/05/13/generate-your-own-python-package/" class="title">Generate your own python package</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/05/07/how-to-setup-storage-account-trigger-with-event-grid-1/" class="title">How to setup Storage Account trigger with Event Grid-1</a></p>
                     <p class="item-date">
-                        <time datetime="2018-05-13 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">May 13, 2018</time>
+                        <time datetime="2019-05-07 13:26:32 &#43;0200 CEST" itemprop="datePublished">May 07, 2019</time>
                     </p>
                 </div>
             </li>
@@ -556,7 +673,7 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                 <a class="category-list-link" href="https://tintinsnowy.com/categories/tech">
                     tech
                 </a>
-                <span class="category-list-count">11</span>
+                <span class="category-list-count">16</span>
             </li>
             
         </ul>
@@ -578,6 +695,14 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/azure">
+                    azure
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/backend">
                     backend
                 </a>
@@ -589,7 +714,7 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/bigdata">
                     bigdata
                 </a>
-                <span class="category-list-count">4</span>
+                <span class="category-list-count">5</span>
             </li>
             
             <li class="category-list-item">
@@ -598,6 +723,14 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                     blockchain
                 </a>
                 <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/cloud">
+                    cloud
+                </a>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -634,6 +767,14 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/devops">
+                    devops
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/docker">
                     docker
                 </a>
@@ -645,13 +786,21 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/framework">
                     framework
                 </a>
-                <span class="category-list-count">2</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">
                 
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/frontend">
                     frontend
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/git">
+                    git
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -674,6 +823,22 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/infrastruct">
+                    infrastruct
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/kubernetes">
+                    kubernetes
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/linux">
                     linux
                 </a>
@@ -690,6 +855,22 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/microservice">
+                    microservice
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/msg-queue">
+                    msg-queue
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/reading">
                     reading
                 </a>
@@ -700,6 +881,22 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
                 
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/review">
                     review
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/sde">
+                    sde
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/storage-queue">
+                    storage-queue
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -729,6 +926,9 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
     <div class="widget tagcloud">
         
         
+        <a href="https://tintinsnowy.com/tags/azure" style="font-size: 12px;">azure</a>
+        
+        
         <a href="https://tintinsnowy.com/tags/backend" style="font-size: 12px;">backend</a>
         
         
@@ -736,6 +936,9 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
         
         
         <a href="https://tintinsnowy.com/tags/blockchain" style="font-size: 12px;">blockchain</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/cloud" style="font-size: 12px;">cloud</a>
         
         
         <a href="https://tintinsnowy.com/tags/concepts" style="font-size: 12px;">concepts</a>
@@ -750,6 +953,9 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
         <a href="https://tintinsnowy.com/tags/debug" style="font-size: 12px;">debug</a>
         
         
+        <a href="https://tintinsnowy.com/tags/devops" style="font-size: 12px;">devops</a>
+        
+        
         <a href="https://tintinsnowy.com/tags/docker" style="font-size: 12px;">docker</a>
         
         
@@ -759,10 +965,19 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
         <a href="https://tintinsnowy.com/tags/frontend" style="font-size: 12px;">frontend</a>
         
         
+        <a href="https://tintinsnowy.com/tags/git" style="font-size: 12px;">git</a>
+        
+        
         <a href="https://tintinsnowy.com/tags/hardware" style="font-size: 12px;">hardware</a>
         
         
         <a href="https://tintinsnowy.com/tags/hyperledger-fabric" style="font-size: 12px;">hyperledger-fabric</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/infrastruct" style="font-size: 12px;">infrastruct</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/kubernetes" style="font-size: 12px;">kubernetes</a>
         
         
         <a href="https://tintinsnowy.com/tags/linux" style="font-size: 12px;">linux</a>
@@ -771,10 +986,22 @@ Gradually more elements have been added in. <code>Thinking</code>,<code>Book rev
         <a href="https://tintinsnowy.com/tags/machine-learning" style="font-size: 12px;">machine-learning</a>
         
         
+        <a href="https://tintinsnowy.com/tags/microservice" style="font-size: 12px;">microservice</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/msg-queue" style="font-size: 12px;">msg-queue</a>
+        
+        
         <a href="https://tintinsnowy.com/tags/reading" style="font-size: 12px;">reading</a>
         
         
         <a href="https://tintinsnowy.com/tags/review" style="font-size: 12px;">review</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/sde" style="font-size: 12px;">sde</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/storage-queue" style="font-size: 12px;">storage-queue</a>
         
         
         <a href="https://tintinsnowy.com/tags/techniques" style="font-size: 12px;">techniques</a>
