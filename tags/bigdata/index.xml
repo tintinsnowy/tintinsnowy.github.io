@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bigdata on Sherry&#39;s blog</title>
-    <link>https://www.tintinsnowy.com/tags/bigdata/</link>
+    <link>tintinsnowy.com/tags/bigdata/</link>
     <description>Recent content in Bigdata on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 13 May 2018 09:57:55 +0100</lastBuildDate>
     
-	<atom:link href="https://www.tintinsnowy.com/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="tintinsnowy.com/tags/bigdata/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Feature Selection for unsupervised Learning with R and Python</title>
-      <link>https://www.tintinsnowy.com/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/</link>
+      <link>tintinsnowy.com/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/</link>
       <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
       
-      <guid>https://www.tintinsnowy.com/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/</guid>
+      <guid>tintinsnowy.com/2018/05/13/feature-selection-for-unsupervised-learning-with-r-and-python/</guid>
       <description>Starting from dimensionality reduction Feature selection is a part technique of data dimensional reduction. According to the book Data minging: concepts and techniques, the most ubiquitous methods are:
  wavelet transforms principal components analysis (PCA) attribute subset selection(or feature selection)  It is worth mentioning, that PCA, Exploratory Factor Analysis (EFA), SVD, etc are all methods which reconstruct our original attributes. PCA is essentially creates new variables that are linear combinations of the original variables.</description>
     </item>
     
     <item>
       <title>Spark多节点配置</title>
-      <link>https://www.tintinsnowy.com/2016/03/14/spark%E5%A4%9A%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE/</link>
+      <link>tintinsnowy.com/2016/03/14/spark%E5%A4%9A%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 14 Mar 2016 16:22:23 +0200</pubDate>
       
-      <guid>https://www.tintinsnowy.com/2016/03/14/spark%E5%A4%9A%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE/</guid>
+      <guid>tintinsnowy.com/2016/03/14/spark%E5%A4%9A%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE/</guid>
       <description>楔子 这次完全拿到的是裸机，所以从零开始配置。其实集群和单节点差不多，见我前面的blog
 本机配置  Centos 5.8 4 cores 8G  节点布置 Masters&amp;amp;Slaves Master 119.254.168.33 Slaves1 119.254.168.34 Slaves2 119.254.168.36 Slaves3 119.254.168.38  环境配置 Environment JAVA 环境 见Apache Spark单节点安装和环境配置  SCALA 环境 见Apache Spark单节点安装和环境配置  SSH 配置 背景：搭建Hadoop环境需要设置无密码登陆，所谓无密码登陆其实是指通过证书认证的方式登陆 ，使用一种被称为”公私钥”(RSA)认证的方式来进行ssh登录。 在linux系统中,ssh是远程登录的默认工具,因为该工具的协议使用了RSA/DSA的加密算法.该工具做linux系统的远程管理是非常安全的。
 所谓ssh就是ssh免密码登录服务器，其中用到了RSA加密算法。其中的细节和原理我有时间再写。
@@ -35,10 +35,10 @@
     
     <item>
       <title>Apache Spark安装和环境配置</title>
-      <link>https://www.tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <link>tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 08 Jan 2016 13:26:32 +0200</pubDate>
       
-      <guid>https://www.tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <guid>tintinsnowy.com/2016/01/08/apache-spark%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
       <description>Excerpt The Desiderata (part 2)
 by Max Ehrmann, 1927
  If you compare yourself with others,

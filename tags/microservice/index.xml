@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microservice on Sherry&#39;s blog</title>
-    <link>https://www.tintinsnowy.com/tags/microservice/</link>
+    <link>tintinsnowy.com/tags/microservice/</link>
     <description>Recent content in Microservice on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 May 2019 13:26:32 +0200</lastBuildDate>
     
-	<atom:link href="https://www.tintinsnowy.com/tags/microservice/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="tintinsnowy.com/tags/microservice/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Build blob trigger and storage queue for microservice</title>
-      <link>https://www.tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/</link>
+      <link>tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/</link>
       <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
       
-      <guid>https://www.tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/</guid>
+      <guid>tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/</guid>
       <description>In my last blog(here), I have demonstrated how to set up a Blob trigger uing the Microsoft Azure native product: Azure function to handle the events/updates.
 but instead of creating an Azure funtion in cloud, we want an on-premise application, or a microservice with the tigger function embeded.
 Solution 2: using RESTful API conncets Azure Storage Account. Architecture: Steps:  prerequisites create resouce group -&amp;gt; Storage account
