@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cpu on Sherry&#39;s blog</title>
+    <title>CPU on Sherry&#39;s blog</title>
     <link>https://tintinsnowy.com/tags/cpu/</link>
-    <description>Recent content in Cpu on Sherry&#39;s blog</description>
+    <description>Recent content in CPU on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Content by Xiaoli Yang</copyright>
     <lastBuildDate>Fri, 18 May 2018 09:57:55 +0100</lastBuildDate>
     
 	<atom:link href="https://tintinsnowy.com/tags/cpu/index.xml" rel="self" type="application/rss+xml" />

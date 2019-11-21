@@ -1,54 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sherry&#39;s blog</title>
     <link>https://tintinsnowy.com/tags/</link>
     <description>Recent content in Tags on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 07 May 2019 13:26:32 +0200</lastBuildDate>
+    <copyright>Powered by [Hugo](//gohugo.io). Content by Xiaoli Yang</copyright>
+    <lastBuildDate>Tue, 08 Oct 2019 09:07:55 +0100</lastBuildDate>
     
 	<atom:link href="https://tintinsnowy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Azure</title>
-      <link>https://tintinsnowy.com/tags/azure/</link>
-      <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/azure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Backend</title>
-      <link>https://tintinsnowy.com/tags/backend/</link>
-      <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/backend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bigdata</title>
-      <link>https://tintinsnowy.com/tags/bigdata/</link>
-      <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/bigdata/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blockchain</title>
-      <link>https://tintinsnowy.com/tags/blockchain/</link>
-      <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/blockchain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cloud</title>
+      <title>cloud</title>
       <link>https://tintinsnowy.com/tags/cloud/</link>
       <pubDate>Tue, 08 Oct 2019 09:07:55 +0100</pubDate>
       
@@ -57,74 +21,29 @@
     </item>
     
     <item>
-      <title>Concepts</title>
-      <link>https://tintinsnowy.com/tags/concepts/</link>
-      <pubDate>Thu, 09 Nov 2017 09:57:55 +0100</pubDate>
+      <title>INFR</title>
+      <link>https://tintinsnowy.com/tags/infr/</link>
+      <pubDate>Tue, 08 Oct 2019 09:07:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/concepts/</guid>
+      <guid>https://tintinsnowy.com/tags/infr/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cpu</title>
-      <link>https://tintinsnowy.com/tags/cpu/</link>
-      <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
+      <title>kubernetes</title>
+      <link>https://tintinsnowy.com/tags/kubernetes/</link>
+      <pubDate>Tue, 08 Oct 2019 09:07:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/cpu/</guid>
+      <guid>https://tintinsnowy.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Data Mining</title>
-      <link>https://tintinsnowy.com/tags/data-mining/</link>
-      <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/data-mining/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debug</title>
-      <link>https://tintinsnowy.com/tags/debug/</link>
-      <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/debug/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Devops</title>
+      <title>DevOps</title>
       <link>https://tintinsnowy.com/tags/devops/</link>
       <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
       <guid>https://tintinsnowy.com/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://tintinsnowy.com/tags/docker/</link>
-      <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Framework</title>
-      <link>https://tintinsnowy.com/tags/framework/</link>
-      <pubDate>Mon, 14 Mar 2016 16:22:23 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/framework/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Frontend</title>
-      <link>https://tintinsnowy.com/tags/frontend/</link>
-      <pubDate>Mon, 21 Dec 2015 16:22:23 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/frontend/</guid>
       <description></description>
     </item>
     
@@ -138,61 +57,25 @@
     </item>
     
     <item>
-      <title>Hardware</title>
-      <link>https://tintinsnowy.com/tags/hardware/</link>
-      <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
+      <title>SDE</title>
+      <link>https://tintinsnowy.com/tags/sde/</link>
+      <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/hardware/</guid>
+      <guid>https://tintinsnowy.com/tags/sde/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hyperledger Fabric</title>
-      <link>https://tintinsnowy.com/tags/hyperledger-fabric/</link>
-      <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
+      <title>Azure</title>
+      <link>https://tintinsnowy.com/tags/azure/</link>
+      <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/tags/hyperledger-fabric/</guid>
+      <guid>https://tintinsnowy.com/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Infr</title>
-      <link>https://tintinsnowy.com/tags/infr/</link>
-      <pubDate>Tue, 08 Oct 2019 09:07:55 +0100</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/infr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://tintinsnowy.com/tags/kubernetes/</link>
-      <pubDate>Tue, 08 Oct 2019 09:07:55 +0100</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://tintinsnowy.com/tags/linux/</link>
-      <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>https://tintinsnowy.com/tags/machine-learning/</link>
-      <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Microservice</title>
+      <title>microservice</title>
       <link>https://tintinsnowy.com/tags/microservice/</link>
       <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
       
@@ -201,38 +84,11 @@
     </item>
     
     <item>
-      <title>Msg Queue</title>
+      <title>msg queue</title>
       <link>https://tintinsnowy.com/tags/msg-queue/</link>
       <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
       
       <guid>https://tintinsnowy.com/tags/msg-queue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reading</title>
-      <link>https://tintinsnowy.com/tags/reading/</link>
-      <pubDate>Tue, 01 Dec 2015 16:22:23 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/reading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Review</title>
-      <link>https://tintinsnowy.com/tags/review/</link>
-      <pubDate>Tue, 01 Dec 2015 16:22:23 +0200</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sde</title>
-      <link>https://tintinsnowy.com/tags/sde/</link>
-      <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/sde/</guid>
       <description></description>
     </item>
     
@@ -246,11 +102,155 @@
     </item>
     
     <item>
-      <title>Techniques</title>
+      <title>blockchain</title>
+      <link>https://tintinsnowy.com/tags/blockchain/</link>
+      <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debug</title>
+      <link>https://tintinsnowy.com/tags/debug/</link>
+      <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/debug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hyperledger-fabric</title>
+      <link>https://tintinsnowy.com/tags/hyperledger-fabric/</link>
+      <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/hyperledger-fabric/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CPU</title>
+      <link>https://tintinsnowy.com/tags/cpu/</link>
+      <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/cpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hardware</title>
+      <link>https://tintinsnowy.com/tags/hardware/</link>
+      <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://tintinsnowy.com/tags/linux/</link>
+      <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bigdata</title>
+      <link>https://tintinsnowy.com/tags/bigdata/</link>
+      <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/bigdata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Mining</title>
+      <link>https://tintinsnowy.com/tags/data-mining/</link>
+      <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/data-mining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://tintinsnowy.com/tags/machine-learning/</link>
+      <pubDate>Sun, 13 May 2018 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backend</title>
+      <link>https://tintinsnowy.com/tags/backend/</link>
+      <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/backend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://tintinsnowy.com/tags/docker/</link>
+      <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>techniques</title>
       <link>https://tintinsnowy.com/tags/techniques/</link>
       <pubDate>Mon, 11 Dec 2017 16:22:23 +0200</pubDate>
       
       <guid>https://tintinsnowy.com/tags/techniques/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Concepts</title>
+      <link>https://tintinsnowy.com/tags/concepts/</link>
+      <pubDate>Thu, 09 Nov 2017 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/concepts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>framework</title>
+      <link>https://tintinsnowy.com/tags/framework/</link>
+      <pubDate>Mon, 14 Mar 2016 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>frontend</title>
+      <link>https://tintinsnowy.com/tags/frontend/</link>
+      <pubDate>Mon, 21 Dec 2015 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reading</title>
+      <link>https://tintinsnowy.com/tags/reading/</link>
+      <pubDate>Tue, 01 Dec 2015 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/reading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://tintinsnowy.com/tags/review/</link>
+      <pubDate>Tue, 01 Dec 2015 16:22:23 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/review/</guid>
       <description></description>
     </item>
     

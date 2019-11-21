@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blockchain on Sherry&#39;s blog</title>
+    <title>blockchain on Sherry&#39;s blog</title>
     <link>https://tintinsnowy.com/tags/blockchain/</link>
-    <description>Recent content in Blockchain on Sherry&#39;s blog</description>
+    <description>Recent content in blockchain on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Content by Xiaoli Yang</copyright>
     <lastBuildDate>Thu, 21 Jun 2018 16:22:23 +0200</lastBuildDate>
     
 	<atom:link href="https://tintinsnowy.com/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
@@ -30,7 +30,7 @@
       <description>Hyperledger Fabric Sample Application This is originally from the Introduction to Hyperledger Technologies course on edX. Link However, if follow the instructions, you may not successfully run the example.
 the overview graph Node.js version When an error occurs, in most case it has something to do with the version of Node.js&amp;rsquo;s version
 completely remove Node.js old version completely uninstall node + npm is to do the following:
- go to /usr/local/lib and delete any node and node_modules go to /usr/local/include and delete any node and node_modules directory check your Home directory for any local or lib or include folders, and delete any node or node_modules from there go to /usr/local/bin and delete any node executable  sudo rm -rf /opt/local/bin/node /opt/local/include/node /opt/local/lib/node_modules sudo rm -rf /usr/local/bin/npm /usr/local/share/man/man1/node.</description>
+ go to /usr/local/lib and delete any node and node_modules go to /usr/local/include and delete any node and node_modules directory check your Home directory for any local or lib or include folders, and delete any node or node_modules from there go to /usr/local/bin and delete any node executable</description>
     </item>
     
     <item>
