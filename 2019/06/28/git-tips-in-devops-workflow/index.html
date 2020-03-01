@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>Git tips in DevOPs workflow &middot; Sherry&#39;s blog</title>
+    <title>Git tips in DevOps workflow &middot; Sherry&#39;s blog</title>
     <meta name="generator" content="Hugo 0.59.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -20,32 +20,32 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Git tips in DevOPs workflow" />
-<meta property="og:description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shift the whole project into DevOps workflow. Git, is most essential part of the version control. So in this post, I will shsare some tips that I have encountered
-Git Branching Models There should be at least two models: Dev and Master. Dev branch is the front line defensing bugs. This branch will proceed first round of testing." />
+    <meta property="og:title" content="Git tips in DevOps workflow" />
+<meta property="og:description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" />
 <meta property="article:published_time" content="2019-06-28T09:57:55+01:00" />
 <meta property="article:modified_time" content="2019-06-28T09:57:55+01:00" /><meta property="og:site_name" content="Sherry&#39;s blog" />
 
     
-    <meta itemprop="name" content="Git tips in DevOPs workflow">
-<meta itemprop="description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shift the whole project into DevOps workflow. Git, is most essential part of the version control. So in this post, I will shsare some tips that I have encountered
-Git Branching Models There should be at least two models: Dev and Master. Dev branch is the front line defensing bugs. This branch will proceed first round of testing.">
+    <meta itemprop="name" content="Git tips in DevOps workflow">
+<meta itemprop="description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.">
 
 
 <meta itemprop="datePublished" content="2019-06-28T09:57:55&#43;01:00" />
 <meta itemprop="dateModified" content="2019-06-28T09:57:55&#43;01:00" />
-<meta itemprop="wordCount" content="280">
+<meta itemprop="wordCount" content="333">
 
 
 
 <meta itemprop="keywords" content="DevOps,Git,SDE," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Git tips in DevOPs workflow"/>
-<meta name="twitter:description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shift the whole project into DevOps workflow. Git, is most essential part of the version control. So in this post, I will shsare some tips that I have encountered
-Git Branching Models There should be at least two models: Dev and Master. Dev branch is the front line defensing bugs. This branch will proceed first round of testing."/>
+<meta name="twitter:title" content="Git tips in DevOps workflow"/>
+<meta name="twitter:description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs."/>
 
     
     
@@ -246,7 +246,7 @@ Git Branching Models There should be at least two models: Dev and Master. Dev br
         <header class="article-header">
     <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/">
     <h1 class="article-title" itemprop="name">
-        Git tips in DevOPs workflow
+        Git tips in DevOps workflow
     </h1>
     </a>
     <div class="article-meta">
@@ -256,7 +256,7 @@ Git Branching Models There should be at least two models: Dev and Master. Dev br
             <i class="fa fa-calendar"></i>
             <time datetime="2019-06-28 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">June 28, 2019</time>
             &middot;
-            280
+            333
             words
             &middot;
             2
@@ -305,16 +305,15 @@ Git Branching Models There should be at least two models: Dev and Master. Dev br
             
 
 <p>This is the second phase of my current project. After the Beta version of
-the project, I upgraded and shift the whole project into DevOps
-workflow. Git, is most essential part of the version control.
-So in this post, I will shsare some tips that I have encountered</p>
+the project, I upgraded and shifted the whole project into DevOps
+workflow. Git, is very essential part of the version control.
+So in this post, I will share some tips that I have used to solve problems</p>
 
 <h2 id="git-branching-models">Git Branching Models</h2>
 
-<p>There should be at least two models: <code>Dev</code> and <code>Master</code>. <code>Dev</code> branch is the front line defensing bugs. This branch
-will proceed first round of testing.
-the <code>Master</code> or <code>Production</code> branch is used for release the stable version of the software. Still this branch will
-go through all possible tests and report bugs.</p>
+<p>There should be at least two Branches: <code>Dev</code> and <code>Master</code>. <code>Dev</code> branch is the front line defensing bugs. This branch
+will proceed first round of testing. All the feature, hotfix, customized branches should firstly be merged to <code>Dev</code> branch.
+The <code>Master</code> or <code>Production</code> branch is used for release the stable version of the software. In some scenarios, we need a <code>Test</code> branch, between <code>Dev</code> and <code>Master</code>(<code>Production</code>).</p>
 
 <p><img src="https://app.yinxiang.com/shard/s33/res/d3525737-ac00-45cb-b4c2-98441aebb472/Screenshot%20from%202019-07-29%2014-26-40.png?search=Blog" alt="branch modes" /></p>
 
@@ -325,7 +324,7 @@ it is better to restricts the access to master branch.
 when the feature
 <a href="https://stackoverflow.com/questions/38864405/how-to-restrict-access-to-master-branch-on-git">https://stackoverflow.com/questions/38864405/how-to-restrict-access-to-master-branch-on-git</a></p>
 
-<h2 id="create-feature-branch">Create/ feature branch</h2>
+<h2 id="create-a-feature-branch">Create a feature branch</h2>
 
 <p>git pull before your any actions</p>
 
@@ -337,6 +336,16 @@ git checkout -b new_branch current_branch
 
 <pre><code class="language-console">git branch -D wanted_to_delete
 
+</code></pre>
+
+<p>to avoid the conflicts, you need to merge the last diffs to your branch.</p>
+
+<pre><code class="language-console">git checkout dev
+git pull
+git checkout your-feature-branch
+git merge dev    #update your feature branch
+git add .
+git commit -m &quot;xxx&quot;
 </code></pre>
 
 <h2 id="retrieve-committed-code">Retrieve committed code</h2>
@@ -523,7 +532,7 @@ git reset $(hash-code)
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2019/10/08/how-to-depoly-mapr-kafka-app-on-kubernetes/" class="thumbnail">
                     
-                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/d2e0b66b-1525-4965-8700-ef5f7ebe4cd7/PSX_20191018_225433.jpg?search=Blog)" alt="Git tips in DevOPs workflow" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/d2e0b66b-1525-4965-8700-ef5f7ebe4cd7/PSX_20191018_225433.jpg?search=Blog)" alt="Git tips in DevOps workflow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -549,7 +558,7 @@ git reset $(hash-code)
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/IMGP5712.JPG)" alt="Git tips in DevOPs workflow" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/IMGP5712.JPG)" alt="Git tips in DevOps workflow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -564,7 +573,7 @@ git reset $(hash-code)
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="title">Git tips in DevOPs workflow</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="title">Git tips in DevOps workflow</a></p>
                     <p class="item-date">
                         <time datetime="2019-06-28 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">June 28, 2019</time>
                     </p>
@@ -575,7 +584,7 @@ git reset $(hash-code)
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="Git tips in DevOPs workflow" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="Git tips in DevOps workflow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -601,7 +610,7 @@ git reset $(hash-code)
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2019/05/07/how-to-setup-storage-account-trigger-with-event-grid-1/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/spring.jpg)" alt="Git tips in DevOPs workflow" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/spring.jpg)" alt="Git tips in DevOps workflow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -627,7 +636,7 @@ git reset $(hash-code)
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2018/06/21/errors-and-solutions-with-hyperledger-fabric/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/fabric-logo.png)" alt="Git tips in DevOPs workflow" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/fabric-logo.png)" alt="Git tips in DevOps workflow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -1025,7 +1034,7 @@ git reset $(hash-code)
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>. Content by Xiaoli Yang
     </div>
   </div>

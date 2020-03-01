@@ -24,13 +24,13 @@ from confluent_kafka import Producer p = Producer({&#39;streams.</description>
     </item>
     
     <item>
-      <title>Git tips in DevOPs workflow</title>
+      <title>Git tips in DevOps workflow</title>
       <link>https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/</link>
       <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
       <guid>https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/</guid>
-      <description>This is the second phase of my current project. After the Beta version of the project, I upgraded and shift the whole project into DevOps workflow. Git, is most essential part of the version control. So in this post, I will shsare some tips that I have encountered
-Git Branching Models There should be at least two models: Dev and Master. Dev branch is the front line defensing bugs. This branch will proceed first round of testing.</description>
+      <description>This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.</description>
     </item>
     
     <item>
