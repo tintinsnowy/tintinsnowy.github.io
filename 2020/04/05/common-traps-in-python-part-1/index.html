@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>debug &middot; Sherry&#39;s blog</title>
+    <title>Common Traps in Python - part 1 &middot; Sherry&#39;s blog</title>
     <meta name="generator" content="Hugo 0.59.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Sherry Yang">
     
-      <meta name="description" content="">
+      <meta name="description" content="The first part of the python-traps series will explains the common mistakes we may encounter in list">
     
     
-      <link href="https://tintinsnowy.com/tags/debug/index.xml" rel="alternate" type="application/rss+xml" title="Sherry&#39;s blog" />
-      <link href="https://tintinsnowy.com/tags/debug/index.xml" rel="feed" type="application/rss+xml" title="Sherry&#39;s blog" />
-    
-    <link rel="canonical" href="https://tintinsnowy.com/tags/debug/"/>
+    <link rel="canonical" href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/"/>
     <link rel="icon" href="https://tintinsnowy.com/favicon.ico">
     <link rel="apple-touch-icon" href="https://tintinsnowy.com/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://tintinsnowy.com/css/style.css">
@@ -23,21 +20,29 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="debug" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tintinsnowy.com/tags/debug/" />
-
-<meta property="og:updated_time" content="2018-06-21T16:22:23+02:00" /><meta property="og:site_name" content="Sherry&#39;s blog" />
+    <meta property="og:title" content="Common Traps in Python - part 1" />
+<meta property="og:description" content="The first part of the python-traps series will explains the common mistakes we may encounter in list" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" />
+<meta property="article:published_time" content="2020-04-05T08:57:55+01:00" />
+<meta property="article:modified_time" content="2020-04-05T08:57:55+01:00" /><meta property="og:site_name" content="Sherry&#39;s blog" />
 
     
-    <meta itemprop="name" content="debug">
-<meta itemprop="description" content="">
+    <meta itemprop="name" content="Common Traps in Python - part 1">
+<meta itemprop="description" content="The first part of the python-traps series will explains the common mistakes we may encounter in list">
 
+
+<meta itemprop="datePublished" content="2020-04-05T08:57:55&#43;01:00" />
+<meta itemprop="dateModified" content="2020-04-05T08:57:55&#43;01:00" />
+<meta itemprop="wordCount" content="411">
+
+
+
+<meta itemprop="keywords" content="python,SDE," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="debug"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Common Traps in Python - part 1"/>
+<meta name="twitter:description" content="The first part of the python-traps series will explains the common mistakes we may encounter in list"/>
 
     
     
@@ -229,45 +234,289 @@
 
     <section id="main">
     
-    
-    
-    
-    <section class="archives-wrap">
-        <div class="archive-category-wrap">
-            <span class="archive-category">debug</span>
-        </div>
-        <div class="archives">
-            
-            
-                <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="https://tintinsnowy.com/2018/06/21/errors-and-solutions-with-hyperledger-fabric/" class="thumbnail">
-                <span style="background-image:url(https://tintinsnowy.com/banners/fabric-logo.png)" alt="Errors and Solutions with Hyperledger Fabric" class="thumbnail-image"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="https://tintinsnowy.com/2018/06/21/errors-and-solutions-with-hyperledger-fabric/">Errors and Solutions with Hyperledger Fabric</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2018-06-21 16:22:23 &#43;0200 CEST" itemprop="datePublished">June 21, 2018</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-            
-        </div>
-    </section>
-    <nav id="page-nav">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <img src="https://app.yinxiang.com/shard/s33/res/53b49ad7-4105-4f81-8765-69b733f539bd/3.jpg" class="article-banner">
+        
 
+        <header class="article-header">
+    <a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/">
+    <h1 class="article-title" itemprop="name">
+        Common Traps in Python - part 1
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-04-05 08:57:55 &#43;0100 &#43;0100" itemprop="datePublished">April 05, 2020</time>
+            &middot;
+            411
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">tech</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/python">python</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/sde">SDE</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<h1 id="part-1-the-traps-of-list-in-python">Part 1 - The traps of List in Python</h1>
+
+<h2 id="1-assignment-trap">1. Assignment trap</h2>
+
+<p><code>Note</code>:  Assignment with an = on lists does not make a copy. Instead, assignment makes the two variables point to the one list in memory.</p>
+
+<pre><code> colors = ['red', 'blue', 'green']
+b = colors ## Does not copy the list
+b [1] = &quot;yellow&quot;
+print (colors)   # ['red', 'yellow', 'green']
+print(b)   # ['red', 'yellow', 'green']
+</code></pre>
+
+<p>and you may get really risky return</p>
+
+<pre><code>values = [0, 1, 2]
+values[1] = values
+print (values)  # [0, [..], 2]
+</code></pre>
+
+<p>use <code>copy</code> method!</p>
+
+<pre><code>b = values.copy
+</code></pre>
+
+<h2 id="2-list-expend-list-append-and">2. List.expend(), List.append() and +</h2>
+
+<ul>
+<li>list.append(elem) &ndash; adds a single element to the end of the list. Common error: does not return the new list, just modifies the original.</li>
+<li>list.insert(index, elem) &ndash; inserts the element at the given index, shifting elements to the right.</li>
+<li>list.extend(list2) adds the elements in list2 to the end of the list. Using <strong>+ or +=</strong> on a list is similar to using extend().</li>
+</ul>
+
+<h3 id="2-1-no-return">2.1 No Return</h3>
+
+<p>Common error: note that the above methods do not <em>return</em> the modified list, they just modify the original list.</p>
+
+<pre><code> list = [1, 2, 3]
+ print list.append(4) ## NO, does not work, append() returns None
+ # Correct way:
+ list.append(4)
+ print list ## [1, 2, 3, 4]  
+</code></pre>
+
+<h3 id="2-2-difference-between-append-and-extend-method">2.2 Difference Between Append and Extend Method</h3>
+
+<ul>
+<li><strong>append</strong>: Appends object at the end.</li>
+<li><strong>extend</strong>: Extends list by appending elements from the iterable.  (equal to +)</li>
+</ul>
+
+<p><img src="https://app.yinxiang.com/shard/s33/res/6d2f875e-e773-4a82-a647-1aa7cbab8dbb" alt="to illustrate the difference" /></p>
+
+<h2 id="3-initialization-for-nested-list">3. Initialization for Nested List</h2>
+
+<p>Q: Consider the two approaches below for initializing an array and the arrays that will result. How will the resulting arrays differ and why should you use one initialization approach vs. the other?</p>
+
+<pre><code>&gt;&gt;&gt; # INITIALIZING AN ARRAY -- METHOD 1
+...
+&gt;&gt;&gt; x = [[1,2,3,4]] * 3&gt;&gt;&gt; x
+[[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]]
+
+
+&gt;&gt;&gt; # INITIALIZING AN ARRAY -- METHOD 2
+...
+&gt;&gt;&gt; y = [[1,2,3,4] for _ in range(3)]
+&gt;&gt;&gt; y   # [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]]
+
+
+&gt;&gt;&gt; # MODIFYING THE x ARRAY FROM THE PRIOR CODE SNIPPET:
+&gt;&gt;&gt; x[0][3] = 99
+&gt;&gt;&gt; x
+[[1, 2, 3, 99], [1, 2, 3, 99], [1, 2, 3, 99]]
+&gt;&gt;&gt; # UH-OH, DON’T THINK YOU WANTED THAT TO HAPPEN!
+
+
+&gt;&gt;&gt; # MODIFYING THE y ARRAY FROM THE PRIOR CODE SNIPPET:
+&gt;&gt;&gt; y[0][3] = 99
+&gt;&gt;&gt; y
+[[1, 2, 3, 99], [1, 2, 3, 4], [1, 2, 3, 4]]
+&gt;&gt;&gt; # THAT’S MORE LIKE WHAT YOU EXPECTED!
+</code></pre>
+
+<p><img src="https://app.yinxiang.com/shard/s33/res/0faddd4d-690d-42d6-89dc-c6eff10710ea.png" alt="images to show " /></p>
+
+<h1 id="reference">Reference:</h1>
+
+<p><a href="https://developers.google.com/edu/python/lists">https://developers.google.com/edu/python/lists</a></p>
+
+<p><a href="http://pythontutor.com/live.html#mode=edit">http://pythontutor.com/live.html#mode=edit</a></p>
+
+        </div>
+
+        <footer class="article-footer">
+    <a data-url="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" data-id="7046e34511b1c390d93efb950ff7369f" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+        <div id="likecoin_thread">
+            
+            <iframe data-v-b66e9a5a="" src="https://button.like.co/in/embed/tintinsnowy/button?referrer=https://tintinsnowy.com/2019/10/08/" float=center width=100% height="300"></iframe>
+           
+        </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="https://tintinsnowy.com/2020/03/01/10-basic-tips-on-bash-scripting-to-optimize-your-operation-work/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">10 Basic Tips on Bash Scripting to Optimize Your Operation Work</div>
+    </a>
+    
+
+    
 </nav>
 
+
+</article>
+
+
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "sherrysblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
 
     </section>
 
@@ -285,7 +534,7 @@
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" class="thumbnail">
                     
-                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/53b49ad7-4105-4f81-8765-69b733f539bd/3.jpg)" alt="debug" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/53b49ad7-4105-4f81-8765-69b733f539bd/3.jpg)" alt="Common Traps in Python - part 1" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -311,7 +560,7 @@
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2020/03/01/10-basic-tips-on-bash-scripting-to-optimize-your-operation-work/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/cherry.JPG)" alt="debug" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/cherry.JPG)" alt="Common Traps in Python - part 1" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -337,7 +586,7 @@
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2019/10/08/how-to-depoly-mapr-kafka-app-on-kubernetes/" class="thumbnail">
                     
-                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/d2e0b66b-1525-4965-8700-ef5f7ebe4cd7/PSX_20191018_225433.jpg)" alt="debug" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/d2e0b66b-1525-4965-8700-ef5f7ebe4cd7/PSX_20191018_225433.jpg)" alt="Common Traps in Python - part 1" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -363,7 +612,7 @@
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/windrad.JPG)" alt="debug" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/windrad.JPG)" alt="Common Traps in Python - part 1" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -389,7 +638,7 @@
                 <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="debug" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="Common Traps in Python - part 1" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
