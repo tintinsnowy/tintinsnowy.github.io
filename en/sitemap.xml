@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tintinsnowy.com/2020/03/01/10-basic-tips-on-bash-scripting-to-optimize-your-operation-work/</loc>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tintinsnowy.com/categories/</loc>
-    <lastmod>2019-10-08T09:07:55+01:00</lastmod>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ch"
@@ -14,6 +19,81 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://tintinsnowy.com/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/tags/maint/</loc>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/post/</loc>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ch"
+                href="https://tintinsnowy.com/ch/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tintinsnowy.com/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/tags/sde/</loc>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/tags/shell/</loc>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/</loc>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ch"
+                href="https://tintinsnowy.com/ch/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tintinsnowy.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/tags/</loc>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ch"
+                href="https://tintinsnowy.com/ch/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tintinsnowy.com/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/categories/tech/</loc>
+    <lastmod>2020-03-01T09:57:55+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ch"
+                href="https://tintinsnowy.com/ch/categories/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tintinsnowy.com/categories/tech/"
                 />
   </url>
   
@@ -38,66 +118,6 @@
   </url>
   
   <url>
-    <loc>https://tintinsnowy.com/post/</loc>
-    <lastmod>2019-10-08T09:07:55+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ch"
-                href="https://tintinsnowy.com/ch/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tintinsnowy.com/post/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tintinsnowy.com/</loc>
-    <lastmod>2019-10-08T09:07:55+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ch"
-                href="https://tintinsnowy.com/ch/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tintinsnowy.com/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tintinsnowy.com/tags/</loc>
-    <lastmod>2019-10-08T09:07:55+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ch"
-                href="https://tintinsnowy.com/ch/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tintinsnowy.com/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://tintinsnowy.com/categories/tech/</loc>
-    <lastmod>2019-10-08T09:07:55+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ch"
-                href="https://tintinsnowy.com/ch/categories/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tintinsnowy.com/categories/tech/"
-                />
-  </url>
-  
-  <url>
     <loc>https://tintinsnowy.com/tags/devops/</loc>
     <lastmod>2019-06-28T09:57:55+01:00</lastmod>
   </url>
@@ -109,11 +129,6 @@
   
   <url>
     <loc>https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/</loc>
-    <lastmod>2019-06-28T09:57:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tintinsnowy.com/tags/sde/</loc>
     <lastmod>2019-06-28T09:57:55+01:00</lastmod>
   </url>
   

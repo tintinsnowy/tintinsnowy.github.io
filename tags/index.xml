@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Powered by [Hugo](//gohugo.io). Content by Xiaoli Yang</copyright>
-    <lastBuildDate>Tue, 08 Oct 2019 09:07:55 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 09:57:55 +0100</lastBuildDate>
     
 	<atom:link href="https://tintinsnowy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MAINT</title>
+      <link>https://tintinsnowy.com/tags/maint/</link>
+      <pubDate>Sun, 01 Mar 2020 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/maint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SDE</title>
+      <link>https://tintinsnowy.com/tags/sde/</link>
+      <pubDate>Sun, 01 Mar 2020 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/sde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://tintinsnowy.com/tags/shell/</link>
+      <pubDate>Sun, 01 Mar 2020 09:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/tags/shell/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cloud</title>
@@ -57,15 +84,6 @@
     </item>
     
     <item>
-      <title>SDE</title>
-      <link>https://tintinsnowy.com/tags/sde/</link>
-      <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
-      
-      <guid>https://tintinsnowy.com/tags/sde/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Azure</title>
       <link>https://tintinsnowy.com/tags/azure/</link>
       <pubDate>Tue, 07 May 2019 13:26:32 +0200</pubDate>
@@ -102,7 +120,7 @@
     </item>
     
     <item>
-      <title>blockchain</title>
+      <title>Blockchain</title>
       <link>https://tintinsnowy.com/tags/blockchain/</link>
       <pubDate>Thu, 21 Jun 2018 16:22:23 +0200</pubDate>
       
@@ -147,7 +165,7 @@
     </item>
     
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://tintinsnowy.com/tags/linux/</link>
       <pubDate>Fri, 18 May 2018 09:57:55 +0100</pubDate>
       
