@@ -6,10 +6,20 @@
     <description>Recent content in tech on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Powered by [Hugo](//gohugo.io). Content by Xiaoli Yang</copyright>
-    <lastBuildDate>Sun, 01 Mar 2020 09:57:55 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 08:57:55 +0100</lastBuildDate>
     
 	<atom:link href="https://tintinsnowy.com/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Common Traps in Python - part 1</title>
+      <link>https://tintinsnowy.com/2020/04/01/common-traps-in-python-part-1/</link>
+      <pubDate>Wed, 01 Apr 2020 08:57:55 +0100</pubDate>
+      
+      <guid>https://tintinsnowy.com/2020/04/01/common-traps-in-python-part-1/</guid>
+      <description>The traps of List in Python Assignment trap Note: Assignment with an = on lists does not make a copy. Instead, assignment makes the two variables point to the one list in memory.
+ colors = [&#39;red&#39;, &#39;blue&#39;, &#39;green&#39;] b = colors ## Does not copy the list b [1] = &amp;quot;yellow&amp;quot; print (colors) # [&#39;red&#39;, &#39;yellow&#39;, &#39;green&#39;] print(b) # [&#39;red&#39;, &#39;yellow&#39;, &#39;green&#39;]  and you may get really risky return</description>
+    </item>
     
     <item>
       <title>10 Basic Tips on Bash Scripting to Optimize Your Operation Work</title>
