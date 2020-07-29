@@ -28,7 +28,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tintinsnowy.com/" />
 
-<meta property="og:updated_time" content="2020-04-05T08:57:55+01:00" /><meta property="og:site_name" content="Sherry&#39;s blog" />
+<meta property="og:updated_time" content="2020-07-29T15:06:14+02:00" /><meta property="og:site_name" content="Sherry&#39;s blog" />
 
     
     <meta itemprop="name" content="Sherry&#39;s blog">
@@ -148,12 +148,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        16
+        17
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          30
+          32
         
         <span>
             Tags
@@ -239,8 +239,176 @@
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+        </a>
+
+        <header class="article-header">
+    <a href="https://tintinsnowy.com/2020/07/29/">
+    <h1 class="article-title" itemprop="name">
+        
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-07-29 15:06:14 &#43;0200 CEST" itemprop="datePublished">July 29, 2020</time>
+            &middot;
+            213
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">tech</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/devops">DevOps</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/git">Git</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/operation">Operation</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/strategy">Strategy</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.
+            </p>
+            <p class="article-more-link">
+                <a href="https://tintinsnowy.com/2020/07/29/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://tintinsnowy.com/2020/07/29/" data-id="fcb7f094b22309b625533880944a29de" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://tintinsnowy.com/2020/07/29/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
         <a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" itemprop="url">
-            <img src="https://app.yinxiang.com/shard/s33/res/53b49ad7-4105-4f81-8765-69b733f539bd/3.jpg" class="article-banner">
+            <img src="https://app.yinxiang.com/shard/s33/res/500de35a-8db4-4823-a516-af38d9ba1358/3.jpg" class="article-banner">
         
         </a>
 
@@ -393,11 +561,6 @@
 
 
 
-
-
-
-
-
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
@@ -466,7 +629,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>
-                1
+                Shell programming is such an essential skill that you need to master, if you want to step further into the Linux/Unix world.
             </p>
             <p class="article-more-link">
                 <a href="https://tintinsnowy.com/2020/03/01/10-basic-tips-on-bash-scripting-to-optimize-your-operation-work/">
@@ -723,15 +886,15 @@
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
-        <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" itemprop="url">
+        <a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" itemprop="url">
             <img src="https://tintinsnowy.com/banners/windrad.JPG" class="article-banner">
         
         </a>
 
         <header class="article-header">
-    <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/">
+    <a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/">
     <h1 class="article-title" itemprop="name">
-        Git tips in DevOps workflow
+        Advanced Git Usage
     </h1>
     </a>
     <div class="article-meta">
@@ -769,10 +932,6 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="https://tintinsnowy.com/tags/devops">DevOps</a>
-                &middot;
-                
-                
                 <a class="article-category-link" href="https://tintinsnowy.com/tags/git">Git</a>
                 &middot;
                 
@@ -792,18 +951,18 @@
 Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.
             </p>
             <p class="article-more-link">
-                <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/">
+                <a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/">
                     Read more
                 </a>
             </p>
         </div>
         <footer class="article-footer">
-    <a data-url="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" data-id="766ed6d8ee605fc9e74a2a846f74d895" class="article-share-link">
+    <a data-url="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" data-id="214a602760403e04e3926969366101c2" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/#disqus_thread" class="article-comment-link">
+    <a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -1529,163 +1688,6 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
 
 
 
-
-<article class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        <a href="https://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/" itemprop="url">
-            <img src="https://tintinsnowy.com/banners/bread.JPG" class="article-banner">
-        
-        </a>
-
-        <header class="article-header">
-    <a href="https://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/">
-    <h1 class="article-title" itemprop="name">
-        Running First Hyperledger Fabric Sample
-    </h1>
-    </a>
-    <div class="article-meta">
-
-        
-        <div class="article-date">
-            <i class="fa fa-calendar"></i>
-            <time datetime="2018-05-15 13:57:55 &#43;0100 &#43;0100" itemprop="datePublished">May 15, 2018</time>
-            &middot;
-            200
-            words
-            &middot;
-            1
-            minute read
-        </div>
-        
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-folder"></i>
-                
-                
-                <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">tech</a>
-                
-                
-            </div>
-            
-        
-
-        
-            
-            
-            <div class="article-category">
-                <i class="fa fa-tags"></i>
-                
-                
-                <a class="article-category-link" href="https://tintinsnowy.com/tags/blockchain">Blockchain</a>
-                &middot;
-                
-                
-                <a class="article-category-link" href="https://tintinsnowy.com/tags/hyperledger-fabric">Hyperledger Fabric</a>
-                
-                
-            </div>
-            
-        
-    </div>
-</header>
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>
-                This is some annotation about running the sample
-            </p>
-            <p class="article-more-link">
-                <a href="https://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/">
-                    Read more
-                </a>
-            </p>
-        </div>
-        <footer class="article-footer">
-    <a data-url="https://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/" data-id="98ec453447c78d7bb83884f7d1095fdf" class="article-share-link">
-        <i class="fa fa-share"></i>
-        Share
-    </a>
-    
-    <a href="https://tintinsnowy.com/2018/05/15/running-first-hyperledger-fabric-sample/#disqus_thread" class="article-comment-link">
-        Comments
-    </a>
-    
-
-    <script>
-    (function ($) {
-        
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-    </script>
-</footer>
-
-    </div>
-</article>
-
-
-
-
-
 <nav id="page-nav">
 
     
@@ -1712,9 +1714,35 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://tintinsnowy.com/2020/07/29/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
+                        tech
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://tintinsnowy.com/2020/07/29/" class="title"></a></p>
+                    <p class="item-date">
+                        <time datetime="2020-07-29 15:06:14 &#43;0200 CEST" itemprop="datePublished">July 29, 2020</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" class="thumbnail">
                     
-                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/53b49ad7-4105-4f81-8765-69b733f539bd/3.jpg)" alt="Sherry&#39;s blog" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/500de35a-8db4-4823-a516-af38d9ba1358/3.jpg)" alt="Sherry&#39;s blog" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -1790,7 +1818,7 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" class="thumbnail">
                     
                         <span style="background-image:url(https://tintinsnowy.com/banners/windrad.JPG)" alt="Sherry&#39;s blog" class="thumbnail-image"></span>
                     
@@ -1807,35 +1835,9 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="title">Git tips in DevOps workflow</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" class="title">Advanced Git Usage</a></p>
                     <p class="item-date">
                         <time datetime="2019-06-28 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">June 28, 2019</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="Sherry&#39;s blog" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
-                        tech
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="title">Build blob trigger and storage queue for microservice</a></p>
-                    <p class="item-date">
-                        <time datetime="2019-05-07 13:26:32 &#43;0200 CEST" itemprop="datePublished">May 07, 2019</time>
                     </p>
                 </div>
             </li>
@@ -1866,7 +1868,7 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
                 <a class="category-list-link" href="https://tintinsnowy.com/categories/tech">
                     tech
                 </a>
-                <span class="category-list-count">15</span>
+                <span class="category-list-count">16</span>
             </li>
             
         </ul>
@@ -1995,7 +1997,7 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/git">
                     git
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -2072,6 +2074,14 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/operation">
+                    operation
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/python">
                     python
                 </a>
@@ -2114,6 +2124,14 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
                 
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/storage-queue">
                     storage-queue
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/strategy">
+                    strategy
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -2212,6 +2230,9 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
         <a href="https://tintinsnowy.com/tags/msg-queue" style="font-size: 12px;">msg-queue</a>
         
         
+        <a href="https://tintinsnowy.com/tags/operation" style="font-size: 12px;">operation</a>
+        
+        
         <a href="https://tintinsnowy.com/tags/python" style="font-size: 12px;">python</a>
         
         
@@ -2228,6 +2249,9 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
         
         
         <a href="https://tintinsnowy.com/tags/storage-queue" style="font-size: 12px;">storage-queue</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/strategy" style="font-size: 12px;">strategy</a>
         
         
         <a href="https://tintinsnowy.com/tags/techniques" style="font-size: 12px;">techniques</a>

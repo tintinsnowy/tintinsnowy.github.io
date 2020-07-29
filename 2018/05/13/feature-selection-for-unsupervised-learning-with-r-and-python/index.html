@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2018-05-13T09:57:55&#43;01:00" />
 <meta itemprop="dateModified" content="2018-05-13T09:57:55&#43;01:00" />
-<meta itemprop="wordCount" content="342">
+<meta itemprop="wordCount" content="371">
 
 
 
@@ -150,12 +150,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        16
+        17
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          30
+          32
         
         <span>
             Tags
@@ -253,7 +253,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-05-13 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">May 13, 2018</time>
             &middot;
-            342
+            371
             words
             &middot;
             2
@@ -338,7 +338,7 @@ extensively <a href="https://machinelearningmastery.com/feature-selection-with-t
 <ol>
 <li>Compute the sample covariance matrix,</li>
 <li>Compute the Principal components and eigenvalues of the
-Covariance /Correlation matrix <strong>A</strong>.</li>
+Covariance or Correlation matrix <strong>A</strong>.</li>
 <li>Choose the subspace dimension <strong>n</strong>, we get new matrix <strong>A_n</strong>,
 the vectors <strong>Vi</strong> are the rows of <strong>A_n</strong>.</li>
 <li>Cluster the vectors <strong>|Vi|</strong>, using K-Means</li>
@@ -347,7 +347,13 @@ the vectors <strong>Vi</strong> are the rows of <strong>A_n</strong>.</li>
 
 <h1 id="code">Code</h1>
 
-<pre><code class="language-python">class PFA(object):
+<pre><code class="language-python">from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+from collections import defaultdict
+from sklearn.metrics.pairwise import euclidean_distances
+from sklearn.preprocessing import StandardScaler
+
+class PFA(object):
     def __init__(self, n_features, q=None):
         self.q = q
         self.n_features = n_features
@@ -359,7 +365,7 @@ the vectors <strong>Vi</strong> are the rows of <strong>A_n</strong>.</li>
         sc = StandardScaler()
         X = sc.fit_transform(X)
 
-        pca = PCA(n_components=self.q).fit(X)
+        pca = PCA(n_components=self.q).fit(X) # calculation Cov matrix is embeded in PCA
         A_q = pca.components_.T
 
         kmeans = KMeans(n_clusters=self.n_features).fit(A_q)
@@ -551,9 +557,35 @@ column_indices = pfa.indices_
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://tintinsnowy.com/2020/07/29/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
+                        tech
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://tintinsnowy.com/2020/07/29/" class="title"></a></p>
+                    <p class="item-date">
+                        <time datetime="2020-07-29 15:06:14 &#43;0200 CEST" itemprop="datePublished">July 29, 2020</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" class="thumbnail">
                     
-                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/53b49ad7-4105-4f81-8765-69b733f539bd/3.jpg)" alt="Feature Selection for unsupervised Learning with R and Python" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/500de35a-8db4-4823-a516-af38d9ba1358/3.jpg)" alt="Feature Selection for unsupervised Learning with R and Python" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -629,7 +661,7 @@ column_indices = pfa.indices_
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" class="thumbnail">
                     
                         <span style="background-image:url(https://tintinsnowy.com/banners/windrad.JPG)" alt="Feature Selection for unsupervised Learning with R and Python" class="thumbnail-image"></span>
                     
@@ -646,35 +678,9 @@ column_indices = pfa.indices_
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/" class="title">Git tips in DevOps workflow</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" class="title">Advanced Git Usage</a></p>
                     <p class="item-date">
                         <time datetime="2019-06-28 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">June 28, 2019</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="Feature Selection for unsupervised Learning with R and Python" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
-                        tech
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://tintinsnowy.com/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="title">Build blob trigger and storage queue for microservice</a></p>
-                    <p class="item-date">
-                        <time datetime="2019-05-07 13:26:32 &#43;0200 CEST" itemprop="datePublished">May 07, 2019</time>
                     </p>
                 </div>
             </li>
@@ -705,7 +711,7 @@ column_indices = pfa.indices_
                 <a class="category-list-link" href="https://tintinsnowy.com/categories/tech">
                     tech
                 </a>
-                <span class="category-list-count">15</span>
+                <span class="category-list-count">16</span>
             </li>
             
         </ul>
@@ -834,7 +840,7 @@ column_indices = pfa.indices_
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/git">
                     git
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -911,6 +917,14 @@ column_indices = pfa.indices_
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/operation">
+                    operation
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/python">
                     python
                 </a>
@@ -953,6 +967,14 @@ column_indices = pfa.indices_
                 
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/storage-queue">
                     storage-queue
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/strategy">
+                    strategy
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -1051,6 +1073,9 @@ column_indices = pfa.indices_
         <a href="https://tintinsnowy.com/tags/msg-queue" style="font-size: 12px;">msg-queue</a>
         
         
+        <a href="https://tintinsnowy.com/tags/operation" style="font-size: 12px;">operation</a>
+        
+        
         <a href="https://tintinsnowy.com/tags/python" style="font-size: 12px;">python</a>
         
         
@@ -1067,6 +1092,9 @@ column_indices = pfa.indices_
         
         
         <a href="https://tintinsnowy.com/tags/storage-queue" style="font-size: 12px;">storage-queue</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/strategy" style="font-size: 12px;">strategy</a>
         
         
         <a href="https://tintinsnowy.com/tags/techniques" style="font-size: 12px;">techniques</a>

@@ -32,11 +32,11 @@ Bash Shell Script Basics We usually call it as Bash Shell, because Bash is the m
     </item>
     
     <item>
-      <title>Git tips in DevOps workflow</title>
-      <link>https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/</link>
+      <title>Advanced Git Usage</title>
+      <link>https://tintinsnowy.com/2019/06/28/advanced-git-usage/</link>
       <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/</guid>
+      <guid>https://tintinsnowy.com/2019/06/28/advanced-git-usage/</guid>
       <description>This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
 Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.</description>
     </item>

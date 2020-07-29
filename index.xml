@@ -6,10 +6,20 @@
     <description>Recent content on Sherry&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Powered by [Hugo](//gohugo.io). Content by Xiaoli Yang</copyright>
-    <lastBuildDate>Sun, 05 Apr 2020 08:57:55 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2020 15:06:14 +0200</lastBuildDate>
     
 	<atom:link href="https://tintinsnowy.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://tintinsnowy.com/2020/07/29/</link>
+      <pubDate>Wed, 29 Jul 2020 15:06:14 +0200</pubDate>
+      
+      <guid>https://tintinsnowy.com/2020/07/29/</guid>
+      <description>This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.</description>
+    </item>
     
     <item>
       <title>Common Traps in Python - part 1</title>
@@ -44,11 +54,11 @@ from confluent_kafka import Producer p = Producer({&#39;streams.</description>
     </item>
     
     <item>
-      <title>Git tips in DevOps workflow</title>
-      <link>https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/</link>
+      <title>Advanced Git Usage</title>
+      <link>https://tintinsnowy.com/2019/06/28/advanced-git-usage/</link>
       <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
-      <guid>https://tintinsnowy.com/2019/06/28/git-tips-in-devops-workflow/</guid>
+      <guid>https://tintinsnowy.com/2019/06/28/advanced-git-usage/</guid>
       <description>This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
 Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.</description>
     </item>
