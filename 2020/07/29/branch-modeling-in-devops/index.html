@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>Azure &middot; Sherry&#39;s blog</title>
+    <title>Branch Modeling in DevOps &middot; Sherry&#39;s blog</title>
     <meta name="generator" content="Hugo 0.59.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="https://tintinsnowy.com/en/tags/azure/index.xml" rel="alternate" type="application/rss+xml" title="Sherry&#39;s blog" />
-      <link href="https://tintinsnowy.com/en/tags/azure/index.xml" rel="feed" type="application/rss+xml" title="Sherry&#39;s blog" />
-    
-    <link rel="canonical" href="https://tintinsnowy.com/en/tags/azure/"/>
+    <link rel="canonical" href="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/"/>
     <link rel="icon" href="https://tintinsnowy.com/favicon.ico">
     <link rel="apple-touch-icon" href="https://tintinsnowy.com/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://tintinsnowy.com/css/style.css">
@@ -23,21 +20,32 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Azure" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tintinsnowy.com/en/tags/azure/" />
-
-<meta property="og:updated_time" content="2019-05-07T13:26:32+02:00" /><meta property="og:site_name" content="Sherry&#39;s blog" />
+    <meta property="og:title" content="Branch Modeling in DevOps" />
+<meta property="og:description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/" />
+<meta property="article:published_time" content="2020-07-29T15:06:14+02:00" />
+<meta property="article:modified_time" content="2020-07-29T15:06:14+02:00" /><meta property="og:site_name" content="Sherry&#39;s blog" />
 
     
-    <meta itemprop="name" content="Azure">
-<meta itemprop="description" content="">
+    <meta itemprop="name" content="Branch Modeling in DevOps">
+<meta itemprop="description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.">
 
+
+<meta itemprop="datePublished" content="2020-07-29T15:06:14&#43;02:00" />
+<meta itemprop="dateModified" content="2020-07-29T15:06:14&#43;02:00" />
+<meta itemprop="wordCount" content="213">
+
+
+
+<meta itemprop="keywords" content="DevOps,Git,Operation,Strategy," />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Azure"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Branch Modeling in DevOps"/>
+<meta name="twitter:description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
+Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs."/>
 
     
     
@@ -68,13 +76,13 @@
           
           <a class="main-nav-link" href="/">Home</a>
           
-          <a class="main-nav-link" href="tags/">Tags</a>
+          <a class="main-nav-link" href="/tags/">Tags</a>
           
-          <a class="main-nav-link" href="categories/">Categories</a>
+          <a class="main-nav-link" href="/categories/">Categories</a>
           
-          <a class="main-nav-link" href="/en/about-me/">About</a>
+          <a class="main-nav-link" href="/about-me/">About</a>
           
-          <a class="main-nav-link" href="/en/projects/projects/">Projects</a>
+          <a class="main-nav-link" href="/projects/projects/">Projects</a>
           
 
           
@@ -103,13 +111,13 @@
           
           <td><a class="main-nav-link" href="/">Home</a></td>
           
-          <td><a class="main-nav-link" href="tags/">Tags</a></td>
+          <td><a class="main-nav-link" href="/tags/">Tags</a></td>
           
-          <td><a class="main-nav-link" href="categories/">Categories</a></td>
+          <td><a class="main-nav-link" href="/categories/">Categories</a></td>
           
-          <td><a class="main-nav-link" href="/en/about-me/">About</a></td>
+          <td><a class="main-nav-link" href="/about-me/">About</a></td>
           
-          <td><a class="main-nav-link" href="/en/projects/projects/">Projects</a></td>
+          <td><a class="main-nav-link" href="/projects/projects/">Projects</a></td>
           
 
           
@@ -145,12 +153,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        14
+        17
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          27
+          32
         
         <span>
             Tags
@@ -229,67 +237,248 @@
 
     <section id="main">
     
-    
-    
-    
-    <section class="archives-wrap">
-        <div class="archive-category-wrap">
-            <span class="archive-category">Azure</span>
-        </div>
-        <div class="archives">
-            
-            
-                <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="https://tintinsnowy.com/en/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="thumbnail">
-                <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="Build blob trigger and storage queue for microservice" class="thumbnail-image"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="https://tintinsnowy.com/en/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/">Build blob trigger and storage queue for microservice</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2019-05-07 13:26:32 &#43;0200 CEST" itemprop="datePublished">May 07, 2019</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-            
-                <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="https://tintinsnowy.com/en/2019/05/07/how-to-setup-storage-account-trigger-with-event-grid-1/" class="thumbnail">
-                <span style="background-image:url(https://tintinsnowy.com/banners/spring.jpg)" alt="How to setup Storage Account trigger with Event Grid-1" class="thumbnail-image"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="https://tintinsnowy.com/en/2019/05/07/how-to-setup-storage-account-trigger-with-event-grid-1/">How to setup Storage Account trigger with Event Grid-1</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2019-05-07 13:26:32 &#43;0200 CEST" itemprop="datePublished">May 07, 2019</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-            
-        </div>
-    </section>
-    <nav id="page-nav">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
 
+        <header class="article-header">
+    <a href="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/">
+    <h1 class="article-title" itemprop="name">
+        Branch Modeling in DevOps
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2020-07-29 15:06:14 &#43;0200 CEST" itemprop="datePublished">July 29, 2020</time>
+            &middot;
+            213
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">tech</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/devops">DevOps</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/git">Git</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/operation">Operation</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://tintinsnowy.com/tags/strategy">Strategy</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            
+
+<p>This is the second phase of my current project. After the Beta version of
+the project, I upgraded and shifted the whole project into DevOps
+workflow. Git, is very essential part of the version control.
+So in this post, I will share some tips that I have used to solve problems</p>
+
+<h2 id="git-branching-models">Git Branching Models</h2>
+
+<p>There should be at least two Branches: <code>Dev</code> and <code>Master</code>. <code>Dev</code> branch is the front line defensing bugs. This branch
+will proceed first round of testing. All the feature, hotfix, customized branches should firstly be merged to <code>Dev</code> branch.
+The <code>Master</code> or <code>Production</code> branch is used for release the stable version of the software. In some scenarios, we need a <code>Test</code> branch, between <code>Dev</code> and <code>Master</code>(<code>Production</code>).</p>
+
+<p><img src="https://app.yinxiang.com/shard/s33/res/d3525737-ac00-45cb-b4c2-98441aebb472/Screenshot%20from%202019-07-29%2014-26-40.png" alt="branch modes" /></p>
+
+<h2 id="protect-master-branch">Protect master branch</h2>
+
+<p>In case the abuse of master branch, or any dangerous action to the release branch,
+it is better to restricts the access to master branch.
+when the feature
+<a href="https://stackoverflow.com/questions/38864405/how-to-restrict-access-to-master-branch-on-git">https://stackoverflow.com/questions/38864405/how-to-restrict-access-to-master-branch-on-git</a></p>
+
+<h2 id="create-a-feature-branch">Create a feature branch</h2>
+
+<p>git pull before your any actions</p>
+
+<pre><code class="language-console">git pull
+git checkout -b new_branch current_branch
+</code></pre>
+
+<p>delete finished branch locally</p>
+
+<pre><code class="language-console">git branch -D wanted_to_delete
+
+</code></pre>
+
+<p>to avoid the conflicts, you need to merge the last diffs to your branch.</p>
+
+<pre><code class="language-console">git checkout dev
+git pull
+git checkout your-feature-branch
+git merge dev    #update your feature branch
+git add .
+git commit -m &quot;xxx&quot;
+</code></pre>
+
+        </div>
+
+        <footer class="article-footer">
+    <a data-url="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/" data-id="fcb7f094b22309b625533880944a29de" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+        <div id="likecoin_thread">
+            
+            <iframe data-v-b66e9a5a="" src="https://button.like.co/in/embed/tintinsnowy/button?referrer=https://tintinsnowy.com/2019/10/08/" float=center width=100% height="300"></iframe>
+           
+        </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Common Traps in Python - part 1</div>
+    </a>
+    
+
+    
 </nav>
 
+
+</article>
+
+
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "sherrysblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
 
     </section>
 
@@ -305,9 +494,9 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/en/2019/10/08/how-to-depoly-mapr-kafka-app-on-kubernetes/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/" class="thumbnail">
                     
-                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/d2e0b66b-1525-4965-8700-ef5f7ebe4cd7/PSX_20191018_225433.jpg?search=Blog)" alt="Azure" class="thumbnail-image"></span>
+                        <span class="thumbnail-image thumbnail-none"></span>
                     
                     </a>
                 </div>
@@ -322,7 +511,85 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/en/2019/10/08/how-to-depoly-mapr-kafka-app-on-kubernetes/" class="title">How to depoly MapR kafka app on kubernetes</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/" class="title">Branch Modeling in DevOps</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-07-29 15:06:14 &#43;0200 CEST" itemprop="datePublished">July 29, 2020</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/500de35a-8db4-4823-a516-af38d9ba1358/3.jpg)" alt="Branch Modeling in DevOps" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
+                        tech
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://tintinsnowy.com/2020/04/05/common-traps-in-python-part-1/" class="title">Common Traps in Python - part 1</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-04-05 08:57:55 &#43;0100 &#43;0100" itemprop="datePublished">April 05, 2020</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://tintinsnowy.com/2020/03/01/10-basic-tips-on-bash-scripting-to-optimize-your-operation-work/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://tintinsnowy.com/banners/cherry.JPG)" alt="Branch Modeling in DevOps" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
+                        tech
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://tintinsnowy.com/2020/03/01/10-basic-tips-on-bash-scripting-to-optimize-your-operation-work/" class="title">10 Basic Tips on Bash Scripting to Optimize Your Operation Work</a></p>
+                    <p class="item-date">
+                        <time datetime="2020-03-01 09:57:55 &#43;0100 CET" itemprop="datePublished">March 01, 2020</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://tintinsnowy.com/2019/10/08/how-to-depoly-mapr-kafka-app-on-kubernetes/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://app.yinxiang.com/shard/s33/res/d2e0b66b-1525-4965-8700-ef5f7ebe4cd7/PSX_20191018_225433.jpg)" alt="Branch Modeling in DevOps" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
+                        tech
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/10/08/how-to-depoly-mapr-kafka-app-on-kubernetes/" class="title">How to depoly MapR kafka app on kubernetes</a></p>
                     <p class="item-date">
                         <time datetime="2019-10-08 09:07:55 &#43;0100 &#43;0100" itemprop="datePublished">October 08, 2019</time>
                     </p>
@@ -331,9 +598,9 @@
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/en/2019/06/28/git-tips-in-devops-workflow/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" class="thumbnail">
                     
-                        <span style="background-image:url(https://tintinsnowy.com/banners/IMGP5712.JPG)" alt="Azure" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://tintinsnowy.com/banners/windrad.JPG)" alt="Branch Modeling in DevOps" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -348,87 +615,9 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/en/2019/06/28/git-tips-in-devops-workflow/" class="title">Git tips in DevOPs workflow</a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" class="title">Advanced Git Usage</a></p>
                     <p class="item-date">
                         <time datetime="2019-06-28 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">June 28, 2019</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/en/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://tintinsnowy.com/banners/microsoft-azure.png)" alt="Azure" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
-                        tech
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://tintinsnowy.com/en/2019/05/07/build-blob-trigger-and-storage-queue-for-microservice/" class="title">Build blob trigger and storage queue for microservice</a></p>
-                    <p class="item-date">
-                        <time datetime="2019-05-07 13:26:32 &#43;0200 CEST" itemprop="datePublished">May 07, 2019</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/en/2019/05/07/how-to-setup-storage-account-trigger-with-event-grid-1/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://tintinsnowy.com/banners/spring.jpg)" alt="Azure" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
-                        tech
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://tintinsnowy.com/en/2019/05/07/how-to-setup-storage-account-trigger-with-event-grid-1/" class="title">How to setup Storage Account trigger with Event Grid-1</a></p>
-                    <p class="item-date">
-                        <time datetime="2019-05-07 13:26:32 &#43;0200 CEST" itemprop="datePublished">May 07, 2019</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/en/2018/06/21/errors-and-solutions-with-hyperledger-fabric/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://tintinsnowy.com/banners/fabric-logo.png)" alt="Azure" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://tintinsnowy.com/categories/tech">
-                        tech
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://tintinsnowy.com/en/2018/06/21/errors-and-solutions-with-hyperledger-fabric/" class="title">Errors and Solutions with Hyperledger Fabric</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-06-21 16:22:23 &#43;0200 CEST" itemprop="datePublished">June 21, 2018</time>
                     </p>
                 </div>
             </li>
@@ -459,7 +648,7 @@
                 <a class="category-list-link" href="https://tintinsnowy.com/categories/tech">
                     tech
                 </a>
-                <span class="category-list-count">13</span>
+                <span class="category-list-count">16</span>
             </li>
             
         </ul>
@@ -588,7 +777,7 @@
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/git">
                     git
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -641,6 +830,14 @@
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/maint">
+                    maint
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/microservice">
                     microservice
                 </a>
@@ -653,6 +850,22 @@
                     msg-queue
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/operation">
+                    operation
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/python">
+                    python
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -676,6 +889,14 @@
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/sde">
                     sde
                 </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/shell">
+                    shell
+                </a>
                 <span class="category-list-count">1</span>
             </li>
             
@@ -683,6 +904,14 @@
                 
                 <a class="category-list-link" href="https://tintinsnowy.com/tags/storage-queue">
                     storage-queue
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://tintinsnowy.com/tags/strategy">
+                    strategy
                 </a>
                 <span class="category-list-count">1</span>
             </li>
@@ -772,10 +1001,19 @@
         <a href="https://tintinsnowy.com/tags/machine-learning" style="font-size: 12px;">machine-learning</a>
         
         
+        <a href="https://tintinsnowy.com/tags/maint" style="font-size: 12px;">maint</a>
+        
+        
         <a href="https://tintinsnowy.com/tags/microservice" style="font-size: 12px;">microservice</a>
         
         
         <a href="https://tintinsnowy.com/tags/msg-queue" style="font-size: 12px;">msg-queue</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/operation" style="font-size: 12px;">operation</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/python" style="font-size: 12px;">python</a>
         
         
         <a href="https://tintinsnowy.com/tags/reading" style="font-size: 12px;">reading</a>
@@ -787,7 +1025,13 @@
         <a href="https://tintinsnowy.com/tags/sde" style="font-size: 12px;">sde</a>
         
         
+        <a href="https://tintinsnowy.com/tags/shell" style="font-size: 12px;">shell</a>
+        
+        
         <a href="https://tintinsnowy.com/tags/storage-queue" style="font-size: 12px;">storage-queue</a>
+        
+        
+        <a href="https://tintinsnowy.com/tags/strategy" style="font-size: 12px;">strategy</a>
         
         
         <a href="https://tintinsnowy.com/tags/techniques" style="font-size: 12px;">techniques</a>
@@ -809,7 +1053,7 @@
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019
+      &copy; 2020
       Powered by <a href="//gohugo.io">Hugo</a>. Content by Xiaoli Yang
     </div>
   </div>

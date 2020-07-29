@@ -21,8 +21,9 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="Advanced Git Usage" />
-<meta property="og:description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
-Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs." />
+<meta property="og:description" content="Introduction Git works more than as a version controlling tool, it glues the teamwork together. It is widely used by almost all developers nowadays. Basic usages can be git-cheatsheet
+However, in some scenarios, more advanced skills are required. In this post, I will present some usages, which can impove our efficiency.
+1. git stash: store temporary dirty working branch Scenario: Interrupted workflow When you are in the middle of coding, your boss comes in and demands that you fix something immediately." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tintinsnowy.com/2019/06/28/advanced-git-usage/" />
 <meta property="article:published_time" content="2019-06-28T09:57:55+01:00" />
@@ -30,13 +31,14 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
 
     
     <meta itemprop="name" content="Advanced Git Usage">
-<meta itemprop="description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
-Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.">
+<meta itemprop="description" content="Introduction Git works more than as a version controlling tool, it glues the teamwork together. It is widely used by almost all developers nowadays. Basic usages can be git-cheatsheet
+However, in some scenarios, more advanced skills are required. In this post, I will present some usages, which can impove our efficiency.
+1. git stash: store temporary dirty working branch Scenario: Interrupted workflow When you are in the middle of coding, your boss comes in and demands that you fix something immediately.">
 
 
 <meta itemprop="datePublished" content="2019-06-28T09:57:55&#43;01:00" />
 <meta itemprop="dateModified" content="2019-06-28T09:57:55&#43;01:00" />
-<meta itemprop="wordCount" content="333">
+<meta itemprop="wordCount" content="383">
 
 
 
@@ -44,8 +46,9 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Advanced Git Usage"/>
-<meta name="twitter:description" content="This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
-Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs."/>
+<meta name="twitter:description" content="Introduction Git works more than as a version controlling tool, it glues the teamwork together. It is widely used by almost all developers nowadays. Basic usages can be git-cheatsheet
+However, in some scenarios, more advanced skills are required. In this post, I will present some usages, which can impove our efficiency.
+1. git stash: store temporary dirty working branch Scenario: Interrupted workflow When you are in the middle of coding, your boss comes in and demands that you fix something immediately."/>
 
     
     
@@ -256,7 +259,7 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
             <i class="fa fa-calendar"></i>
             <time datetime="2019-06-28 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">June 28, 2019</time>
             &middot;
-            333
+            383
             words
             &middot;
             2
@@ -300,72 +303,69 @@ Git Branching Models There should be at least two Branches: Dev and Master. Dev 
         <div class="article-entry" itemprop="articleBody">
             
 
-<p>This is the second phase of my current project. After the Beta version of
-the project, I upgraded and shifted the whole project into DevOps
-workflow. Git, is very essential part of the version control.
-So in this post, I will share some tips that I have used to solve problems</p>
+<h2 id="introduction">Introduction</h2>
 
-<h2 id="git-branching-models">Git Branching Models</h2>
+<p>Git works more than as a version controlling tool, it glues the teamwork together. It is widely used by almost all developers nowadays. Basic usages can be <a href="https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet">git-cheatsheet</a></p>
 
-<p>There should be at least two Branches: <code>Dev</code> and <code>Master</code>. <code>Dev</code> branch is the front line defensing bugs. This branch
-will proceed first round of testing. All the feature, hotfix, customized branches should firstly be merged to <code>Dev</code> branch.
-The <code>Master</code> or <code>Production</code> branch is used for release the stable version of the software. In some scenarios, we need a <code>Test</code> branch, between <code>Dev</code> and <code>Master</code>(<code>Production</code>).</p>
+<p>However, in some scenarios, more advanced skills are required. In this post, I will present some usages, which can impove our efficiency.</p>
 
-<p><img src="https://app.yinxiang.com/shard/s33/res/d3525737-ac00-45cb-b4c2-98441aebb472/Screenshot%20from%202019-07-29%2014-26-40.png" alt="branch modes" /></p>
+<h2 id="1-git-stash-store-temporary-dirty-working-branch">1. git stash: store temporary dirty working branch</h2>
 
-<h2 id="protect-master-branch">Protect master branch</h2>
+<p><strong>Scenario: Interrupted workflow</strong>
+  When you are in the middle of coding, your boss comes in and demands that you fix something immediately. Traditionally, you would make a commit to a temporary branch to store your changes away, and return to your original branch to make the emergency fix, like this:</p>
 
-<p>In case the abuse of master branch, or any dangerous action to the release branch,
-it is better to restricts the access to master branch.
-when the feature
-<a href="https://stackoverflow.com/questions/38864405/how-to-restrict-access-to-master-branch-on-git">https://stackoverflow.com/questions/38864405/how-to-restrict-access-to-master-branch-on-git</a></p>
-
-<h2 id="create-a-feature-branch">Create a feature branch</h2>
-
-<p>git pull before your any actions</p>
-
-<pre><code class="language-console">git pull
-git checkout -b new_branch current_branch
+<pre><code>    $ git commit -a -m &quot;WIP&quot;
+    $ git checkout bugfix/branch 
+    $ ...edit emergency fix
+    $ git commit -a -m &quot;Fix in a hurry&quot;
+    $ git checkout my_original_branch
+    # ... continue hacking ...
 </code></pre>
 
-<p>delete finished branch locally</p>
+<p>You can use git stash to simplify the above, like this:</p>
 
-<pre><code class="language-console">git branch -D wanted_to_delete
-
+<pre><code>    # ...doing your work until your boss comes...
+    $ git stash
+    $ edit emergency fix (in this branch or another branch)
+    $ git commit -a -m &quot;Fix in a hurry&quot;
+    $ git stash pop
+    # ... continue hacking ...
 </code></pre>
 
-<p>to avoid the conflicts, you need to merge the last diffs to your branch.</p>
+<p><a href="https://git-scm.com/docs/git-stash">more reference</a></p>
 
-<pre><code class="language-console">git checkout dev
-git pull
-git checkout your-feature-branch
-git merge dev    #update your feature branch
-git add .
-git commit -m &quot;xxx&quot;
-</code></pre>
-
-<h2 id="retrieve-committed-code">Retrieve committed code</h2>
+<h2 id="2-retrieve-committed-code">2. Retrieve committed code</h2>
 
 <p>you have committed code / added all the code, but forget to push to the remote repo. After had checked out to another branch,
 and changed back to previous branch, you found out that all the changes are gone. How to retrieve code? This
 method may apply to other scenarios.</p>
 
-<pre><code class="language-commandline"># to check the commit info and the abbrivation of commit-hashcode
-git reflog
+<pre><code>    # to check the commit info and the abbrivation of commit-hashcode
+    $ git reflog
 
-# to get the full information of logs. copy the hashcode
-git fsck --cache --no-reflogs
+    # to get the full information of logs. copy the hashcode
+    $ git fsck --cache --no-reflogs
 
-# retrieve 
-git reset $(hash-code)
+    # retrieve 
+    $ git reset $(hash-code)
 </code></pre>
 
-<h2 id="overwrite-complete-a-branch">Overwrite complete a branch</h2>
+<h2 id="3-overwrite-complete-a-branch">3. Overwrite complete a branch</h2>
 
 <p>the <strong>production branch</strong> regularly <code>completely compy</code> the latest verion of <strong>dev branch</strong>, and replace the old version(not merge) to avoid conflicts.</p>
 
 <pre><code>git checkout -B production_branch dev_branch 
 </code></pre>
+
+<h2 id="4-git-fetch-vs-git-pull">4. git fetch vs. git pull</h2>
+
+<p>In most cases:</p>
+
+<p>git pull = git fetch + git merge</p>
+
+<p><strong>git fetch:</strong> When no remote is specified, by default the origin remote will be used, unless there’s an upstream branch configured for the current branch. You can retrieve new updates(newly created branch in remote repo)</p>
+
+<p><strong>git pull</strong> Fetch from and integrate with another repository or a local branch</p>
 
 <h1 id="reference">Reference</h1>
 
@@ -526,7 +526,7 @@ git reset $(hash-code)
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="https://tintinsnowy.com/2020/07/29/" class="thumbnail">
+                    <a href="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -543,7 +543,7 @@ git reset $(hash-code)
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://tintinsnowy.com/2020/07/29/" class="title"></a></p>
+                    <p class="item-title"><a href="https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/" class="title">Branch Modeling in DevOps</a></p>
                     <p class="item-date">
                         <time datetime="2020-07-29 15:06:14 &#43;0200 CEST" itemprop="datePublished">July 29, 2020</time>
                     </p>

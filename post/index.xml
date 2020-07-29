@@ -12,11 +12,11 @@
     
     
     <item>
-      <title></title>
-      <link>https://tintinsnowy.com/2020/07/29/</link>
+      <title>Branch Modeling in DevOps</title>
+      <link>https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/</link>
       <pubDate>Wed, 29 Jul 2020 15:06:14 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/2020/07/29/</guid>
+      <guid>https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/</guid>
       <description>This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
 Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.</description>
     </item>
@@ -59,8 +59,9 @@ from confluent_kafka import Producer p = Producer({&#39;streams.</description>
       <pubDate>Fri, 28 Jun 2019 09:57:55 +0100</pubDate>
       
       <guid>https://tintinsnowy.com/2019/06/28/advanced-git-usage/</guid>
-      <description>This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
-Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.</description>
+      <description>Introduction Git works more than as a version controlling tool, it glues the teamwork together. It is widely used by almost all developers nowadays. Basic usages can be git-cheatsheet
+However, in some scenarios, more advanced skills are required. In this post, I will present some usages, which can impove our efficiency.
+1. git stash: store temporary dirty working branch Scenario: Interrupted workflow When you are in the middle of coding, your boss comes in and demands that you fix something immediately.</description>
     </item>
     
     <item>
