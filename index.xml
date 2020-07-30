@@ -12,13 +12,14 @@
     
     
     <item>
-      <title>Branch Modeling in DevOps</title>
-      <link>https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/</link>
+      <title>Three-Stage Branch Model applied in DevOps - CI part</title>
+      <link>https://tintinsnowy.com/2020/07/29/three-stage-branch-model-applied-in-devops-ci-part/</link>
       <pubDate>Wed, 29 Jul 2020 15:06:14 +0200</pubDate>
       
-      <guid>https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/</guid>
-      <description>This is the second phase of my current project. After the Beta version of the project, I upgraded and shifted the whole project into DevOps workflow. Git, is very essential part of the version control. So in this post, I will share some tips that I have used to solve problems
-Git Branching Models There should be at least two Branches: Dev and Master. Dev branch is the front line defensing bugs.</description>
+      <guid>https://tintinsnowy.com/2020/07/29/three-stage-branch-model-applied-in-devops-ci-part/</guid>
+      <description>I am working on a data platform project, the product itself is composed of several microservices. Our team is under great pressure of operation and mantainance. Thanks to the DevOps helps us keep the balance of development and deployment.
+In this post, I illustrate how we maintain the CI(continuous integration) part, which contains: the branch strategy we adopt, the concept of DevOps, overview of the workflow, the tips.
+next post, I will continue to explain the CD part(continous deployment)</description>
     </item>
     
     <item>

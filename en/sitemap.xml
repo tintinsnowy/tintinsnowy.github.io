@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tintinsnowy.com/2020/07/29/branch-modeling-in-devops/</loc>
-    <lastmod>2020-07-29T15:06:14+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tintinsnowy.com/categories/</loc>
     <lastmod>2020-07-29T15:06:14+02:00</lastmod>
     <xhtml:link
@@ -29,6 +24,11 @@
   
   <url>
     <loc>https://tintinsnowy.com/tags/git/</loc>
+    <lastmod>2020-07-29T15:06:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/tags/microservices/</loc>
     <lastmod>2020-07-29T15:06:14+02:00</lastmod>
   </url>
   
@@ -100,6 +100,11 @@
                 hreflang="en"
                 href="https://tintinsnowy.com/categories/tech/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://tintinsnowy.com/2020/07/29/three-stage-branch-model-applied-in-devops-ci-part/</loc>
+    <lastmod>2020-07-29T15:06:14+02:00</lastmod>
   </url>
   
   <url>
