@@ -19,7 +19,7 @@
       <guid>https://tintinsnowy.com/2020/07/29/three-stage-branch-model-applied-in-devops-ci-part/</guid>
       <description>I am working on a data platform project, the product itself is composed of several microservices. Our team is under great pressure of operation and mantainance. Thanks to the DevOps helps us keep the balance of development and deployment.
 In this post, I illustrate how we maintain the CI(continuous integration) part, which contains: the branch strategy we adopt, the concept of DevOps, overview of the workflow, the tips.
-next post, I will continue to explain the CD part(continous deployment)</description>
+next post, I will continue to explain the CD part(cotinous deployment)</description>
     </item>
     
     <item>
