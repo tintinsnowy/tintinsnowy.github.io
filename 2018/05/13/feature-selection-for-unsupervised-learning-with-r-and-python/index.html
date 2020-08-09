@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2018-05-13T09:57:55&#43;01:00" />
 <meta itemprop="dateModified" content="2018-05-13T09:57:55&#43;01:00" />
-<meta itemprop="wordCount" content="371">
+<meta itemprop="wordCount" content="414">
 
 
 
@@ -253,7 +253,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-05-13 09:57:55 &#43;0100 &#43;0100" itemprop="datePublished">May 13, 2018</time>
             &middot;
-            371
+            414
             words
             &middot;
             2
@@ -336,7 +336,7 @@ extensively <a href="https://machinelearningmastery.com/feature-selection-with-t
 <p>Steps:</p>
 
 <ol>
-<li>Compute the sample covariance matrix,</li>
+<li>Compute the sample covariance matrix or correlation matrix,</li>
 <li>Compute the Principal components and eigenvalues of the
 Covariance or Correlation matrix <strong>A</strong>.</li>
 <li>Choose the subspace dimension <strong>n</strong>, we get new matrix <strong>A_n</strong>,
@@ -344,6 +344,10 @@ the vectors <strong>Vi</strong> are the rows of <strong>A_n</strong>.</li>
 <li>Cluster the vectors <strong>|Vi|</strong>, using K-Means</li>
 <li>For each cluster, find the corresponding vector <strong>Vi</strong> which is closest to the mean of the cluster.</li>
 </ol>
+
+<p><strong>Since so many of readers have mentioned the covariance calculation: in the paper, it states that both cov and corr are okay. and calculation of cov is embeded in PCA. That&rsquo;s why you might be confused by the first step</strong></p>
+
+<p><img src="https://app.yinxiang.com/shard/s33/res/3fb059a6-bc09-4521-bafe-1f5febdf6b4b.png?search=blog%20image" alt="The step in the paper" /></p>
 
 <h1 id="code">Code</h1>
 

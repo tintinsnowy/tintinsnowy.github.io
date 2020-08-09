@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2020-07-29T15:06:14&#43;02:00" />
 <meta itemprop="dateModified" content="2020-07-29T15:06:14&#43;02:00" />
-<meta itemprop="wordCount" content="420">
+<meta itemprop="wordCount" content="413">
 
 
 
@@ -253,7 +253,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-07-29 15:06:14 &#43;0200 CEST" itemprop="datePublished">July 29, 2020</time>
             &middot;
-            420
+            413
             words
             &middot;
             2
@@ -321,26 +321,27 @@
 will proceed continuous integration and testing. All the feature, hotfix, customized branches should firstly be merged to <code>Dev</code> branch.
 The <code>Master</code> or <code>Production</code>(short for prd) branch is used for releasing the stable version of the product. In some scenarios, we need a <code>Int</code> (abbr. Integration) branch, between <code>Dev</code> and <code>Prd</code> branch. We keep 3 long-live branches: Dev, Release, Prd</p>
 
-<pre><code>- Dev: this branch accepts all the PR from feature branches, and unit tests will be done in this branch.
-- Int: this branch accepts release PR
-- Prd: this branch accepts stable, UAT PR
-</code></pre>
+<ul>
+<li>Dev: this branch accepts all the PR from feature branches, and unit tests will be done in this branch.</li>
+<li>Int: this branch accepts release PR</li>
+<li>Prd: this branch accepts stable, UAT PR</li>
+</ul>
 
 <h2 id="2-devops-concept">2. DevOps Concept</h2>
 
-<pre><code>There are three concepts which I think we should keep in mind if we want to be good DevOps player.
+<p>There are three concepts which I think we should keep in mind if we want to be good DevOps player.</p>
 
-- Agileness: normal we apply DevOps together with the modern software practice: Scrum. We break down the requirements into smallers features. Instead of giving a breaking change at once after a long period of time, DevOps helps incrementally develop and build the product frequenctly. 
+<ul>
+<li><p>Agileness: normal we apply DevOps together with the modern software practice: Scrum. We break down the requirements into smallers features. Instead of giving a breaking change at once after a long period of time, DevOps helps incrementally develop and build the product frequenctly.</p></li>
 
-- Tracibility: we use `JIRA` to trace the progress in each sprint. Starting the work by creating a feature branch from the `JIRA` ticket. After the feature branch has been merged, we can close the ticket.
+<li><p>Tracibility: we use <code>JIRA</code> to trace the progress in each sprint. Starting the work by creating a feature branch from the <code>JIRA</code> ticket. After the feature branch has been merged, we can close the ticket.</p></li>
 
-- Automation: by using configuration, scripts, and tooling we enabled to sync, compile, build automatically. The automation of the process eliminates repetitive manual work and human error. It vastly improve the efficiency.
-</code></pre>
+<li><p>Automation: by using configuration, scripts, and tooling we enabled to sync, compile, build automatically. The automation of the process eliminates repetitive manual work and human error. It vastly improve the efficiency.</p></li>
+</ul>
 
 <h2 id="3-workflow">3. Workflow</h2>
 
-<p>TBC
-<img src="https://app.yinxiang.com/shard/s33/res/d3525737-ac00-45cb-b4c2-98441aebb472/Screenshot%20from%202019-07-29%2014-26-40.png" alt="branch modes" /></p>
+<p><img src="https://app.yinxiang.com/shard/s33/res/6dc1c12c-fe42-4c30-ba8d-4fb811844df3/workflow.png" alt="branch modes" /></p>
 
 <h2 id="create-a-feature-branch">Create a feature branch</h2>
 
