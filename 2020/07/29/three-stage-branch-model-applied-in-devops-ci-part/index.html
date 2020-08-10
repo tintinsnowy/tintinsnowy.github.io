@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2020-07-29T15:06:14&#43;02:00" />
 <meta itemprop="dateModified" content="2020-07-29T15:06:14&#43;02:00" />
-<meta itemprop="wordCount" content="413">
+<meta itemprop="wordCount" content="553">
 
 
 
@@ -253,10 +253,10 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2020-07-29 15:06:14 &#43;0200 CEST" itemprop="datePublished">July 29, 2020</time>
             &middot;
-            413
+            553
             words
             &middot;
-            2
+            3
             minute read
         </div>
         
@@ -341,7 +341,25 @@ The <code>Master</code> or <code>Production</code>(short for prd) branch is used
 
 <h2 id="3-workflow">3. Workflow</h2>
 
-<p><img src="https://app.yinxiang.com/shard/s33/res/6dc1c12c-fe42-4c30-ba8d-4fb811844df3/workflow.png" alt="branch modes" /></p>
+<p>step 1:  start the sprint, developers work on feature branches which are created from DEV</p>
+
+<p>step 2: finish the development then merge to the DEV.</p>
+
+<p>step 3: unlike azure environment, on-prem we must merge to INT if we want to test in the runtime environment</p>
+
+<p>step 4: sprint ends around the corner, we finish all the tasks and merge to the DEV.</p>
+
+<p>step 5: create a release branch from dev:  for example V0.2.3  (0 means: year;  2 means: PI;   3 means : sprint)</p>
+
+<p>step 6: start to test in INT, found a bug</p>
+
+<p>step 7: create a bugfix branch, merge to DEV first(make sure the main branch has the latest fix), then to release, INT</p>
+
+<p>step 8:  the Integration Test ends which stands for the success of the release</p>
+
+<p>step 9: after the PI, we can roll out on PRO</p>
+
+<p><img src="https://app.yinxiang.com/shard/s33/res/e89fe792-7189-4fe5-b1da-f6c62b94646b/workflow%281%29.png?search=blog%20image" alt="branch modes" /></p>
 
 <h2 id="create-a-feature-branch">Create a feature branch</h2>
 
